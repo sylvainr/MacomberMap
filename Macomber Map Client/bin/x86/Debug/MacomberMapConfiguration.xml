@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Configuration>
+  <Permissions ConnectionTimeoutThreshold="15" OTS="false" LineVoltageLimit="95" BusLowLimit="95" BusHighLimit="105" DefaultConnectors="false" ShowViews="true" showRTHist="true" ShowProcesses="true" ShowOwnership="true" ShowDUNS="true" ShowTelephone="true" ShowOneLines="true" ShowNotes="true" ShowPropertyPage="true" ShowViolations="true" ShowDistance="true" ShowWebsite="true" CreateNotes="true" LassoStandard="true" LassoInvisible="true" DisplayICCPISDLinks="true" DisplayMMCommLinks="true" ShowTEIDs="true" SearchAvailable="true" CreateSavecase="true" DisplayProperties="true" AllowModelSwitching="true" />
+  <DisplayParameters DefaultName="Voltages">
+    <Displays>
+      <Display Name="One-Line Display" Sources="Contingency,Substation,Line">
+        <Panel Name="Summary" Type="Element_Summary" />
+        <Panel Name="Violations" Type="Violation_Viewer" />
+        <Panel Name="MiniMap" Type="Mini_Map" />
+      </Display>
+    </Displays>
+    <Views>
+      <Category Name="Other View Options">
+        <View Name="Lines/Gen Stn"> 
+          Overall.MultipleLineWidthAddition=2
+          Substations.ShowSubstations=Units
+          345 KV.Energized.Width=3
+          138 KV.Energized.Width=1
+          69 KV.Energized.Width=1
+          345 KV.ShowEnergized=True
+          345 KV.ShowDeEnergized=True
+          345 KV.ShowPartiallyEnergized=True
+          345 KV.ShowMVA=True
+          138 KV.ShowEnergized=True
+          138 KV.ShowDeEnergized=True
+          138 KV.ShowPartiallyEnergized=True
+          138 KV.ShowMVA=True
+          69 KV.ShowEnergized=True
+          69 KV.ShowDeEnergized=True
+          69 KV.ShowPartiallyEnergized=True
+          69 KV.ShowMVA=True
+          Other KV.ShowEnergized=True
+          Other KV.ShowDeEnergized=True
+          Other KV.ShowPartiallyEnergized=True
+          Other KV.ShowMVA=True
+          DCTie.ShowEnergized=True
+          DCTie.ShowDeEnergized=True
+          DCTie.ShowMVA=True
+          ForcedOutage.Width=7
+          ForcedExtension.Width=7
+          UnavoidableExtension.Width=7
+          BasecaseBranch.Width=7
+          BasecaseBranch.Blink=True
+          BasecaseHighVoltage.Width=7
+          BasecaseHighVoltage.Blink=True
+          BasecaseLowVoltage.Width=7
+          BasecaseLowVoltage.Blink=True
+          ContingencyBranch.Width=7
+          ContingencyBranch.Blink=True
+          ContingencyHighVoltage.Width=7
+          ContingencyHighVoltage.Blink=True
+          ContingencyLowVoltage.Width=7
+          ContingencyLowVoltage.Blink=True
+          PlannedOutage.Width=7
+          PlannedOutage.Blink=True
+        </View>
+        <View Name="Line coloring">
+          Overall.MultipleLineWidthAddition=0
+          345 KV.Energized.Width=1
+          138 KV.Energized.Width=1
+          69 KV.Energized.Width=1
+          345 KV.PartiallyEnergized.Width=1
+          138 KV.PartiallyEnergized.Width=1
+          69 KV.PartiallyEnergized.Width=1
+          345 KV.DeEnergized.Width=1
+          138 KV.DeEnergized.Width=1
+          69 KV.DeEnergized.Width=1
+          Overall.Contour=None
+          Substations.ShowSubstations=None
+          345 KV.ShowEnergized=True
+          345 KV.ShowDeEnergized=True
+          345 KV.ShowPartiallyEnergized=True
+          345 KV.ShowMVA=True
+          138 KV.ShowEnergized=True
+          138 KV.ShowDeEnergized=True
+          138 KV.ShowPartiallyEnergized=True
+          138 KV.ShowMVA=True
+          69 KV.ShowEnergized=True
+          69 KV.ShowDeEnergized=True
+          69 KV.ShowPartiallyEnergized=True
+          69 KV.ShowMVA=True
+          Other KV.ShowEnergized=True
+          Other KV.ShowDeEnergized=True
+          Other KV.ShowPartiallyEnergized=True
+          Other KV.ShowMVA=True
+          DCTie.ShowEnergized=True
+          DCTie.ShowDeEnergized=True
+          DCTie.ShowMVA=True
+          ForcedOutage.SimpleVisibility=false
+          UnavoidableExtension.SimpleVisibility=false
+          BasecaseBranch.SimpleVisibility=false
+          BasecaseHighVoltage.SimpleVisibility=false
+          BasecaseLowVoltage.SimpleVisibility=false
+          ContingencyBranch.SimpleVisibility=false
+          ContingencyHighVoltage.SimpleVisibility=false
+          ContingencyLowVoltage.SimpleVisibility=false
+          PlannedOutage.SimpleVisibility=false
+        </View>
+        <Category Name="Naming convention">
+          <View Name="Description">
+            Overall.UseLongNames=true
+            Substations.ShowSubstations=All
+          </View>
+          <View Name="Acronym">
+            Overall.UseLongNames=false
+            Substations.ShowSubstations=All
+          </View>
+        </Category>
+      </Category>
+      <Category Name="Transmission">
+        <Category Name="All lines">
+          <View Name="Flows">
+            Substations.ShowSubstations=All
+            345 KV.ShowEnergized=True
+            345 KV.ShowDeEnergized=True
+            345 KV.ShowPartiallyEnergized=True
+            345 KV.ShowMVA=True
+            138 KV.ShowEnergized=True
+            138 KV.ShowDeEnergized=True
+            138 KV.ShowPartiallyEnergized=True
+            138 KV.ShowMVA=True
+            69 KV.ShowEnergized=True
+            69 KV.ShowDeEnergized=True
+            69 KV.ShowPartiallyEnergized=True
+            69 KV.ShowMVA=True
+            Other KV.ShowEnergized=True
+            Other KV.ShowDeEnergized=True
+            Other KV.ShowPartiallyEnergized=True
+            Other KV.ShowMVA=True
+            DCTie.ShowEnergized=True
+            DCTie.ShowDeEnergized=True
+            DCTie.ShowMVA=True
+            ForcedOutage.Width=7
+            ForcedExtension.Width=7
+            UnavoidableExtension.Width=7
+            BasecaseBranch.Width=7
+            BasecaseBranch.Blink=True
+            BasecaseHighVoltage.Width=7
+            BasecaseHighVoltage.Blink=True
+            BasecaseLowVoltage.Width=7
+            BasecaseLowVoltage.Blink=True
+            ContingencyBranch.Width=7
+            ContingencyBranch.Blink=True
+            ContingencyHighVoltage.Width=7
+            ContingencyHighVoltage.Blink=True
+            ContingencyLowVoltage.Width=7
+            ContingencyLowVoltage.Blink=True
+            PlannedOutage.Width=7
+            PlannedOutage.Blink=True
+          </View>
+        </Category>
+        <View Name="Capacitors">
+          Substations.ShowSubstations=Capacitors
+        </View>
+        <View Name="Transformers">
+          Substations.ShowSubstations=Transformers
+        </View>
+      </Category>
+      <Category Name="Frequency">
+        <View Name="Generators">
+          Substations.ShowSubstations=Units
+        </View>
+        <View Name="Loads">
+          Substations.ShowSubstations=Loads
+        </View>
+        <View Name="LAARs">
+          Substations.ShowSubstations=LAARs
+        </View>
+      </Category>
+    </Views>
+    <VoltageLevel Name="345 KV" Permitted="true" ShowEnergized="false" ShowPartiallyEnergized="false" ShowDeEnergized="false" ShowMVA="true" ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10">
+      <Energized ForeColor="LightGreen" Width="3" Blink="false" />
+      <PartiallyEnergized ForeColor="LightGreen" Width="3" Blink="false" DashStyle="Dash" />
+      <DeEnergized ForeColor="Gray" Width="3" Blink="false" />
+      <Unknown ForeColor="Gray" Width="3" Blink="false" DashStyle="Dot" />
+    </VoltageLevel>
+    <VoltageLevel Name="138 KV" Permitted="true" ShowEnergized="false" ShowPartiallyEnergized="false" ShowDeEnergized="false" ShowMVA="true" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10">
+      <Energized ForeColor="CornflowerBlue" Width="2" Blink="false"  />
+      <PartiallyEnergized ForeColor="CornflowerBlue" Width="2" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="Gray" Width="2" Blink="false"  />
+      <Unknown ForeColor="Gray" Width="2" Blink="false" DashStyle="Dot"  />
+    </VoltageLevel>
+    <VoltageLevel Name="69 KV" Permitted="true" ShowEnergized="false" ShowPartiallyEnergized="false" ShowDeEnergized="false" ShowMVA="true" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10">
+      <Energized ForeColor="Magenta" Width=".5" Blink="false"  />
+      <PartiallyEnergized ForeColor="Magenta" Width=".5" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="Gray" Width=".5" Blink="false"  />
+      <Unknown ForeColor="Gray" Width=".5" Blink="false" DashStyle="Dot" />
+    </VoltageLevel>
+    <VoltageLevel Name="Other KV" Permitted="true" ShowEnergized="false" ShowPartiallyEnergized="false" ShowDeEnergized="false" ShowMVA="false" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10">
+      <Energized ForeColor="Thistle" Width="1" Blink="false"  />
+      <PartiallyEnergized ForeColor="Thistle" Width="2" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="Gray" Width="1" Blink="false" />
+      <Unknown ForeColor="Gray" Width="2" Blink="false" DashStyle="Dot"  />
+    </VoltageLevel>
+    <VoltageLevel Name="DCTie" Permitted="true" ShowEnergized="false" ShowPartiallyEnergized="false" ShowDeEnergized="false" ShowMVA="true" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" MVASize="14" VisibilityByZoom="0" StationMW="12" StationNames="10">
+      <Energized ForeColor="White" Width="3" Blink="false"  />
+      <PartiallyEnergized ForeColor="White" Width="3" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="White" Width="3" Blink="false"  />
+      <PartiallyEnergized ForeColor="White" Width="3" Blink="false" DashStyle="Dot"  />
+    </VoltageLevel>
+    <KeyIndicators>
+      <!-- In this section, all the key indicators that appear on the top of the map are categorized. The map auto-sizes them as the window size changes.-->
+      <Indicator Name="System frequency and ACE" GraphMode="SystemWide" HistoricQueries="ERCOT.FHZ%,ERCOT.ACE%" EMSMappings="TAGCLAST,FHZ,Frequency,ACE,ACE" Format="#,##0" Title="ACE" Indicator="ACE" Axis="mw" EMSValue="ACE"/>
+      <Indicator Name="System frequency" GraphMode="SystemWide" HistoricQueries="ERCOT.FHZ%" EMSMappings="FHZ" Format="0.000" Title="Freq" Indicator="Frequency" Axis="Hz" EMSValue="FHZ"/>
+      <Indicator Name="Generation Types" GraphMode="GenTypes" HistoricQueries="ERCOT.GEN,ERCOT.%.GEN" EMSMappings="" Format="#,##0" Title="Gen" Indicator="Gen" Axis="mw" EMSValue="GEN"/>
+      <Indicator Name="Load vs. Load Forecast" GraphMode="LoadVsLoadForecast" HistoricQueries="ERCOT.EXPLD, ERCOT.LOAD" EMSMappings="KEY,FLD,Forecast,MLD,Override,LD,Actual" Format="#,##0" Title="Load" Indicator="Load" Axis="mw" EMSValue="LD"/>
+      <Indicator Name="Wind generation" GraphMode="SystemWide" HistoricQueries="ERCOT.GEN.WIND" EMSMappings="TAGCLAST,Wind,Wind MW,WindPercent,Wind percentage" Format="#,##0" PercentageFormat=" \(0%\)" Title="Wind" ComparisonAxis="true" Indicator="Wind" Comparison="Gen" Axis="mw"/>
+      <!--Indicator Name="Island Count" GraphMode="Island" Format="0" Title="Islands" Indicator="IslandCount" Axis="" /-->
+      <Indicator Name="Limit Reserve Viewer" GraphMode="Limit_Reserve_Viewer" Format="#,##0" Title="PRC" Indicator="LoadRes" Axis="mw" EMSValue="PRCT" HistoricQueries="ERCOT.PRCT,ERCOT.HSLT,ERCOT.HASLT,ERCOT.HDLT,ERCOT.LDLT,ERCOT.LASLT,ERCOT.LSLT">
+        <!-- For the limit reserve viewer, individial reserves can be added. -->
+       <Reserve Category="SCED" Name="Total HSL"  EMSValue="HSLT"/>
+        <Reserve Category="SCED" Name="Total HASL" EMSValue="HASLT"/>
+        <Reserve Category="SCED" Name="Total HDL"  EMSValue="HDLT"/>
+        <Reserve Category="SCED" Name="Total LDL"  EMSValue="LDLT"/>
+        <Reserve Category="SCED" Name="Total LASL" EMSValue="LASLT"/>
+        <Reserve Category="SCED" Name="Total LSL"  EMSValue="LSLT"/>
+        <Reserve Category="Capacity Res." Name="Physical Response" EMSValue="PRCT"/>
+      </Indicator>
+    </KeyIndicators>
+    <Levels>
+      <Level Title="345 KV Substations" PointsByDistance="10,100,20,50,30,25,40,10,50,5,300,1" ExitThresholdScore="200" FailureThreshold="5" NumberOfQuestions="5" QuestionTimeout="30" WaitBetweenQuestions="2" AllowZoom="false" ElemType="Substation" KVLevel="345 KV" ID="0"/>
+      <Level Title="Gen Substations" PointsByDistance="10,100,20,50,30,25,40,10,50,5,300,1" ExitThresholdScore="200" FailureThreshold="5" NumberOfQuestions="5" QuestionTimeout="30" WaitBetweenQuestions="2" AllowZoom="false" ElemType="Unit" ID="1"/>
+    </Levels>
+    <Substation Name="Substations" ForeColor="LightSteelBlue" Width="1.5" Blink="false" ShowTotalGeneration="true" ShowTotalHSL="false" ShowRemainingCapacity="false" ShowTotalLoad="true" GenerationColor="Cyan" LoadColor="Thistle" ShowSubstations="Units" />
+    <Overall Name="Overall" Contour="BusVoltage" SystemValueCount="3600" ContourBrightness="1200" ContourThreshold="2" FlowInterval="100" StationNames="10" LineFlows="8" LineText="13" StationMW="12" DisplayCounties="true" DisplayStateBorder="true" FPS="false" UseLongNames="true" SmoothingMode="AntiAlias" MapTileCache="C:\Users\Michael\Desktop\MM Tiles"/>    
+    <GenerationType Name="Hydro" EMSName="HYDR" Physical="true"/>
+    <GenerationType Name="Nuclear" EMSName="NUCL" Physical="true"/>
+    <GenerationType Name="Thermal" EMSName="FOSS" Physical="true"/>
+    <GenerationType Name="Wind" EMSName="WIND" Physical="true"/>
+    <GenerationType Name="Steam" EMSName="STM" Physical="true"/>
+    <GenerationType Name="Turbine" EMSName="GT" Physical="true"/>
+    <GenerationType Name="Logical" EMSName="LOG" Physical="false"/>
+    <GenerationType Name="CombinedCyclePlant" EMSName="COGN" Physical="false"/>
+    <GenerationType Name="TotalGeneration" EMSName="TOTL" Physical="false"/>
+    <StateBorder ForeColor="White" Width="1" Blink="false" />
+    <CountyBorder ForeColor="#191919" Width="1" Blink="false" />
+    <Violation Name="BasecaseBranch"         ViolationIndex="0"  Permitted="true"  Priority="3" Acronym="BB" ForeColor="Orange" Width="3" Blink="true" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="BasecaseHighVoltage"    ViolationIndex="1"  Permitted="true"  Priority="3" Acronym="BH" ForeColor="Orange" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="BasecaseLowVoltage"     ViolationIndex="2"  Permitted="true"  Priority="3" Acronym="BL" ForeColor="Orange" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ContingencyBranch"      ViolationIndex="3"  Permitted="true"  Priority="4" Acronym="CB" ForeColor="Yellow" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ContingencyHighVoltage" ViolationIndex="4"  Permitted="true"  Priority="4" Acronym="CH" ForeColor="Yellow" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ContingencyLowVoltage"  ViolationIndex="5"  Permitted="true"  Priority="4" Acronym="CL" ForeColor="Yellow" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="UndocumentedOutage"     ViolationIndex="6"  Permitted="true"  Priority="1" Acronym="UO" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ForcedOutage"           ViolationIndex="7"  Permitted="true"  Priority="2" Acronym="fo" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ForcedExtension"        ViolationIndex="8"  Permitted="true"  Priority="2" Acronym="fe" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="UnavoidableExtension"   ViolationIndex="9"  Permitted="true"  Priority="2" Acronym="ue" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="true" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="PlannedOutage"          ViolationIndex="10" Permitted="true"  Priority="5" Acronym="po" ForeColor="Lavender" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="NormalOpenEvent"        ViolationIndex="11" Permitted="true"  Priority="5" Acronym="no" ForeColor="Lavender" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="UserAction"             ViolationIndex="12" Permitted="true"  Priority="6" Acronym="ua" ForeColor="Lavender" Width="1" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />    
+    <WeatherStations Name="WeatherStations" URL="http://api.wunderground.com/auto/wui/geo/GeoLookupXML/index.xml?query=" />
+    <WeatherStationDetail Name="WeatherStationDetail" URL="http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=" />
+    <WeatherStationAlerts Name="WeatherStationAlerts" URL="http://api.wunderground.com/auto/wui/geo/AlertsXML/index.xml?query=" />
+    <WeatherStationForecast Name="WeatherStationForecast" URL="http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=" />
+  </DisplayParameters>
+  <Databases>  
+    <Database Name="Historic database" Default="true" Type="MM_Historic_Connector" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=HistoricData.xls;Extended Properties=&quot;Excel 8.0;HDR=YES;&quot;" TagQueryString="SELECT * FROM [Tags$] WHERE Title LIKE ?" ValuesQueryString="SELECT Date, Value FROM [Points$] WHERE TAG=? AND DATE &gt;? AND DATE &lt;?" TagTitleReference="Title" TagDescriptionReference="Description" PointTagReference="Tag" PointValueReference="Value" PointDateReference="Date"/>    
+    <MMServer Default="true" Type="MM_Server_Connector" Name="MM Server Test">
+      <Connection Primary="true" Target="localhost" Port="8000"/>
+      <Connection Primary="false" Target="10.5.2.114" Port="8000"/>
+      <DataSource Default="true" Application="StateEstimator" Database="State Estimator" Family="EMS" Name="State Estimator" Telemetry="true" Estimates="true" BackColor="Blue" ForeColor="White"/>
+      <DataSource                Application="StudySystem" Database="State Estimator" Family="EMS" Name="Study Network" Telemetry="false " Estimates="true" BackColor="Pink" ForeColor="Black"/>
+    </MMServer>
+    </Databases>
+  <Commands>
+    <!--
+    Commands go here, such as the following example, which would handle a command on a contingency
+    <Command ConnectorType="MM_Server_Connector" TargetType="MM_Contingency" Title="View contingency definition" Command="DisplayContingency({Position})"/>
+    -->
+    </Commands>
+  <GeneralConfig>
+    <Config InternalOneLines="false" ExternalOneLines="true" IslandDisplay="true" HistoricDisplays="true" />    
+  </GeneralConfig>
+  <Processes>
+    <!--
+    
+    Here one can track the processes and the components underneath. For example (note the Zonal attribute is depreciated):
+    <Application Name="EMS" Connector="EMS_Connector">
+      <Category Name="Frequency">
+        <Process Name="[Process Name]"  Application="[App name]" Database="[Db name]" Record="SystemWide" Key="SystemWide=ERCOT" Field="[FieldName]" Zonal="false"/>
+      </Category>
+      <Category Name="Transmission">
+        <Process Name="State Estimator" Application="StateEstimator" Database="State Estimator" Record="SystemWide" Key="SystemWide=SystemWide Key" Field="LastSERun" Zonal="false"/>
+      </Category>
+    </Application>
+    
+    -->
+  </Processes>
+  <OneLineData ServerType="EMS">
+    <ElementType Name="EndCap" Acronym="Ec" CIMName="EndCap"/>
+    <ElementType Name="StaticVarCompensator" Acronym="SVS" CIMName="StaticVarCompensator">
+      <!-- Here are the data locators and control panels associated with a one-line element. Note at present, because of the way they're architected, a control panel for a component can only send commands back to the core system/application from which the data points are from.
+      For example:
+      <DataLocator Connector="EMS" Database="State Estimator" Values="ST={Station},SVS={Name}" TableName="SVS">
+        <DatabaseLinkage Category="Identity" Name="TEID" ColumnName="TEID" OneLine="true" VarType="MM_Element"/>
+        <DatabaseLinkage Category="Identity" Name="Substation" ColumnName="P__KV>P__ST>ID" OneLine="true" VarType="string"/>
+        <DatabaseLinkage Category="Identity" Name="Name" ColumnName="ID" OneLine="true" VarType="string"/>
+        <DatabaseLinkage Category="Status" Name="MVAR (Est)" ColumnName="R" OneLine="true" VarType="float"/>
+        <ControlPanel Title="SVS Control Panel">
+          <DataSource Name="Subscript" ColumnName="[KeyIndex]" VarType="int" />
+          <DataSource Name="Name" ColumnName="ID" VarType="string" />
+          <DataSource Name="Substation" ColumnName="P__KV&gt;P__ST&gt;ID" VarType="string" />
+          <DataSource Name="AVR" ColumnName="AVR" VarType="boolean" />
+          <DataSource Name="RegND" ColumnName="REG__ND" VarType="int" />
+          <DataSource Name="RemoveEnabled" ColumnName="RMVENABL" VarType="boolean" />
+          <DataSource Name="Removed" ColumnName="REMOVE" VarType="boolean" />
+          <DataSource Name="ManTarget" ColumnName="ManTarget" VarType="boolean" />
+          <DataSource Name="DISTARG" ColumnName="DISTARG" VarType="float" />
+          <DataSource Name="MVAR" ColumnName="R" VarType="float" />
+          <DataSource Name="NominalMVAR" ColumnName="NominalMVAR" VarType="float" />
+          <Label Text="Substation:" Location="15,15" Font="Arial,10" />
+          <Label Text="Name:" Location="15,35" Font="Arial,10" />
+          <Label DataSource="Substation" Location="70,15" Font="Arial,10" />
+          <Label DataSource="Name" Location="70,35" Font="Arial,10" />
+          <Label Text="AVR Control:" Location="15,55" Font="Arial,10" />
+          <CheckBox Location="115,55" DataSource="AVR" OnClick="ToggleBoolean(AVR/AVR)" Font="Arial,10" Text="" />
+          <TextBox Bounds="280,55,50,20" Editable="!AVR" DataSource="NominalMVAR" />
+          <Label Text="MVAR Setting" Location="175,55" Font="Arial,10" />
+          <Label Text="MVAR Output" Location="175,80" Font="Arial,10" />
+          <Label DataSource="MVAR" Location="280,80" Font="Arial,10" />
+          <Label Text="Removed:" Location="240,10" Font="Arial,10" />
+          <CheckBox Location="315,10" DataSource="Removed" OnClick="ToggleBoolean(REMOVE/Removed)" Font="Arial,10" Text="" />
+          <Label Text="Specify Regulation Target:" Location="15,125" Font="Arial,10" />
+          <CheckBox Location="175,105" DataSource="ManTarget" OnClick="ToggleBoolean(ManTarget/ManTarget)" Font="Arial,10" Text="" />
+          <Label Text="Regulation Target (KV):" Location="15,105" Font="Arial,10" />
+          <TextBox Bounds="195,125,60,20" Editable="ManTarget" DataSource="DISTARG" />
+        </ControlPanel>
+      </DataLocator>
+      -->
+    </ElementType>
+    <ElementType Name="Load" Acronym="Ld" CIMName="CustomerLoad">
+    </ElementType>
+    <ElementType Name="LaaR" Acronym="Ld" CIMName="CustomerLoad">
+    </ElementType>
+    <ElementType Name="Unit" Acronym="Un" CIMName="SynchronousMachine">
+    </ElementType>
+    <ElementType Name="Capacitor" Acronym="Cp" CIMName="ShuntCompensator" CIMParameter="NominalMVAR&gt;0">
+    </ElementType>
+    <ElementType Name="Reactor" Acronym="Rc" CIMName="ShuntCompensator" CIMParameter="NominalMVAR&lt;0">
+    </ElementType>
+    <ElementType Name="Breaker" Acronym="Cb" CIMName="Breaker">
+    </ElementType>
+    <ElementType Name="Switch" Acronym="Sw" CIMName="Disconnector">
+    </ElementType>
+    <ElementType Name="Node" Acronym="Node" CIMName="Nd">
+    </ElementType>
+    <ElementType Name="Transformer" Acronym="XF" CIMName="PowerTransformer">
+    </ElementType>
+    <ElementType Name="TransformerWinding" Acronym="XW" CIMName="TransformerWinding">
+    </ElementType>
+    <ElementType Name="Line" Acronym="Ln" CIMName="Line">
+    </ElementType>
+    <ElementType Name="SeriesCompensator" Acronym="Sc" CIMName="SeriesCompensator">
+    </ElementType>
+  </OneLineData>
+</Configuration>
