@@ -1,0 +1,83 @@
+© 2009 - 2013, Michael E. Legatt, Ph.D., 
+Electric Reliability Council of Texas (ERCOT)
+
+The Macomber Map provides high to low-level 
+situation awareness, pulling data from a variety 
+of systems, integrated around a CIM model.
+
+The Macomber Map is named to honor the memory of 
+Gary Macomber, Ph.D., who initated the research 
+that lead to this product's development.
+
+Original development:
+Developer and architect: Michael E. Legatt, Ph.D.
+Director, EMMS Development: Diran Obadina, Ph.D.
+Manager, Nodal EMS Development: Murali Boddeti, M.Sc.
+Usability co-architect: Marianne Clark, Ph.D.
+
+Testers:
+Michael E. Legatt
+Marianne Clark
+Vasiliy Astapov
+Weihui Lu
+Jimmy Hartmann
+Bill Blevins
+Venkatakishore Rachamalla
+Jerry Neef
+
+Primary Consultants:
+Joel Koepke, NMMS
+John Moseley, NMMS
+Shawn Catoe, Enterprise Architecture
+
+Special Thanks:
+John Adams
+Vasiliy Astapov
+Manuel Atanacio
+Boza Avramovic
+Brian Barcalow
+Murali Boddeti
+Arthur Boecker
+Bill Blevins
+Jim Bowles
+Brian Cook
+Vinod Damaraju
+Chris Davis
+Estrellita Doolin
+David Forfia
+Colleen Frosch
+Weihui Fu
+David Hackett
+Jimmy Hartmann
+Kate Horne
+Richard Howard
+Manho Joung
+Bob Kahn
+Venkata Kanduri
+Joel Koepke
+Caroline Legatt
+Shelly Levitt
+Cagle Lowe
+Gene Lowrie
+Martha Macomber
+Sarah Macomber
+William Malcolm
+John Moseley
+Jerry Neef
+Diran Obadina
+Dan Roehl
+Kent Saathoff
+Martha Siebold
+Sinoun Staples
+Chelsea Valentine
+Steve White
+
+ERCOT's control room operators
+ERCOT's operations engineers
+ERCOT's production support
+
+And most of all, Gary Macomber.
+
+This product, including all research and intellectual 
+property, is the property of the Electric Reliability 
+Council of Texas. All Rights Reserved.

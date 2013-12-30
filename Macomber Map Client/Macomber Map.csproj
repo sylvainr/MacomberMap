@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F0580CA-C09B-49AB-85DD-18C136C6218A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Macomber_Map</RootNamespace>
+    <AssemblyName>Macomber Map</AssemblyName>
+    <ApplicationIcon>ErcotRound.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>3CAC19BBB33FF18475C1D2D0D74A225F23BD2BC2</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Macomber Map_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <StartupObject>
+    </StartupObject>
+    <TargetZone>LocalIntranet</TargetZone>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>\\cpwp004d\emms dev\software\Macomber Map\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Macomber Map</ProductName>
+    <PublisherName>Electric Reliability Council of Texas</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LimitedCoordinates, WebFG35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;LimitedCoordinates, WebFG35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LimitedCoordinates, WebFG35</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\x86\Debug\Macomber Map.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;LimitedCoordinates, WebFG35</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LimitedCoordinates, WebFG35</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;LimitedCoordinates, WebFG35</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\System.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Support Libraries\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Connections\Generic\MM_Command.cs" />
+    <Compile Include="Data Connections\Generic\MM_DataConnector.cs" />
+    <Compile Include="Data Connections\Generic\MM_DataQuery.cs" />
+    <Compile Include="Data Connections\Generic\MM_Data_Source.cs" />
+    <Compile Include="Data Connections\Generic\MM_Query_Configuration.cs" />
+    <Compile Include="Data Connections\Historic\MM_Historic_Connector.cs" />
+    <Compile Include="Data Connections\Historic\MM_Historic_DataPoint.cs" />
+    <Compile Include="Data Connections\Historic\MM_Historic_DataValue.cs" />
+    <Compile Include="Data Connections\MM_Pipe.cs" />
+    <Compile Include="Data Connections\MM_Server\MM_Server_Connector.cs" />
+    <Compile Include="Data Connections\MM_Server\MM_Server_ValueUpdate.cs" />
+    <Compile Include="Data Connections\MM_Type_Finder.cs" />
+    <Compile Include="Data Elements\Positional\MM_Coordinate_Suggestion.cs" />
+    <Compile Include="Data Elements\Display\MM_MapTile.cs" />
+    <Compile Include="Data Elements\Training\MM_Level.cs" />
+    <Compile Include="Data Elements\Training\MM_Training.cs" />
+    <Compile Include="Data Elements\Violations\MM_AlarmViolation_Type.cs" />
+    <Compile Include="Data Elements\Blackstart\MM_Blackstart_Corridor.cs" />
+    <Compile Include="Data Elements\Blackstart\MM_Blackstart_Corridor_Element.cs" />
+    <Compile Include="Data Elements\Blackstart\MM_Blackstart_Corridor_Target.cs" />
+    <Compile Include="Data Elements\Physical\MM_Breaker_Switch.cs" />
+    <Compile Include="Data Elements\Physical\MM_BusbarSection.cs" />
+    <Compile Include="Data Elements\Physical\MM_CombinedCycleConfiguration.cs" />
+    <Compile Include="Data Elements\MM_Communication_Linkage.cs" />
+    <Compile Include="Misc. Components\MM_Converter.cs" />
+    <Compile Include="Data Elements\Positional\MM_Coordinates.cs" />
+    <Compile Include="Data Elements\Physical\MM_DCTie.cs" />
+    <Compile Include="Data Elements\Physical\MM_EPSMeter.cs" />
+    <Compile Include="Data Elements\Physical\MM_Island.cs" />
+    <Compile Include="Data Elements\MM_Limit.cs" />
+    <Compile Include="Data Elements\Physical\MM_LogicalUnit.cs" />
+    <Compile Include="Data Elements\Physical\MM_Node.cs" />
+    <Compile Include="Data Elements\Physical\MM_PricingVector.cs" />
+    <Compile Include="Data Elements\Physical\MM_RemedialActionScheme.cs" />
+    <Compile Include="Data Elements\MM_Serializable.cs" />
+    <Compile Include="Data Elements\Physical\MM_StaticVarCompensator.cs" />
+    <Compile Include="Data Elements\Physical\MM_TransformerWinding.cs" />
+    <Compile Include="Misc. Components\ProcessDetails.cs" />
+    <Compile Include="ModelRandomizer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Communication_Status.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Communication_Status.Designer.cs">
+      <DependentUpon>Communication_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Connectivity_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Connectivity_Viewer.designer.cs">
+      <DependentUpon>Connectivity_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Coordinate_Delta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Coordinate_Delta.Designer.cs">
+      <DependentUpon>MM_Coordinate_Delta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Elements\Display\MM_DisplayParameter.cs" />
+    <Compile Include="Data Elements\Physical\MM_Element_Type.cs" />
+    <Compile Include="Data Elements\Physical\MM_Generation_Type.cs" />
+    <Compile Include="Data Elements\Physical\MM_Load.cs" />
+    <Compile Include="Data Elements\Display\MM_Note.cs" />
+    <Compile Include="Data Elements\MM_Permissions.cs" />
+    <Compile Include="Data Elements\MM_Process.cs" />
+    <Compile Include="Data Elements\MM_Repository.cs" />
+    <Compile Include="Data Connections\Data_Integration.cs" />
+    <Compile Include="Data Elements\Violations\MM_AlarmViolation.cs" />
+    <Compile Include="Data Elements\Physical\MM_Company.cs" />
+    <Compile Include="Data Elements\Physical\MM_Contingency.cs" />
+    <Compile Include="Data Elements\Physical\MM_Electrical_Bus.cs" />
+    <Compile Include="Data Elements\Physical\MM_Element.cs" />
+    <Compile Include="Data Elements\Physical\MM_KVLevel.cs" />
+    <Compile Include="Data Elements\Physical\MM_Line.cs" />
+    <Compile Include="Data Elements\Positional\MM_Boundary.cs" />
+    <Compile Include="Data Elements\Physical\MM_ScheduledOutage.cs" />
+    <Compile Include="Data Elements\Physical\MM_ShuntCompensator.cs" />
+    <Compile Include="Data Elements\Physical\MM_Substation.cs" />
+    <Compile Include="Data Elements\Display\MM_Substation_Display.cs" />
+    <Compile Include="Data Elements\Physical\MM_Transformer.cs" />
+    <Compile Include="Data Elements\Physical\MM_Unit.cs" />
+    <Compile Include="Data Elements\Display\MM_Display.cs" />
+    <Compile Include="Data Elements\Display\MM_Display_View.cs" />
+    <Compile Include="Data Elements\Positional\MM_Zone.cs" />
+    <Compile Include="Data Elements\Weather\MM_WeatherStation.cs" />
+    <Compile Include="Data Elements\Weather\MM_WeatherStationCollection.cs" />
+    <Compile Include="User Interface Components\MacomberMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MacomberMap.Designer.cs">
+      <DependentUpon>MacomberMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc. Components\AnimatedGifEncoder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="User Interface Components\Connectivity_Viewer.resx">
+      <DependentUpon>Connectivity_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MacomberMap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MacomberMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\About_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Communication_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Communication_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Constraint_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Constraint_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Display_Options.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Display_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Form_Builder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Builder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Key_Indicators.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Key_Indicators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Log_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Log_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Mini_Map.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Mini_Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Data_Entry.resx">
+      <DependentUpon>MM_Data_Entry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\OneLines\OneLine_Viewer.resx">
+      <DependentUpon>OneLine_Viewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Process_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Process_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Search_Results.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Search_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Violation_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Violation_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HistoricData.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="User Interface Components\About_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\About_Form.Designer.cs">
+      <DependentUpon>About_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Communication_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Communication_Viewer.Designer.cs">
+      <DependentUpon>Communication_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Constraint_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Constraint_Viewer.Designer.cs">
+      <DependentUpon>Constraint_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\DataSet_Base.cs" />
+    <Compile Include="User Interface Components\Data_Table.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Display_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Display_Options.Designer.cs">
+      <DependentUpon>Display_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Element_Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Form_Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Form_Builder.Designer.cs">
+      <DependentUpon>Form_Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Historical_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Historical_Viewer.Designer.cs">
+      <DependentUpon>Historical_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Historical_Viewer_Date_SelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Historical_Viewer_Date_SelectionForm.Designer.cs">
+      <DependentUpon>Historical_Viewer_Date_SelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Key_Indicator_Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Blackstart_Display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Blackstart_Display.Designer.cs">
+      <DependentUpon>MM_Blackstart_Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Data_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Data_Entry.Designer.cs">
+      <DependentUpon>MM_Data_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Excel_Exporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Excel_Exporter.Designer.cs">
+      <DependentUpon>MM_Excel_Exporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Form.Designer.cs">
+      <DependentUpon>MM_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Game.Designer.cs">
+      <DependentUpon>MM_Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Island_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Island_View.Designer.cs">
+      <DependentUpon>MM_Island_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Model_Selector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Model_Selector.Designer.cs">
+      <DependentUpon>MM_Model_Selector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Popup_Menu_ValueItems.cs" />
+    <Compile Include="User Interface Components\OneLines\MM_Value_Locator.cs" />
+    <Compile Include="User Interface Components\Overrides\MM_SearchBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Overrides\MM_TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_ControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_ControlPanel.Designer.cs">
+      <DependentUpon>MM_ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_Node.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_PokePoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_PricingVector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_Synchroscope.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_Synchroscope.Designer.cs">
+      <DependentUpon>MM_OneLine_Synchroscope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_Transformer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Popup_Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\MM_Reserve.cs" />
+    <Compile Include="User Interface Components\NetworkMap\GDIPlus\MM_GDI_County.cs" />
+    <Compile Include="User Interface Components\NetworkMap\GDIPlus\MM_GDI_Line.cs" />
+    <Compile Include="User Interface Components\NetworkMap\GDIPlus\MM_GDI_MultipleLine.cs" />
+    <Compile Include="User Interface Components\NetworkMap\GDIPlus\MM_GDI_Substation.cs" />
+    <Compile Include="User Interface Components\NetworkMap\GDIPlus\Network_Map_GDI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\NetworkMap\GDIPlus\Network_Map_GDI.Designer.cs">
+      <DependentUpon>Network_Map_GDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Key_Indicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Key_Indicators.Designer.cs">
+      <DependentUpon>Key_Indicators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Limit_Reserve_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Log_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Log_Viewer.Designer.cs">
+      <DependentUpon>Log_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Mini_Map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Mini_Map.Designer.cs">
+      <DependentUpon>Mini_Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\NetworkMap\Generic\MM_NetworkMap_FlowPath.cs" />
+    <Compile Include="User Interface Components\NetworkMap\Generic\Network_Map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Note_Writer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Note_Writer.Designer.cs">
+      <DependentUpon>Note_Writer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Note_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Note_Viewer.Designer.cs">
+      <DependentUpon>Note_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\MM_OneLine_TransformerWinding.cs">
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\OneLine_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\OneLines\OneLine_Viewer.Designer.cs">
+      <DependentUpon>OneLine_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Overrides\MM_TabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Process_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Process_Viewer.Designer.cs">
+      <DependentUpon>Process_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Property_Page.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\SearchResultsHelper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Search_Results.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Startup_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Startup_Form.Designer.cs">
+      <DependentUpon>Startup_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\UserInteraction_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\UserInteraction_Viewer.Designer.cs">
+      <DependentUpon>UserInteraction_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface Components\Violation_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interface Components\Violation_Viewer.Designer.cs">
+      <DependentUpon>Violation_Viewer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acknowledgements.txt" />
+    <EmbeddedResource Include="User Interface Components\Communication_Status.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Communication_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\ErrorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Historical_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Historical_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Historical_Viewer_Date_SelectionForm.resx">
+      <DependentUpon>Historical_Viewer_Date_SelectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Limit_Reserve_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Limit_Reserve_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Blackstart_Display.resx">
+      <DependentUpon>MM_Blackstart_Display.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Coordinate_Delta.resx">
+      <DependentUpon>MM_Coordinate_Delta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Excel_Exporter.resx">
+      <DependentUpon>MM_Excel_Exporter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Form.resx">
+      <DependentUpon>MM_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Game.resx">
+      <DependentUpon>MM_Game.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Island_View.resx">
+      <DependentUpon>MM_Island_View.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\MM_Model_Selector.resx">
+      <DependentUpon>MM_Model_Selector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Note_Writer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Note_Writer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Note_Viewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Note_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\OneLines\MM_ControlPanel.resx">
+      <DependentUpon>MM_ControlPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\OneLines\MM_OneLine_Synchroscope.resx">
+      <DependentUpon>MM_OneLine_Synchroscope.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\Startup_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Startup_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface Components\UserInteraction_Viewer.resx">
+      <DependentUpon>UserInteraction_Viewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="ErcotRound.ico" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <Content Include="MacomberMapConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\Search.bmp" />
+    <None Include="Resources\ERCOT cmyk-01.png" />
+    <None Include="Resources\Excel.bmp" />
+    <None Include="Resources\StopHS2.png" />
+    <None Include="Resources\PauseHS.png" />
+    <None Include="Resources\RefreshDocViewHS.png" />
+    <None Include="Resources\PlayHS.png" />
+    <None Include="Resources\StopHS1.png" />
+    <None Include="Resources\FillRightHS.png" />
+    <None Include="Resources\ERCOTLogo_Small_Blue.bmp" />
+    <None Include="Resources\logo_trans.bmp" />
+    <None Include="Resources\logo_trans.gif" />
+    <None Include="Resources\NoteHS.png" />
+    <None Include="Resources\openHS.png" />
+    <None Include="Resources\PropertiesHS.png" />
+    <None Include="Resources\StopHS.png" />
+    <None Include="Resources\StopHS.bmp" />
+    <None Include="Resources\SearchWebHS.png" />
+    <None Include="Resources\OneLine.bmp" />
+    <None Include="Resources\PublishToWebHS.png" />
+    <None Include="Resources\FindNextHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MM_Communication\MM_Communication.csproj">
+      <Project>{F8BD1BB9-4344-4739-A565-B561B7BDFFA9}</Project>
+      <Name>MM_Communication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User Interface Components\NetworkMap\OpenGL\" />
+    <Folder Include="User Interface Components\NetworkMap\WPF\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)\VersionIncrementer.exe" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
