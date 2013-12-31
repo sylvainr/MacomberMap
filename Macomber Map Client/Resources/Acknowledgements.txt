@@ -1,4 +1,4 @@
-© 2009 - 2013, Michael E. Legatt, Ph.D., 
+Copyright © 2009 - 2013, Michael E. Legatt, Ph.D., 
 Electric Reliability Council of Texas, Inc. (ERCOT)
 
 The Macomber Map® provides high to low-level 
