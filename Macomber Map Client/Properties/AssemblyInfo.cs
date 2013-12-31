@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Electric Reliability Council of Texas")]
 [assembly: AssemblyProduct("Macomber Map®")]
-[assembly: AssemblyCopyright("Copyright © 2009 Michael E. Legatt, Ph.D., Electric Reliability Council of Texas (ERCOT)")]
+[assembly: AssemblyCopyright("Copyright © 2009-2013 Michael E. Legatt, Ph.D., Electric Reliability Council of Texas (ERCOT)")]
 [assembly: AssemblyTrademark("Macomber Map (R)")]
 [assembly: AssemblyCulture("")]
 
@@ -30,6 +30,6 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 
-[assembly: AssemblyVersion("4.0.2.1802")]
-[assembly: AssemblyFileVersion("4.0.2.1802")]
+[assembly: AssemblyVersion("4.0.2.1804")]
+[assembly: AssemblyFileVersion("4.0.2.1804")]
 
