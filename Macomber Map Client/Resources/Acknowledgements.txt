@@ -1,7 +1,7 @@
 © 2009 - 2013, Michael E. Legatt, Ph.D., 
-Electric Reliability Council of Texas (ERCOT)
+Electric Reliability Council of Texas, Inc. (ERCOT)
 
-The Macomber Map provides high to low-level 
+The Macomber Map® provides high to low-level 
 situation awareness, pulling data from a variety 
 of systems, integrated around a CIM model.
 
@@ -9,11 +9,30 @@ The Macomber Map is named to honor the memory of
 Gary Macomber, Ph.D., who initated the research 
 that lead to this product's development.
 
-Original development:
+Original development (2008-2011):
 Developer and architect: Michael E. Legatt, Ph.D.
-Director, EMMS Development: Diran Obadina, Ph.D.
-Manager, Nodal EMS Development: Murali Boddeti, M.Sc.
+Director, Applications Services: Jerry Dreyer
+Manager, EMMS Development: Diran Obadina, Ph.D.
+Manager, Enterprise Architecture: Brian Cook
+Supervisor, Nodal EMS Development: Murali Boddeti, M.Sc.
 Usability co-architect: Marianne Clark, Ph.D.
+Enterprise architect: Shawn Catoe
+Project manager: Gokal Raina
+Vice President of Grid Planning and Operations: Kent Saathoff
+Chief Information Officer: Jerry Dreyer, Richard Morgan
+Chief Executive Officer: Trip Doggett, Bob Kahn
+
+Macomber Map Project update (2012-2013):
+Principal lead and architect: Michael E. Legatt, Ph.D.
+Business owner: Bill Blevins
+Lead developer, EMMS Development: Mark Nataros
+EMMS Developers: Helen Li, Ph.D., Yong Ma, Ph.D.
+Project managers: Charles Lee, Gokal Raina
+Manager, EMMS Development: Richard Howard
+Director, Applications Services: Steven Daniels
+Vice President of Grid Planning and Operations: Ken McIntyre, Kent Saathoff
+Chief Information Officer: Jerry Dreyer
+Chief Executive Officer: Trip Doggett
 
 Testers:
 Michael E. Legatt
@@ -40,13 +59,18 @@ Murali Boddeti
 Arthur Boecker
 Bill Blevins
 Jim Bowles
+Shawn Catoe
+Candy Clark
+Marianne Clark
 Brian Cook
 Vinod Damaraju
 Chris Davis
+Trip Doggett
 Estrellita Doolin
 David Forfia
 Colleen Frosch
 Weihui Fu
+Theresa Gage
 David Hackett
 Jimmy Hartmann
 Kate Horne
@@ -55,18 +79,28 @@ Manho Joung
 Bob Kahn
 Venkata Kanduri
 Joel Koepke
+Caleb Legatt
 Caroline Legatt
+Eliana Legatt
+Zachary Legatt
 Shelly Levitt
 Cagle Lowe
 Gene Lowrie
 Martha Macomber
 Sarah Macomber
+Bill Magness
 William Malcolm
+Juliana Morehead
 John Moseley
 Jerry Neef
 Diran Obadina
-Dan Roehl
+Danya Pysh
+Venkatakishore Rachamalla
+Gokal Raina
+Woody Rickerson
+Dottie Roark
 Kent Saathoff
+Robbie Searcy
 Martha Siebold
 Sinoun Staples
 Chelsea Valentine
