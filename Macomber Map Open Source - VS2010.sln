@@ -6,6 +6,18 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macomber Map", "Macomber Map Client\Macomber Map.csproj", "{3F0580CA-C09B-49AB-85DD-18C136C6218A}"
 EndProject
 Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs34
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MM_Communication\\MM_Communication.csproj
+		SccProjectName1 = MM_Communication
+		SccLocalPath1 = MM_Communication
+		SccProjectUniqueName2 = Macomber\u0020Map\u0020Client\\Macomber\u0020Map.csproj
+		SccProjectName2 = Macomber\u0020Map\u0020Client
+		SccLocalPath2 = Macomber\u0020Map\u0020Client
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
