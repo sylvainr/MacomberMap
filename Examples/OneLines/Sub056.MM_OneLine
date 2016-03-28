@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="719713" BaseElement.ConnectedLines="" BaseElement.County="Floyd" BaseElement.DisplayName="Sub056" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="34.071515" BaseElement.LatLong="34.071515,-101.30315" BaseElement.Longitude="-101.30315" BaseElement.Operator="402004" BaseElement.Owner="680902" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub056" BaseElement.LongName="Sub056">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch056" rdfID="065870e4-79a1-4f4c-b8a3-7cffbf43e4ea" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch056" BaseElement.TEID="326839" BaseElement.Owner="770538" BaseElement.Operator="770538" BaseElement.Substation="719713" BaseElement.SubLongName="Sub056" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub056">
+		<Descriptor DescriptorText="Switch056" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch056" rdfID="065870e4-79a1-4f4c-b8a3-7cffbf43e4ea" BaseElement.TEID="326839" BaseElement.ElemType="Breaker" BaseElement.Owner="770538" BaseElement.Operator="770538" BaseElement.KVLevel="69 KV" BaseElement.Substation="719713" BaseElement.SubName="Switch056" BaseElement.SubLongName="Switch056" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch056"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line035" rdfID="33050418-5842-429a-9206-df1c4ed0f20a" BaseElement.ElemType="Line" BaseElement.KVLevel="69 KV" BaseElement.Name="Line035" BaseElement.TEID="518258" BaseElement.Owner="680902" BaseElement.Operator="402004">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line035" rdfID="33050418-5842-429a-9206-df1c4ed0f20a" BaseElement.TEID="518258" BaseElement.ElemType="Line" BaseElement.Owner="680902" BaseElement.Operator="402004" BaseElement.KVLevel="69 KV" BaseElement.Name="Line035" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,268,8" Orientation="Vertical" Text="Bus080" rdfID="302bf4ee-1f00-4897-9ab7-06475cfee9bc" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus080" BaseElement.TEID="204918" BaseElement.Owner="680902" BaseElement.Operator="919908" BaseElement.Substation="719713" BaseElement.SubLongName="Sub056" PUNElement="False" BaseElement.SubName="Sub056">
+		<Switch rdfID="d1e25588-464e-42a7-b630-8fe9e58e6b99" TEID="326839"/>
+		<Line rdfID="33050418-5842-429a-9206-df1c4ed0f20a" TEID="518258"/>
+	</Node>
+</Nodes>
+</One_Line>

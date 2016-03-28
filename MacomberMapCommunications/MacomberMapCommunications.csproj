@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B75C9805-1C7D-4B32-8A84-D0AC41D7D57A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MacomberMapCommunications</RootNamespace>
+    <AssemblyName>MacomberMapCommunications</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MacomberMapCommunications.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\CompanyIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\MacomberMapCommunications.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DoNotRemoveAttribute.cs" />
+    <Compile Include="Attributes\FileNameAttribute.cs" />
+    <Compile Include="Attributes\RemovalCommandAttribute.cs" />
+    <Compile Include="Attributes\UpdateCommandAttribute.cs" />
+    <Compile Include="Attributes\UpdateParametersAttribute.cs" />
+    <Compile Include="Dapper\DbFactoryExtensions.cs" />
+    <Compile Include="Dapper\SqlBuilder.cs" />
+    <Compile Include="Dapper\SqlMapper.cs" />
+    <Compile Include="Dapper\SqlMapperExtensions.cs" />
+    <Compile Include="Extensions\ByteArrayExtensions.cs" />
+    <Compile Include="Extensions\Copy.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\MM_Sortable_BindingList.cs" />
+    <Compile Include="Extensions\ParallelUtils.cs" />
+    <Compile Include="Messages\Communications\MM_Coordinate_Suggestion.cs" />
+    <Compile Include="Messages\Display\MM_Display_Configuration.cs" />
+    <Compile Include="Messages\EMS\MM_Analog_Measurement.cs" />
+    <Compile Include="Messages\EMS\MM_Basecase_Violation_Data.cs" />
+    <Compile Include="Messages\EMS\MM_BreakerSwitch_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Bus_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Chart_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Contingency_Violation_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Flowgate_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Tie_Data.cs" />
+    <Compile Include="Messages\EMS\MM_EMS_Command.cs" />
+    <Compile Include="Messages\EMS\MM_Interface_Monitoring_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Island_Simulation_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Load_Forecast_Data.cs" />
+    <Compile Include="Messages\EMS\MM_OneLine_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Operatorship_Update.cs" />
+    <Compile Include="Messages\EMS\MM_Outage_Line_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Outage_Transformer_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Outage_Unit_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Scada_Analog.cs" />
+    <Compile Include="Messages\EMS\MM_Scada_Enumerations.cs" />
+    <Compile Include="Messages\EMS\MM_Scada_Status.cs" />
+    <Compile Include="Messages\EMS\MM_ShuntCompensator_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Simulation_Time.cs" />
+    <Compile Include="Messages\EMS\MM_State_Measurement.cs" />
+    <Compile Include="Messages\EMS\MM_StaticVarCompensator_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Synchroscope_Data.cs" />
+    <Compile Include="Messages\EMS\MM_SystemWide_Generation_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Transformer_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Transformer_PhaseShifter_Data.cs" />
+    <Compile Include="Messages\EMS\MM_UnitType_Generation_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Unit_Control_Status.cs" />
+    <Compile Include="Messages\EMS\MM_Unit_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Unit_Gen_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Unit_Simulation_Data.cs" />
+    <Compile Include="Messages\EMS\MM_ZeroImpedanceBridge_Data.cs" />
+    <Compile Include="Messages\MM_Client_Status.cs" />
+    <Compile Include="Messages\MM_Comparable.cs" />
+    <Compile Include="Messages\MM_Database_Model.cs" />
+    <Compile Include="Messages\MM_Data_Collection.cs" />
+    <Compile Include="Messages\MM_Historic_Query.cs" />
+    <Compile Include="Messages\EMS\MM_Island_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Line_Data.cs" />
+    <Compile Include="Messages\EMS\MM_Load_Data.cs" />
+    <Compile Include="Messages\MM_LMP_Data.cs" />
+    <Compile Include="Messages\MM_Note.cs" />
+    <Compile Include="Messages\MM_Savecase.cs" />
+    <Compile Include="Messages\MM_Training_Level.cs" />
+    <Compile Include="MM_System_Profiling.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Attributes\RetrievalCommandAttribute.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WCF\IMM_Base_Types.cs" />
+    <Compile Include="WCF\IMM_ConversationMessage_Types.cs" />
+    <Compile Include="WCF\IMM_Conversation_Types.cs" />
+    <Compile Include="WCF\IMM_EMS_Types.cs" />
+    <Compile Include="WCF\IMM_Historic_Types.cs" />
+    <Compile Include="WCF\IMM_Login_Types.cs" />
+    <Compile Include="WCF\IMM_Database_Types.cs" />
+    <Compile Include="WCF\IMM_WCF_Interface.cs" />
+    <Compile Include="WCF\MM_Binding_Configuration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Macomber Map Open Source License - MIT.txt" />
+    <None Include="Resources\CompanyIcon.ico" />
+    <None Include="Resources\CompanyLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)VersionIncrementer.exe" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="154180" BaseElement.ConnectedLines="" BaseElement.County="Coryell" BaseElement.DisplayName="Sub096" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="31.390195" BaseElement.LatLong="31.390195,-97.79931" BaseElement.Longitude="-97.79931" BaseElement.Operator="21073" BaseElement.Owner="402004" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub096" BaseElement.LongName="Sub096">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch096" rdfID="b0a23315-f6bd-469d-aaeb-41d7bdfe8482" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch096" BaseElement.TEID="507347" BaseElement.Owner="94017" BaseElement.Operator="260493" BaseElement.Substation="154180" BaseElement.SubLongName="Sub096" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub096">
+		<Descriptor DescriptorText="Switch096" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch096" rdfID="b0a23315-f6bd-469d-aaeb-41d7bdfe8482" BaseElement.TEID="507347" BaseElement.ElemType="Breaker" BaseElement.Owner="94017" BaseElement.Operator="260493" BaseElement.KVLevel="69 KV" BaseElement.Substation="154180" BaseElement.SubName="Switch096" BaseElement.SubLongName="Switch096" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch096"/>
+	</Switch>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,172,8" Orientation="Vertical" Text="Bus140" rdfID="6f01dd14-315c-4a86-9105-04ba6dfce78a" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus140" BaseElement.TEID="293633" BaseElement.Owner="680902" BaseElement.Operator="177411" BaseElement.Substation="154180" BaseElement.SubLongName="Sub096" PUNElement="False" BaseElement.SubName="Sub096">
+		<Switch rdfID="3176178b-8334-4e3f-aa0f-327eedb1736d" TEID="507347"/>
+		<Line rdfID="d86f16ec-e146-43d4-8f9d-341e6f6955b7" TEID="202501"/>
+	</Node>
+</Nodes>
+</One_Line>

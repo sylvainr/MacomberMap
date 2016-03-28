@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="570845" BaseElement.ConnectedLines="" BaseElement.County="Jeff Davis" BaseElement.DisplayName="Sub041" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="30.75868" BaseElement.LatLong="30.75868,-104.21" BaseElement.Longitude="-104.21" BaseElement.Operator="260493" BaseElement.Owner="154976" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub041" BaseElement.LongName="Sub041">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker041" rdfID="f786aa10-decb-4af4-9ba5-43cf890df644" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker041" BaseElement.TEID="367893" BaseElement.Owner="998404" BaseElement.Operator="94017" BaseElement.Substation="570845" BaseElement.SubLongName="Sub041" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub041">
+		<Descriptor DescriptorText="Breaker041" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker041" rdfID="f786aa10-decb-4af4-9ba5-43cf890df644" BaseElement.TEID="367893" BaseElement.ElemType="Breaker" BaseElement.Owner="998404" BaseElement.Operator="94017" BaseElement.KVLevel="138 KV" BaseElement.Substation="570845" BaseElement.SubName="Breaker041" BaseElement.SubLongName="Breaker041" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker041"/>
+	</Breaker>
+	<Capacitor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Right" Bounds="180,50,32,25" Visible="true" Text="Cap044" rdfID="9117ca2e-3646-4859-adac-1b92d31dfbf8" BaseElement.ElemType="Capacitor" BaseElement.KVLevel="138 KV" BaseElement.Name="Cap044" BaseElement.TEID="416248" BaseElement.Owner="260493" BaseElement.Operator="402004" BaseElement.Substation="570845" BaseElement.SubLongName="Sub041" PUNElement="False" BaseElement.SubName="Sub041">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="210,50,48,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Cap044" rdfID="9117ca2e-3646-4859-adac-1b92d31dfbf8" BaseElement.TEID="416248" BaseElement.ElemType="Capacitor" BaseElement.Owner="260493" BaseElement.Operator="402004" BaseElement.KVLevel="138 KV" BaseElement.Substation="570845" BaseElement.SubName="Sub041" BaseElement.SubLongName="Sub041" BaseElement.Name="Cap044" />
+	</Capacitor>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,268,8" Orientation="Vertical" Text="Bus060" rdfID="3e398ac0-7c10-4504-8f44-58f39dac5e9a" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus060" BaseElement.TEID="956241" BaseElement.Owner="177411" BaseElement.Operator="402004" BaseElement.Substation="570845" BaseElement.SubLongName="Sub041" PUNElement="False" BaseElement.SubName="Sub041">
+		<Breaker rdfID="14b7a017-91e0-4f7b-982b-563718a6f0fd" TEID="367893"/>
+		<Capacitor rdfID="9117ca2e-3646-4859-adac-1b92d31dfbf8" TEID="416248"/>
+	</Node>
+</Nodes>
+</One_Line>

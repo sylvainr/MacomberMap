@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Configuration>
+  <Permissions ConnectionTimeoutThreshold="15" OTS="true" LineVoltageLimit="95" BusLowLimit="95" BusHighLimit="105" DefaultConnectors="false" ShowViews="true" showRTHist="true" ShowProcesses="true" ShowOwnership="true" ShowDUNS="false" ShowTelephone="false" ShowOneLines="true" ShowNotes="true" ShowPropertyPage="true" ShowViolations="true" ShowDistance="true" ShowWebsite="true" CreateNotes="true" LassoStandard="true" LassoInvisible="true" DisplayICCPISDLinks="true" DisplayMMCommLinks="true" ShowTEIDs="true" SearchAvailable="true" CreateSavecase="true" DisplayProperties="true" AllowModelSwitching="false" ManualDataEntry="true" PlayGame="true"/>
+  <DisplayParameters DefaultName="Voltages">
+    <Displays>
+      <Display Name="One-Line Display" Sources="Contingency,Substation,Line">
+        <Panel Name="Summary" Type="Element_Summary" />
+        <Panel Name="Violations" Type="Violation_Viewer" />
+        <Panel Name="MiniMap" Type="Mini_Map" />
+      </Display>
+    </Displays>
+    <Views>
+      <Category Name="Other View Options">
+        <View Name="Lines/Gen Stn">
+          Overall.MultipleLineWidthAddition=2
+          Substations.ShowSubstations=Units
+          345 KV.Energized.Width=3
+          138 KV.Energized.Width=1
+          69 KV.Energized.Width=1
+          345 KV.ShowEnergized=True
+          345 KV.ShowDeEnergized=True
+          345 KV.ShowPartiallyEnergized=True
+          345 KV.ShowMVA=True
+          138 KV.ShowEnergized=True
+          138 KV.ShowDeEnergized=True
+          138 KV.ShowPartiallyEnergized=True
+          138 KV.ShowMVA=True
+          69 KV.ShowEnergized=True
+          69 KV.ShowDeEnergized=True
+          69 KV.ShowPartiallyEnergized=True
+          69 KV.ShowMVA=True
+          Other KV.ShowEnergized=True
+          Other KV.ShowDeEnergized=True
+          Other KV.ShowPartiallyEnergized=True
+          Other KV.ShowMVA=True
+          DCTie.ShowEnergized=True
+          DCTie.ShowDeEnergized=True
+          DCTie.ShowMVA=True
+          ForcedOutage.Width=7
+          ForcedExtension.Width=7
+          UnavoidableExtension.Width=7
+          BasecaseBranch.Width=7
+          BasecaseBranch.Blink=True
+          BasecaseHighVoltage.Width=7
+          BasecaseHighVoltage.Blink=True
+          BasecaseLowVoltage.Width=7
+          BasecaseLowVoltage.Blink=True
+          ContingencyBranch.Width=7
+          ContingencyBranch.Blink=True
+          ContingencyHighVoltage.Width=7
+          ContingencyHighVoltage.Blink=True
+          ContingencyLowVoltage.Width=7
+          ContingencyLowVoltage.Blink=True
+          PlannedOutage.Width=7
+          PlannedOutage.Blink=True
+        </View>
+        <View Name="Line coloring">
+          Overall.MultipleLineWidthAddition=0
+          345 KV.Energized.Width=1
+          138 KV.Energized.Width=1
+          69 KV.Energized.Width=1
+          345 KV.PartiallyEnergized.Width=1
+          138 KV.PartiallyEnergized.Width=1
+          69 KV.PartiallyEnergized.Width=1
+          345 KV.DeEnergized.Width=1
+          138 KV.DeEnergized.Width=1
+          69 KV.DeEnergized.Width=1
+          Overall.Contour=None
+          Substations.ShowSubstations=None
+          345 KV.ShowEnergized=True
+          345 KV.ShowDeEnergized=True
+          345 KV.ShowPartiallyEnergized=True
+          345 KV.ShowMVA=True
+          138 KV.ShowEnergized=True
+          138 KV.ShowDeEnergized=True
+          138 KV.ShowPartiallyEnergized=True
+          138 KV.ShowMVA=True
+          69 KV.ShowEnergized=True
+          69 KV.ShowDeEnergized=True
+          69 KV.ShowPartiallyEnergized=True
+          69 KV.ShowMVA=True
+          Other KV.ShowEnergized=True
+          Other KV.ShowDeEnergized=True
+          Other KV.ShowPartiallyEnergized=True
+          Other KV.ShowMVA=True
+          DCTie.ShowEnergized=True
+          DCTie.ShowDeEnergized=True
+          DCTie.ShowMVA=True
+          ForcedOutage.SimpleVisibility=false
+          UnavoidableExtension.SimpleVisibility=false
+          BasecaseBranch.SimpleVisibility=false
+          BasecaseHighVoltage.SimpleVisibility=false
+          BasecaseLowVoltage.SimpleVisibility=false
+          ContingencyBranch.SimpleVisibility=false
+          ContingencyHighVoltage.SimpleVisibility=false
+          ContingencyLowVoltage.SimpleVisibility=false
+          PlannedOutage.SimpleVisibility=false
+        </View>
+        <Category Name="Naming convention">
+          <View Name="Description">
+            Overall.UseLongNames=true
+            Substations.ShowSubstations=All
+          </View>
+          <View Name="Acronym">
+            Overall.UseLongNames=false
+            Substations.ShowSubstations=All
+          </View>
+        </Category>
+      </Category>
+      <Category Name="Transmission">
+        <Category Name="All lines">
+          <View Name="Flows">
+            Substations.ShowSubstations=All
+            345 KV.ShowEnergized=True
+            345 KV.ShowDeEnergized=True
+            345 KV.ShowPartiallyEnergized=True
+            345 KV.ShowMVA=True
+            138 KV.ShowEnergized=True
+            138 KV.ShowDeEnergized=True
+            138 KV.ShowPartiallyEnergized=True
+            138 KV.ShowMVA=True
+            69 KV.ShowEnergized=True
+            69 KV.ShowDeEnergized=True
+            69 KV.ShowPartiallyEnergized=True
+            69 KV.ShowMVA=True
+            Other KV.ShowEnergized=True
+            Other KV.ShowDeEnergized=True
+            Other KV.ShowPartiallyEnergized=True
+            Other KV.ShowMVA=True
+            DCTie.ShowEnergized=True
+            DCTie.ShowDeEnergized=True
+            DCTie.ShowMVA=True
+            ForcedOutage.Width=7
+            ForcedExtension.Width=7
+            UnavoidableExtension.Width=7
+            BasecaseBranch.Width=7
+            BasecaseBranch.Blink=True
+            BasecaseHighVoltage.Width=7
+            BasecaseHighVoltage.Blink=True
+            BasecaseLowVoltage.Width=7
+            BasecaseLowVoltage.Blink=True
+            ContingencyBranch.Width=7
+            ContingencyBranch.Blink=True
+            ContingencyHighVoltage.Width=7
+            ContingencyHighVoltage.Blink=True
+            ContingencyLowVoltage.Width=7
+            ContingencyLowVoltage.Blink=True
+            PlannedOutage.Width=7
+            PlannedOutage.Blink=True
+          </View>
+        </Category>
+        <View Name="Capacitors">
+          Substations.ShowSubstations=Capacitors
+        </View>
+        <View Name="Transformers">
+          Substations.ShowSubstations=Transformers
+        </View>
+      </Category>
+      <Category Name="Frequency">
+        <View Name="Generators">
+          Substations.ShowSubstations=Units
+        </View>
+        <View Name="Loads">
+          Substations.ShowSubstations=Loads
+        </View>
+        <View Name="LAARs">
+          Substations.ShowSubstations=LAARs
+        </View>
+      </Category>
+    </Views>
+    <VoltageLevel Name="345 KV" Permitted="true" ShowEnergized="true" ShowPartiallyEnergized="true" ShowDeEnergized="false" ShowMVA="true" ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10" ShowOnMap="true" ShowInMenu="true" ShowLineRouting="true">
+      <Energized ForeColor="LightGreen" Width="3" Blink="false" />
+      <PartiallyEnergized ForeColor="LightGreen" Width="3" Blink="false" DashStyle="Dash" />
+      <DeEnergized ForeColor="Gray" Width="3" Blink="false" />
+      <Unknown ForeColor="Gray" Width="3" Blink="false" DashStyle="Dot" />
+    </VoltageLevel>
+    <VoltageLevel Name="230 KV" Permitted="true" ShowEnergized="true" ShowPartiallyEnergized="true" ShowDeEnergized="false" ShowMVA="true" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10" ShowOnMap="true" ShowInMenu="true" ShowLineRouting="true">
+      <Energized ForeColor="Cyan" Width="2" Blink="false"  />
+      <PartiallyEnergized ForeColor="Cyan" Width="2" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="Gray" Width="2" Blink="false"  />
+      <Unknown ForeColor="Gray" Width="2" Blink="false" DashStyle="Dot"  />
+    </VoltageLevel>
+	<VoltageLevel Name="138 KV" Permitted="true" ShowEnergized="true" ShowPartiallyEnergized="true" ShowDeEnergized="false" ShowMVA="true" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10" ShowOnMap="true" ShowInMenu="true" ShowLineRouting="true">
+      <Energized ForeColor="CornflowerBlue" Width="2" Blink="false"  />
+      <PartiallyEnergized ForeColor="CornflowerBlue" Width="2" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="Gray" Width="2" Blink="false"  />
+      <Unknown ForeColor="Gray" Width="2" Blink="false" DashStyle="Dot"  />
+    </VoltageLevel>
+    <VoltageLevel Name="69 KV" Permitted="true" ShowEnergized="true" ShowPartiallyEnergized="true" ShowDeEnergized="false" ShowMVA="true" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10" ShowOnMap="true" ShowInMenu="true" ShowLineRouting="true">
+      <Energized ForeColor="Magenta" Width=".5" Blink="false"  />
+      <PartiallyEnergized ForeColor="Magenta" Width=".5" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="Gray" Width=".5" Blink="false"  />
+      <Unknown ForeColor="Gray" Width=".5" Blink="false" DashStyle="Dot" />
+    </VoltageLevel>
+    <VoltageLevel Name="Other KV" Permitted="true" ShowEnergized="true" ShowPartiallyEnergized="true" ShowDeEnergized="false" ShowMVA="false" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10" ShowOnMap="true" ShowInMenu="true" ShowLineRouting="true">
+      <Energized ForeColor="Thistle" Width="1" Blink="false"  />
+      <PartiallyEnergized ForeColor="Thistle" Width="2" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="Gray" Width="1" Blink="false" />
+      <Unknown ForeColor="Gray" Width="2" Blink="false" DashStyle="Dot"  />
+    </VoltageLevel>
+    <VoltageLevel Name="DCTie" Permitted="true" ShowEnergized="true" ShowPartiallyEnergized="true" ShowDeEnergized="false" ShowMVA="true" MVAThreshold="0"  ShowMWText="false" ShowMVARText="false" ShowMVAText="false" ShowPercentageText="false" VisibilityByZoom="0" StationMW="12" StationNames="10" ShowOnMap="true" ShowInMenu="true" ShowLineRouting="true">
+      <Energized ForeColor="White" Width="3" Blink="false"  />
+      <PartiallyEnergized ForeColor="White" Width="3" Blink="false" DashStyle="Dash"  />
+      <DeEnergized ForeColor="White" Width="3" Blink="false"  />
+      <PartiallyEnergized ForeColor="White" Width="3" Blink="false" DashStyle="Dot"  />
+    </VoltageLevel>
+    <KeyIndicators>
+      <Indicator Name="System frequency" GraphMode="SystemWide" PIQueries="ERCOT.FHZ*" SourceCategory="AGC_OPA_1" SourceMappings="Frequency,A_SAMPLE" Format="0.000" Title="Freq" Indicator="Frequency" Axis="Hz" EMSValue="FHZ"/>
+      <Indicator Name="Generation Types" GraphMode="GenTypes" PIQueries="ERCOT.GEN,ERCOT.*.GEN" Format="#,##0" Title="Gen" Indicator="Gen" Axis="mw" SourceMappings="" SourceCategory="" EMSValue="GEN"/>
+      <Indicator Name="Load vs. Load Forecast" GraphMode="LoadVsLoadForecast" PIQueries="ERCOT.EXPLD, ERCOT.LOAD" Format="#,##0" Title="Load" Indicator="Load" Axis="mw" EMSValue="LD" SourceMappings="" SourceCategory="" />
+      <Indicator Name="Wind generation" GraphMode="SystemWide" PIQueries="ERCOT.GEN.WIND" SourceCategory="LDTUNING_OPA_1" SourceMappings="Load,A_SAMPLE,Generation,B_SAMPLE" Format="#,##0" PercentageFormat=" \(0%\)" Title="Wind" ComparisonAxis="true" Indicator="Wind" Comparison="Gen" Axis="mw"/>
+      <Indicator Name="Limit Reserve Viewer" GraphMode="Limit_Reserve_Viewer" Format="#,##0" Title="PRC" Indicator="PRC" Axis="mw" EMSValue="PRCT" PIQueries="ERCOT.PRCT,ERCOT.IBPTCAPT,ERCOT.DBPTCAPT,ERCOT.HSLT,ERCOT.HASLT,ERCOT.HDLT,ERCOT.LDLT,ERCOT.LASLT,ERCOT.LSLT,ERCOT.SCEDBPT,ERCOT.UDBPT,ERCOT.EXPGENT,ERCOT.RGUASRT,ERCOT.RGUREQT,ERCOT.RGUREQT,ERCOT.RGUASST,ERCOT.RGDASRT,ERCOT.RGDREQT,ERCOT.RGDASST,ERCOT.RRASRT,ERCOT.RRASST,ERCOT.RRASDT,ERCOT.RVRRCPT,ERCOT.NSASRT,ERCOT.NSASST,ERCOT.NSASDT,ERCOT.RVNSPT,ERCOT.RVSP,ERCOT.RVBLKS,ERCOT.RVRMRN">
+        <Reserve Category="SCED" Name="Cap to increase BP" EMSValue="IBPTCAPT"/>
+        <Reserve Category="SCED" Name="Cap to decrease BP" EMSValue="DBPTCAPT"/>
+        <Reserve Category="SCED" Name="Total HSL"  EMSValue="HSLT"/>
+        <Reserve Category="SCED" Name="Total HASL" EMSValue="HASLT"/>
+        <Reserve Category="SCED" Name="Total HDL"  EMSValue="HDLT"/>
+        <Reserve Category="SCED" Name="Total LDL"  EMSValue="LDLT"/>
+        <Reserve Category="SCED" Name="Total LASL" EMSValue="LASLT"/>
+        <Reserve Category="SCED" Name="Total LSL"  EMSValue="LSLT"/>
+        <Reserve Category="SCED" Name="Base points"  EMSValue="SCEDBPT"/>
+        <Reserve Category="SCED" Name="Updated base points"  EMSValue="UDBPT"/>
+        <Reserve Category="SCED" Name="Expected generation"  EMSValue="EXPGENT"/>
+        <Reserve Category="Regulation" Name="Responsibility - Up" EMSValue="RGUASRT"/>
+        <Reserve Category="Regulation" Name="Requested - Up" EMSValue="RGUREQT"/>
+        <Reserve Category="Regulation" Name="Deployed - Up"  EMSValue="RGUREQT"/>
+        <Reserve Category="Regulation" Name="Undeployed - Up" EMSValue="RGUASST"/>
+        <Reserve Category="Regulation" Name="Responsibility - Down" EMSValue="RGDASRT"/>
+        <Reserve Category="Regulation" Name="Requested - Down" EMSValue="RGDREQT"/>
+        <Reserve Category="Regulation" Name="Deployed - Down"  EMSValue="RGDREQT"/>
+        <Reserve Category="Regulation" Name="Undeployed - Down" EMSValue="RGDASST"/>
+        <Reserve Category="Responsive Res." Name="Responsibliity" EMSValue="RRASRT"/>
+        <Reserve Category="Responsive Res." Name="Scheduled" EMSValue="RRASST"/>
+        <Reserve Category="Responsive Res." Name="Deployed" EMSValue="RRASDT"/>
+        <Reserve Category="Responsive Res." Name="Undeployed" EMSValue="RVRRCPT"/>
+        <Reserve Category="Non-Spin" Name="Responsibility" EMSValue="NSASRT"/>
+        <Reserve Category="Non-Spin" Name="Scheduled" EMSValue="NSASST"/>
+        <Reserve Category="Non-Spin" Name="Deployed" EMSValue="NSASDT"/>
+        <Reserve Category="Non-Spin" Name="Undeployed" EMSValue="RVNSPT"/>
+        <Reserve Category="Capacity Res." Name="Spinning" EMSValue="RVSP"/>
+        <Reserve Category="Capacity Res." Name="Physical Response" EMSValue="PRCT"/>
+        <Reserve Category="Capacity Res." Name="Black Start" EMSValue="RVBLKS"/>
+        <Reserve Category="Capacity Res." Name="Reliability MR" EMSValue="RVRMRN"/>
+      </Indicator>
+    </KeyIndicators>
+    <Substation Name="Substations" ForeColor="LightSteelBlue" Width="1.5" Blink="false" ShowTotalGeneration="true" ShowTotalHSL="false" ShowRemainingCapacity="false" ShowTotalLoad="true" GenerationColor="Cyan" LoadColor="Thistle" ShowSubstations="Units" />
+    <Overall Name="Overall" Contour="BusVoltage" SystemValueCount="3600" ContourBrightness="1200" ContourThreshold="2" FlowInterval="100" StationNames="10" LineFlows="8" LineText="13" StationMW="12" DisplayCounties="true" DisplayStateBorder="true" FPS="false" UseLongNames="true" SmoothingMode="AntiAlias" MapTileCache="C:\Users\Michael\Desktop\MM Tiles"/>
+    <GenerationType Name="Hydro" EMSName="HYDR" Physical="true"/>
+    <GenerationType Name="Nuclear" EMSName="NUCL" Physical="true"/>
+    <GenerationType Name="Thermal" EMSName="FOSS" Physical="true"/>
+    <GenerationType Name="Wind" EMSName="WIND" Physical="true"/>
+    <GenerationType Name="Steam" EMSName="STM" Physical="true"/>
+    <GenerationType Name="Turbine" EMSName="GT" Physical="true"/>
+    <GenerationType Name="Logical" EMSName="LOG" Physical="false"/>
+    <GenerationType Name="CombinedCyclePlant" EMSName="COGN" Physical="false"/>
+    <GenerationType Name="TotalGeneration" EMSName="TOTL" Physical="false"/>
+    <StateBorder ForeColor="White" Width="1" Blink="false" />
+    <CountyBorder ForeColor="#191919" Width="1" Blink="false" />
+    <Violation Name="BasecaseBranch"         ViolationIndex="0"  Permitted="true"  Priority="3" Acronym="BB" ForeColor="Orange" Width="3" Blink="true" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="BasecaseHighVoltage"    ViolationIndex="1"  Permitted="true"  Priority="3" Acronym="BH" ForeColor="Orange" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="BasecaseLowVoltage"     ViolationIndex="2"  Permitted="true"  Priority="3" Acronym="BL" ForeColor="Orange" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ContingencyBranch"      ViolationIndex="3"  Permitted="true"  Priority="4" Acronym="CB" ForeColor="Yellow" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ContingencyHighVoltage" ViolationIndex="4"  Permitted="true"  Priority="4" Acronym="CH" ForeColor="Yellow" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ContingencyLowVoltage"  ViolationIndex="5"  Permitted="true"  Priority="4" Acronym="CL" ForeColor="Yellow" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="UndocumentedOutage"     ViolationIndex="6"  Permitted="true"  Priority="1" Acronym="UO" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ForcedOutage"           ViolationIndex="7"  Permitted="true"  Priority="2" Acronym="fo" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="ForcedExtension"        ViolationIndex="8"  Permitted="true"  Priority="2" Acronym="fe" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="UnavoidableExtension"   ViolationIndex="9"  Permitted="true"  Priority="2" Acronym="ue" ForeColor="Red" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="PlannedOutage"          ViolationIndex="10" Permitted="true"  Priority="5" Acronym="po" ForeColor="Lavender" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="NormalOpenEvent"        ViolationIndex="11" Permitted="true"  Priority="5" Acronym="no" ForeColor="Lavender" Width="3" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <Violation Name="UserAction"             ViolationIndex="12" Permitted="true"  Priority="6" Acronym="ua" ForeColor="Lavender" Width="1" Blink="false" ViolationViewer="WhenSelected" ViolationViewerDefault="false" MiniMap="WhenSelected" NetworkMap_Substation="WhenSelected" NetworkMap_Line="WhenSelected" OneLineElement="WhenSelected"  />
+    <WeatherStations Name="WeatherStations" URL="http://api.wunderground.com/auto/wui/geo/GeoLookupXML/index.xml?query=" />
+    <WeatherStationDetail Name="WeatherStationDetail" URL="http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=" />
+    <WeatherStationAlerts Name="WeatherStationAlerts" URL="http://api.wunderground.com/auto/wui/geo/AlertsXML/index.xml?query=" />
+    <WeatherStationForecast Name="WeatherStationForecast" URL="http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=" />
+  </DisplayParameters>
+  <Databases/>
+  <Commands/>
+  <GeneralConfig>
+    <Config InternalOneLines="false" ExternalOneLines="true" IslandDisplay="true" PiDisplays="true" />
+  </GeneralConfig>
+  <Processes/>
+  <OneLineData>
+    <ElementType Name="EndCap" Acronym="Ec" CIMName="EndCap"/>
+    <ElementType Name="StaticVarCompensator" Acronym="SVS" CIMName="StaticVarCompensator">
+		<ControlPanel Title="SVS Control Panel">
+			<Label Text="Substation:" Location="15,15" Font="Arial,10" />
+			<Label Text="Name:" Location="15,35" Font="Arial,10" />
+			<Label DataSource="SubLongName" Location="99,15" Font="Arial,10" />
+			<Label DataSource="Name" Location="70,35" Font="Arial,10" />
+			<Label Text="AVR Control:" Location="15,55" Font="Arial,10" />
+			<CheckBox Location="115,55" DataSource="AVR" OnChange="SET AVR for {TEID}={Value}" Font="Arial,10" Text="" />
+			<TextBox Bounds="280,55,50,20" VisibleIfFalse="AVR" DataSource="Nominal_MVAR" OnChange="Set Nominal MVAR for {TEID}={Value}" />
+			<Label Bounds="281,64,49,13" VisibleIfTrue="AVR" DataSource="Nominal_MVAR" Font="Arial,10" />
+			<Label Text="MVAR Setting" Location="176,63" Font="Arial,10" />
+			<Label Text="MVAR Output" Location="175,80" Font="Arial,10" />
+			<Label Text="MVAR Max" Location="175,105" Font="Arial,10" />
+			<Label Text="MVAR Min" Location="175,130" Font="Arial,10" />
+			<Label DataSource="Estimated_MVAR" Location="280,80" Font="Arial,10" />
+			<Label DataSource="MaxMVAR" Location="280,105" Font="Arial,10" />
+			<Label DataSource="MinMVAR" Location="280,130" Font="Arial,10" />
+			<Label Text="Removed:" Location="197,38" Font="Arial,10" />
+			<CheckBox Location="278,37" DataSource="Removed" OnChange="Set Removed for {TEID}={Value}" Font="Arial,10" Text="" />
+			<Label Text="Specify Regulation Target:" Location="11,190" Font="Arial,10" />
+			<CheckBox Location="191,170" DataSource="ManualTarget" OnChange="Set Target Voltage for {TEID}={Value}" Font="Arial,10" Text="" />
+			<Label Text="Regulation Target (KV):" Location="11,168" Font="Arial,10" />
+			<TextBox Bounds="191,188,60,20" VisibleIfTrue="ManualTarget" DataSource="DisTarg" OnChange="Set Regulation Target for {TEID}={Value}" />
+			<Label Bounds="195,125,60,20" VisibleIfFalse="ManualTarget" DataSource="DisTarg" />
+		</ControlPanel>
+    </ElementType>
+    <ElementType Name="Load" Acronym="Ld" CIMName="CustomerLoad">
+      <ControlPanel Title="Load Control Panel" Size="233,274">
+        <Label Text="Load Control Panel" Location="32,0" Font="Arial,14" />
+        <Label Text="Station:" Location="55,30" Font="Arial,10" />
+        <Label DataSource="SubLongName" Location="115,30" Font="Arial,10" />
+        <Label Text="Network Load:" Location="10,50" Font="Arial,10" />
+        <Label DataSource="Name" Location="115,50" Font="Arial,10" />
+        <Label Text="Current Value:" Location="10,70" Font="Arial,10" />
+        <Label Location="115,70" Font="Arial,10" DataSource="Estimated_MW" NumberFormat="#,##0.0 MW" />
+        <Label Location="115,90" Font="Arial,10" DataSource="Estimated_MVAR" NumberFormat="#,##0.0 MVAR" />
+        <Label Text="Set Value:" Location="45,115" Font="Arial,9" />
+        <CheckBox Location="115,115" DataSource="Manual" OnChange="Set Manual for {TEID}={Value}" Font="Arial,10" Text="" />
+        <TextBox Bounds="135,110,70,20" Editable="Manual" DataSource="ManualTarget" OnChange="Set WM for {TEID}={Value}" />
+        <Label Text="Max Value:" Location="35,135" Font="Arial,10" />
+        <Label Location="115,135" Font="Arial,10" DataSource="LoadMaximum" NumberFormat="#,##0.0 MW" />
+        <Label Text="Normal Value:" Location="15,155" Font="Arial,10" />
+        <Label Location="115,155" Font="Arial,10" DataSource="WLoad" NumberFormat="#,##0.0 MW" />
+        <Label Location="115,175" Font="Arial,10" DataSource="RM" NumberFormat="#,##0.0 MVAR" />
+        <CheckBox Location="90,205" Editable="RemoveEnabled" OnChange="Set Remove for {TEID}={Value}" DataSource="Removed" Text="" Font="Arial,10" />
+        <CheckBox Location="90,225" Editable="false" DataSource="BusDead" Text="" Font="Arial,10" />
+        <Label Location="115,205" Font="Arial,10" Text="Removed" ConditionalColor="Removed,Red,White" />
+        <Label Location="115,225" Font="Arial,10" Text="Dead Bus" ConditionalColor="BusDead,Red,White" />
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="LaaR" Acronym="Ld" CIMName="CustomerLoad">
+      <ControlPanel Title="Load Control Panel" Size="233,274">
+        <Label Text="LaaR Control Panel" Location="32,0" Font="Arial,14" />
+        <Label Text="Station:" Location="55,30" Font="Arial,10" />
+        <Label DataSource="SubLongName" Location="115,30" Font="Arial,10" />
+        <Label Text="Network LaaR:" Location="10,50" Font="Arial,10" />
+        <Label DataSource="Name" Location="115,50" Font="Arial,10" />
+        <Label Text="Current Value:" Location="10,70" Font="Arial,10" />
+        <Label Location="115,70" Font="Arial,10" DataSource="Estimated_MW" NumberFormat="#,##0.0 MW" />
+        <Label Location="115,90" Font="Arial,10" DataSource="Estimated_MVAR" NumberFormat="#,##0.0 MVAR" />
+        <Label Text="Set Value:" Location="45,115" Font="Arial,9" />
+        <CheckBox Location="115,115" DataSource="Manual" OnChange="Set MANUAL for {TEID}={Value}" Font="Arial,10" Text="" />
+        <TextBox Bounds="135,110,70,20" Editable="Manual" DataSource="ManualTarget" OnChange="Set WM for {TEID}={Value}" />
+        <Label Text="Max Value:" Location="35,135" Font="Arial,10" />
+        <Label Location="115,135" Font="Arial,10" DataSource="LoadMaximum" NumberFormat="#,##0.0 MW" />
+        <Label Text="Normal Value:" Location="15,155" Font="Arial,10" />
+        <Label Location="115,155" Font="Arial,10" DataSource="WLoad" NumberFormat="#,##0.0 MW" />
+        <Label Location="115,175" Font="Arial,10" DataSource="RM" NumberFormat="#,##0.0 MVAR" />
+        <CheckBox Location="90,205" Editable="RemoveEnabled" OnChange="Set REMOVE for {TEID}={Value}" DataSource="Removed" Text="" Font="Arial,10" />
+        <CheckBox Location="90,225" Editable="false" DataSource="BusDead" Text="" Font="Arial,10" />
+        <Label Location="115,205" Font="Arial,10" Text="Removed" ConditionalColor="Removed,Red,White" />
+        <Label Location="115,225" Font="Arial,10" Text="Dead Bus" ConditionalColor="BusDead,Red,White" />
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="Unit" Acronym="Un" CIMName="SynchronousMachine">
+      <ControlPanel Title="Generator Control Panel" Size="1200,800">
+          <GeneratorControlPanel Dock="Fill"/>
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="Capacitor" Acronym="Cp" CIMName="ShuntCompensator" CIMParameter="NominalMVAR&gt;0">
+      <ControlPanel Title="Capacitor Control Panel">
+        <Label Location="15,15" Font="Arial,10" Text="Substation:" />
+        <Label DataSource="SubLongName" Location="120,15" Font="Arial,10" />
+        <Label Text="Device Name:" Location="15,35" Font="Arial,10" />
+        <Label DataSource="Name" Location="120,35" Font="Arial,10" />
+        <Label Text="AVR Control:" Location="15,65" Font="Arial,10" />
+        <CheckBox Location="120,65" DataSource="AVR" Editable="Reg" OnChange="Set AVR for {TEID}={Value}" Font="Arial,10" Text="" />
+        <Label Text="Removed:" Location="15,90" Font="Arial,10" />
+        <CheckBox Location="120,95" DataSource="Removed" Editable="RemoveEnabled" OnChange="Set REMOVE for {TEID}={Value}" Text="" />
+        <Label Text="Specify Regulation Target:" Location="15,115" Font="Arial,10" />
+        <CheckBox Location="200,115" DataSource="ManualTarget" Editable="Bank" OnChange="Set manual target voltage for {TEID}={Value}" Font="Arial,10" Text="" />
+        <Label Text="Regulation Target (KV):" Location="15,145" Font="Arial,10" />
+        <TextBox Bounds="175,150,70,20" VisibleIfTrue="ManualTarget" DataSource="ManualTargetMVAR" OnChange="Set regulation target for {TEID}={Value}"/>
+		<Label Bounds="175,150,70,20" VisibleIfFalse="ManualTarget" DataSource="ManualTargetMVAR" />
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="Reactor" Acronym="Rc" CIMName="ShuntCompensator" CIMParameter="NominalMVAR&lt;0">
+      <ControlPanel Title="Reactor Control Panel">
+        <Label Location="15,15" Font="Arial,10" Text="Substation:" />
+        <Label DataSource="SubLongName" Location="120,15" Font="Arial,10" />
+        <Label Text="Device Name:" Location="15,35" Font="Arial,10" />
+        <Label DataSource="Name" Location="120,35" Font="Arial,10" />
+        <Label Text="AVR Control:" Location="15,65" Font="Arial,10" />
+        <CheckBox Location="120,65" DataSource="AVR" Editable="Reg" OnChange="Set AVR for {TEID}={Value}" Font="Arial,10" Text="" />
+        <Label Text="Removed:" Location="15,90" Font="Arial,10" />
+        <CheckBox Location="120,95" DataSource="Removed" Editable="RemoveEnabled" OnChange="Set REMOVE for {TEID}={Value}" Text="" />
+        <Label Text="Specify Regulation Target:" Location="15,115" Font="Arial,10" />
+        <CheckBox Location="200,115" DataSource="ManualTarget" Editable="Bank" OnChange="Set manual target voltage for {TEID}={Value}" Font="Arial,10" Text="" />
+        <Label Text="Regulation Target (KV):" Location="15,145" Font="Arial,10" />
+        <TextBox Bounds="175,150,70,20" VisibleIfTrue="ManualTarget" DataSource="ManualTargetMVAR" OnChange="Set regulation target for {TEID}={Value}"/>
+		<Label Bounds="175,150,70,20" VisibleIfFalse="ManualTarget" DataSource="ManualTargetMVAR"/>
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="Breaker" Acronym="Cb" CIMName="Breaker">
+      <ControlPanel Title="Breaker Control Panel">
+        <GroupBox Text="Synchroscope" Location="2,2" Size="219,392" IfTrue="HasSynchroscope">
+          <Synchroscope Location="3,16" Size="217,390"/>
+        </GroupBox>
+        <GroupBox Text="Synchro-Check" Location="2,2" IfTrue="HasSynchrocheckRelay">
+          <Label Text="Substation" Location="15,20" Font="Arial,10" />
+          <Label DataSource="SubLongName" Location="95,20" Font="Arial,10" />
+          <Label Text="Breaker" Location="15,40" Font="Arial,10" />
+          <Label DataSource="Name" Location="95,40" Font="Arial,10" />
+          <Label Location="215,70" Font="Arial,10" Text="Disabled" VisibleIfFalse="Synchroscope.Disabled_Syncry"/>
+          <Label Location="215,70" Font="Arial,10" Text="Enabled" VisibleIfTrue="Synchroscope.Disabled_Syncry"/>
+          <Label Text="Actuals:" Location="15,70" Font="Arial,10" />
+          <Label Text="Angle Difference:" Location="15,90" Font="Arial,10" />
+          <Label DataSource="Synchroscope.Dangle_Syncry" Location="215,90" NumberFormat="#,##0.000 \D\e\g" Font="Arial,10" />
+          <Label Text="Frequency Difference:" Location="15,110" Font="Arial,10" />
+          <Label DataSource="Synchroscope.DFreq_Syncry" Location="215,110" NumberFormat="#,##0.000 \H\z" Font="Arial,10" />
+          <Label Text="Voltage Magnitude Difference:" Location="15,130" Font="Arial,10" />
+          <Label DataSource="Synchroscope.DMag_Syncry" Location="215,130" NumberFormat="0.000 \P\u" Font="Arial,10" />
+          <Label Text="Relay Settings:" Location="15,155" Font="Arial,10" />
+          <Label Text="Angle Difference:" Location="15,175" Font="Arial,10" />
+          <TextBox DataSource="Synchroscope.AngMX_Syncty" Location="215,170" Enabled="false" NumberFormat="#,##0.0 \D\e\g" Font="Arial,10" Subscript="RelaySubscript" />
+          <Label Text="Frequency Difference:" Location="15,200" Font="Arial,10" />
+          <TextBox DataSource="Synchroscope.FreqMX_Syncty" Location="215,195" Enabled="false" NumberFormat="#,##0.0000 \H\z" Font="Arial,10" Subscript="RelaySubscript" />
+          <Label Text="Voltage Magnitude Difference:" Location="15,225" Font="Arial,10" />
+          <TextBox DataSource="Synchroscope.MagMX_Syncty" Location="215,220" Enabled="false" NumberFormat="0.0000 \P\u" Font="Arial,10" Subscript="RelaySubscript" />
+        </GroupBox>
+        <GroupBox Text="Control" Location="2,2">
+          <Label Text="Substation" Location="10,20" Font="Arial,10" />
+          <Label Text="ElemType" Location="100,20" Font="Arial,10" />
+          <Label Text="Breaker" Location="165,20" Font="Arial,10" />
+          <Label DataSource="Substation" Location="10,40" Font="Arial,10" />
+          <Label DataSource="ElemType" Location="100,40" Font="Arial,10" />
+          <Label DataSource="Name" Location="165,40" Font="Arial,10" />
+          <Label Text="NodeName" Location="15,85" Font="Arial,10" />
+          <Label Text="BS #" Location="50,105" Font="Arial,10" />
+          <Label Text="KV" Location="60,125" Font="Arial,10" />
+          <Label Text="Island Idx" Location="20,145" Font="Arial,10" />
+          <Label Text="Hz" Location="60,165" Font="Arial,10" />
+          <Label Text="Near" Location="100,65" Font="Arial,10" />
+          <Label Text="Far" Location="165,65" Font="Arial,10" />
+          <Label DataSource="NearNodeName" Location="100,85" Font="Arial,10" />
+          <Label DataSource="FarNodeName" Location="165,85" Font="Arial,10" />
+          <Label DataSource="NearBus" Location="100,105" Font="Arial,10" />
+          <Label DataSource="FarBus" Location="165,105" Font="Arial,10" />
+          <Label DataSource="NearVoltage" Location="100,125" Font="Arial,10" NumberFormat="0.00"/>
+          <Label DataSource="FarVoltage" Location="165,125" Font="Arial,10" NumberFormat="0.00"/>
+          <Label DataSource="NearIsland" Location="100,145" Font="Arial,10" />
+          <Label DataSource="FarIsland" Location="165,145" Font="Arial,10" />
+          <Label DataSource="NearFrequency" Location="100,165" Font="Arial,10" NumberFormat="0.00"/>
+          <Label DataSource="FarFrequency" Location="165,165" Font="Arial,10" NumberFormat="0.00"/>
+          <Label Text="OK to Toggle?" Location="10,190" Font="Arial,10" />
+          <Button Text="Yes" Location="101,208" OnChange="Set Open for{TEID}={!Open}" OnClick="Close()"/>
+          <Button Text="No" Location="174,208" OnClick="Close()" />
+        </GroupBox>
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="Switch" Acronym="Sw" CIMName="Disconnector">
+      <ControlPanel Title="Switch Control Panel">
+        <Label Text="Substation" Location="10,10" Font="Arial,10" />
+        <Label Text="Type" Location="100,10" Font="Arial,10" />
+        <Label Text="Switch" Location="150,10" Font="Arial,10" />
+        <Label DataSource="Substation" Location="10,30" Font="Arial,10" />
+        <Label DataSource="ElemType" Location="100,30" Font="Arial,10" />
+        <Label DataSource="Name" Location="150,30" Font="Arial,10" />
+        <Label Location="60,90" Font="Arial,10" Text="Bus" />
+        <Label Location="40,120" Font="Arial,10" Text="Voltage" />
+        <Label Location="35,145" Font="Arial,10" Text="Island #" />
+        <Label Location="15,170" Font="Arial,10" Text="Frequency" />
+        <Label Text="Near" Location="100,60" Font="Arial,10" />
+        <Label Text="Far" Location="175,60" Font="Arial,10" />
+        <Label DataSource="NearBus" Location="100,90" Font="Arial,10" />
+        <Label DataSource="FarBus" Location="175,90" Font="Arial,10" />
+        <Label DataSource="NearVoltage" Location="100,120" Font="Arial,10" />
+        <Label DataSource="FarVoltage" Location="175,115" Font="Arial,10" />
+        <Label DataSource="NearIsland" Location="100,145" Font="Arial,10" />
+        <Label DataSource="FarIsland" Location="175,145" Font="Arial,10" />
+        <Label DataSource="NearFrequency" Location="100,170" Font="Arial,10" />
+        <Label DataSource="FarFrequency" Location="175,170" Font="Arial,10" />
+        <Label Text="OK to Toggle?" Location="25,190" Font="Arial,10" />
+        <Button Text="Yes" Location="80,215" OnChange="Set OPEN for {TEID}={!Open}" OnClick="Close()"/>
+        <Button Text="No" Location="170,215" OnClick="Close()" />
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="Node" Acronym="Node" CIMName="Nd"/>
+    <ElementType Name="Transformer" Acronym="XF" CIMName="PowerTransformer">
+      <ControlPanel Title="Transformer Control Panel">
+        <Label Text="Substation:" Location="30,10" Font="Arial,10" />
+        <Label Text="Transformer:" Location="20,30" Font="Arial,10" />
+        <Label DataSource="Substation" Location="115,10" Font="Arial,10" />
+        <Label DataSource="PrimaryWinding.Name" Location="115,30" Font="Arial,10" />
+        <Label Text="MVA Rating:" Location="25,50" Font="Arial,10" />
+        <Label DataSource="MVARating" Location="115,50" Font="Arial,10" />
+        <Label Text="From:" Location="65,70" Font="Arial,10" />
+        <Label DataSource="FromKV" Location="115,70" Font="Arial,10" />
+        <Label Text="To:" Location="80,90" Font="Arial,10" />
+        <Label DataSource="ToKV" Location="115,90" Font="Arial,10" />
+        <Label Text="AVR Control:" Location="180,70" Font="Arial,10" VisibleIfTrue="Regulated"  />
+        <CheckBox Location="275,70" DataSource="AVR" OnChange="Set AVR for {PrimaryWinding.TEID}={Value}" Font="Arial,10" Text="" VisibleIfTrue="Regulated"  />
+		<Label Text="Specify Regulation Target:" Location="15,120" Font="Arial,10" VisibleIfTrue="Regulated,AVR"  />
+		<Label Text="Specify Regulation Target:" Location="15,120" Font="Arial,10" VisibleIfTrue="PhaseShifter"  />				
+		<CheckBox Location="200,120" DataSource="ManualTarget" OnChange="Set VTARGMAN for {PrimaryWinding.TEID}={Value}" Font="Arial,10" Text="" VisibleIfTrue="Regulated,AVR,!PhaseShifter"  />
+        <CheckBox Location="200,120" DataSource="PhaseShifterData.WTARGMAN_PS" OnChange="Set WTARGMAN for {PhaseShifterData.TEID_PS}={Value}" Font="Arial,10" Text="" VisibleIfTrue="PhaseShifter"  />
+		<Label Text="Regulation Target (KV):" Location="15,150" Font="Arial,10" VisibleIfTrue="Regulated,AVR,!PhaseShifter"  />
+        <Label Text="Regulation Target Deviation (KV):" Location="15,180" Font="Arial,10" VisibleIfTrue="Regulated,AVR,!PhaseShifter"  />               
+		<TextBox Bounds="245,150,60,20"  DataSource="RegulationTargetVoltage" VisibleIfTrue="Regulated,AVR,ManualTarget,!PhaseShifter"  OnChange="Set DISTARG for {PrimaryWinding.TEID}={Value}"/>
+        <TextBox Bounds="245,180,60,20"  DataSource="RegulationDeviation" VisibleIfTrue="Regulated,AVR,ManualTarget,!PhaseShifter"  OnChange="Set DISDEV for {PrimaryWinding.TEID}={Value}"/>
+		<Label Bounds="245,150,60,20" DataSource="RegulationTargetVoltage" VisibleIfTrue="Regulated,AVR,!ManualTarget,!PhaseShifter"  />
+        <Label Bounds="245,180,60,20"  DataSource="RegulationDeviation" VisibleIfTrue="Regulated,AVR,!ManualTarget,!PhaseShifter"  />		
+		<Label Text="Regulation Target (MW):" Location="15,150" Font="Arial,10" VisibleIfTrue="PhaseShifter"  />
+        <Label Text="Regulation Target Deviation (MW):" Location="15,180" Font="Arial,10" VisibleIfTrue="PhaseShifter"  />
+        <TextBox Bounds="245,150,60,20" Editable="Voltage Manual Target" DataSource="PhaseShifterData.WTARGET_PS" VisibleIfTrue="PhaseShifter,PhaseShifterData.WTARGMAN_PS"  OnChange="SET WTARGET for {PhaseShifterData.TEID_PS}={Value}"/>
+        <TextBox Bounds="245,180,60,20" Editable="Voltage Manual Target" DataSource="PhaseShifterData.DEVIAT_PS" VisibleIfTrue="PhaseShifter,PhaseShifterData.WTARGMAN_PS"  OnChange="Set DEVIAT for {PhaseShifterData.TEID_PS}={Value}"/>
+        <Label Bounds="245,150,60,20" Editable="Voltage Manual Target" DataSource="PhaseShifterData.WTARGET_PS" VisibleIfTrue="PhaseShifter,!PhaseShifterData.WTARGMAN_PS" />
+        <Label Bounds="245,180,60,20" Editable="Voltage Manual Target" DataSource="PhaseShifterData.DEVIAT_PS" VisibleIfTrue="PhaseShifter,!PhaseShifterData.WTARGMAN_PS"  />       	
+		<Label Text="AWR:" Location="15,210" Font="Arial,10" VisibleIfTrue="PhaseShifter"  />
+		<CheckBox Location="200,210" DataSource="PhaseShifterData.AWR_PS" OnChange="Set AWR for {PhaseShifterData.TEID_PS}={Value}" Font="Arial,10" Text="" VisibleIfTrue="PhaseShifter"  />
+		<Label Text="NON-REGULATING&#xD;Transformer" Location="40,135" VisibleIfFalse="Regulated,PhaseShifter" Font="Arial Narrow, 14.25pt, style=Bold" />
+		<Label Text="Tap:" Location="15,245" Font="Arial,10" />	
+		<Label Text="Min:" Location="85,245" Font="Arial,10" />
+		<Label Text="Max:" Location="135,245" Font="Arial,10" />        	
+		<Label Text="Voltage" Location="185,245" Font="Arial,10" VisibleIfFalse="PhaseShifter"/>
+		<TextBox VisibleIfTrue="Regulated,!AVR,!PhaseShifter" Bounds="15,270,30,20" Editable="!AVR" DataSource="PrimaryWinding.Tap" OnChange="Set TAP for {PrimaryWinding.TEID}={Value}" />
+		<TextBox VisibleIfTrue="PhaseShifter,!PhaseShifterData.AWR_PS" Bounds="15,270,30,20" Editable="true" DataSource="PhaseShifterData.TAP_PS" OnChange="SET TAP for {PhaseShifterData.TEID_PS}={Value}" />
+		<Label VisibleIfTrue="PhaseShifter,PhaseShifterData.AWR_PS" Bounds="15,270,30,20" DataSource="PhaseShifterData.TAP_PS"/>
+		<Label DataSource="PrimaryWinding.Tap" Location="15,270" VisibleIfFalse="Regulated,PhaseShifter"/>		
+		<Label DataSource="PrimaryWinding.Tap" Location="15,270" VisibleIfTrue="Regulated,AVR,!PhaseShifter"/>		        
+		<TextBox Bounds="15,295,30,20" DataSource="SecondaryWinding.Tap" VisibleIfTrue="!PhaseShifter,Regulated" OnChange="Set ZTAP for {PrimaryWinding.TEID}={Value}" />				
+		<Label Bounds="15,295,30,20" DataSource="SecondaryWinding.Tap" VisibleIfTrue="!PhaseShifter,!Regulated" />				
+		<Label DataSource="PhaseShifterData.MN_TAPTY" Location="85,270" Font="Arial,10" VisibleIfTrue="PhaseShifter" />       
+        <Label DataSource="TapMin" DataIndex="0" Location="85,270" Font="Arial,10" VisibleIfFalse="PhaseShifter" />
+        <Label DataSource="TapMax" DataIndex="0" Location="85,295" Font="Arial,10" VisibleIfFalse="PhaseShifter" />
+		<Label DataSource="PhaseShifterData.MX_TAPTY"  Location="135,270" Font="Arial,10" VisibleIfTrue="PhaseShifter" />       
+		<Label DataSource="TapMin" DataIndex="1" Location="135,270" Font="Arial,10" VisibleIfFalse="PhaseShifter"/>
+        <Label DataSource="TapMax" DataIndex="1" Location="135,295" Font="Arial,10" VisibleIfFalse="PhaseShifter"/>
+        <Label DataSource="NearVoltage" Location="185,270" Font="Arial,10" VisibleIfFalse="PhaseShifter"/>
+        <Label DataSource="FarVoltage" Location="185,295" Font="Arial,10" VisibleIfFalse="PhaseShifter"/>
+      </ControlPanel>
+    </ElementType>
+    <ElementType Name="TransformerWinding" Acronym="XW" CIMName="TransformerWinding"/>
+    <ElementType Name="Line" Acronym="Ln" CIMName="Line"/>
+    <ElementType Name="SeriesCompensator" Acronym="Sc" CIMName="SeriesCompensator"/>
+  </OneLineData>
+  <DataTypes>
+	<DataType BaseType="MM_Analog_Measurement" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadAnalogData"/>
+	<DataType BaseType="MM_Basecase_Violation_Data" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadBasecaseViolationData"/>
+	<DataType BaseType="MM_BreakerSwitch_Data" WarningTime="20" ErrorTime="30" DataSource="" RefreshCommand="LoadBreakerSwitchData"/>
+	<DataType BaseType="MM_Bus_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadBusData"/>
+	<DataType BaseType="MM_Chart_Data" WarningTime="8" ErrorTime="12" DataSource="" RefreshCommand="LoadChartingData"/>
+	<DataType BaseType="MM_Contingency_Violation_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadContingencyViolationData"/>
+	<DataType BaseType="MM_DCTie_Data" WarningTime="8" ErrorTime="12" DataSource="" RefreshCommand="LoadLineData"/>
+	<DataType BaseType="MM_Interface_Monitoring_Data" WarningTime="20" ErrorTime="30" DataSource="" RefreshCommand="LoadSystemWideData"/>
+	<DataType BaseType="MM_Island_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadIslandData"/>
+	<DataType BaseType="MM_Island_Simulation_Data" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadIslandData"/>
+	<DataType BaseType="MM_Line_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadLineData"/>
+	<DataType BaseType="MM_Load_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadLoadData"/>
+	<DataType BaseType="MM_Load_Forecast_Data" WarningTime="3630" ErrorTime="3660" DataSource="" RefreshCommand="LoadLoadForecastData"/>
+	<DataType BaseType="MM_Operatorship_Update" WarningTime="-1" ErrorTime="-1" DataSource="Manual" RefreshCommand="LoadOperatorshipUpdateData"/>
+	<DataType BaseType="MM_Outage_Line_Data" WarningTime="20" ErrorTime="30" DataSource="" FullRefreshTime="40" RefreshCommand="LoadOutageLineData"/>
+	<DataType BaseType="MM_Outage_Transformer_Data" WarningTime="20" ErrorTime="30" DataSource=""  FullRefreshTime="40" RefreshCommand="LoadOutageTransformerData"/>
+	<DataType BaseType="MM_Outage_Unit_Data" WarningTime="20" ErrorTime="30" DataSource=""  FullRefreshTime="40" RefreshCommand="LoadOutageUnitData"/>
+	<DataType BaseType="MM_Scada_Analog" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadSCADAData"/>
+	<DataType BaseType="MM_Scada_Status" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadSCADAData"/>
+	<DataType BaseType="MM_ShuntCompensator_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadShuntCompensatorData"/>
+	<DataType BaseType="MM_Simulation_Time" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadSystemWideData"/>
+	<DataType BaseType="MM_State_Measurement" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand=""/>
+	<DataType BaseType="MM_StaticVarCompensator_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadShuntCompensatorData"/>
+	<DataType BaseType="MM_Synchroscope_Data" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadBreakerSwitchData"/>
+	<DataType BaseType="MM_SystemWide_Generation_Data" WarningTime="8" ErrorTime="12" DataSource="" RefreshCommand="LoadSystemWideData"/>
+	<DataType BaseType="MM_Transformer_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadTransformerData"/>
+	<DataType BaseType="MM_Transformer_PhaseShifter_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadTransformerData"/>
+	<DataType BaseType="MM_UnitType_Generation_Data" WarningTime="8" ErrorTime="12" DataSource="" RefreshCommand="LoadSystemWideData"/>
+	<DataType BaseType="MM_Unit_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadUnitData"/>
+	<DataType BaseType="MM_Unit_Gen_Data" WarningTime="8" ErrorTime="12" DataSource="" RefreshCommand="LoadUnitData"/>
+	<DataType BaseType="MM_Unit_Simulation_Data" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="LoadUnitData"/>
+	<DataType BaseType="MM_ZeroImpedanceBridge_Data" WarningTime="600" ErrorTime="900" DataSource="" RefreshCommand="LoadLineData"/>
+	<DataType BaseType="MM_Unit_Control_Status" WarningTime="-1" ErrorTime="-1" DataSource="" RefreshCommand="GetUnitControlStatus"/>
+</DataTypes>
+<DataSources>
+      <DataSource Default="true" Application="RealTime" Database="RealTimeDb" Family="EMS" Name="RealTime" Telemetry="true" Estimates="true" BackColor="Blue" ForeColor="White"/>
+      <DataSource                Application="Study" Database="StudyDb" Family="EMS" Name="Study" Telemetry="false " Estimates="true" BackColor="Pink" ForeColor="White"/>
+     
+</DataSources>
+<Commands>
+   
+    </Commands>
+</Configuration>

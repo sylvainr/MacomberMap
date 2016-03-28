@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="7011" BaseElement.ConnectedLines="" BaseElement.County="Childress" BaseElement.DisplayName="Sub070" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="34.52968" BaseElement.LatLong="34.52968,-100.20765" BaseElement.Longitude="-100.20765" BaseElement.Operator="998404" BaseElement.Owner="402004" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub070" BaseElement.LongName="Sub070">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch070" rdfID="4fbbde0c-dd7f-46df-97b3-41fc0d625c4c" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch070" BaseElement.TEID="320839" BaseElement.Owner="770538" BaseElement.Operator="177411" BaseElement.Substation="7011" BaseElement.SubLongName="Sub070" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub070">
+		<Descriptor DescriptorText="Switch070" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch070" rdfID="4fbbde0c-dd7f-46df-97b3-41fc0d625c4c" BaseElement.TEID="320839" BaseElement.ElemType="Breaker" BaseElement.Owner="770538" BaseElement.Operator="177411" BaseElement.KVLevel="69 KV" BaseElement.Substation="7011" BaseElement.SubName="Switch070" BaseElement.SubLongName="Switch070" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch070"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line043" rdfID="871ba564-7afe-4d81-803b-4b818d7bcf20" BaseElement.ElemType="Line" BaseElement.KVLevel="69 KV" BaseElement.Name="Line043" BaseElement.TEID="7503" BaseElement.Owner="402004" BaseElement.Operator="402004">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line043" rdfID="871ba564-7afe-4d81-803b-4b818d7bcf20" BaseElement.TEID="7503" BaseElement.ElemType="Line" BaseElement.Owner="402004" BaseElement.Operator="402004" BaseElement.KVLevel="69 KV" BaseElement.Name="Line043" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,268,8" Orientation="Vertical" Text="Bus101" rdfID="4d9b2e67-372e-43f9-b3be-19de2b88967b" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus101" BaseElement.TEID="251819" BaseElement.Owner="154976" BaseElement.Operator="919908" BaseElement.Substation="7011" BaseElement.SubLongName="Sub070" PUNElement="False" BaseElement.SubName="Sub070">
+		<Switch rdfID="ece84fe9-d045-489f-9893-99b78f38a897" TEID="320839"/>
+		<Line rdfID="871ba564-7afe-4d81-803b-4b818d7bcf20" TEID="7503"/>
+	</Node>
+</Nodes>
+</One_Line>

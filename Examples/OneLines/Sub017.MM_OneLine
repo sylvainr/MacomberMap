@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="871190" BaseElement.ConnectedLines="" BaseElement.County="Gaines" BaseElement.DisplayName="Sub017" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="345 KV" BaseElement.Latitude="32.740845" BaseElement.LatLong="32.740845,-102.6339" BaseElement.Longitude="-102.6339" BaseElement.Operator="94017" BaseElement.Owner="402004" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub017" BaseElement.LongName="Sub017">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch017" rdfID="685915c1-406a-449d-856c-70e617d70cec" BaseElement.ElemType="Breaker" BaseElement.KVLevel="345 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch017" BaseElement.TEID="164703" BaseElement.Owner="94017" BaseElement.Operator="21073" BaseElement.Substation="871190" BaseElement.SubLongName="Sub017" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub017">
+		<Descriptor DescriptorText="Switch017" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch017" rdfID="685915c1-406a-449d-856c-70e617d70cec" BaseElement.TEID="164703" BaseElement.ElemType="Breaker" BaseElement.Owner="94017" BaseElement.Operator="21073" BaseElement.KVLevel="345 KV" BaseElement.Substation="871190" BaseElement.SubName="Switch017" BaseElement.SubLongName="Switch017" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch017"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="345 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line010" rdfID="48a205c7-8d19-4149-8cf5-8b555808c8e0" BaseElement.ElemType="Line" BaseElement.KVLevel="345 KV" BaseElement.Name="Line010" BaseElement.TEID="690656" BaseElement.Owner="21073" BaseElement.Operator="998404">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line010" rdfID="48a205c7-8d19-4149-8cf5-8b555808c8e0" BaseElement.TEID="690656" BaseElement.ElemType="Line" BaseElement.Owner="21073" BaseElement.Operator="998404" BaseElement.KVLevel="345 KV" BaseElement.Name="Line010" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,268,8" Orientation="Vertical" Text="Bus026" rdfID="d574d46d-58a5-4464-aa2a-d2af35c45014" BaseElement.ElemType="Node" BaseElement.KVLevel="345 KV" BaseElement.Name="Bus026" BaseElement.TEID="811017" BaseElement.Owner="21073" BaseElement.Operator="919908" BaseElement.Substation="871190" BaseElement.SubLongName="Sub017" PUNElement="False" BaseElement.SubName="Sub017">
+		<Switch rdfID="9339619f-17b8-4aca-9bd2-f675fe7b8e4b" TEID="164703"/>
+		<Line rdfID="48a205c7-8d19-4149-8cf5-8b555808c8e0" TEID="690656"/>
+	</Node>
+</Nodes>
+</One_Line>

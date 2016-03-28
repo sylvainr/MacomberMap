@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="130350" BaseElement.ConnectedLines="" BaseElement.County="Garza" BaseElement.DisplayName="Sub018" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="33.179125" BaseElement.LatLong="33.179125,-101.298" BaseElement.Longitude="-101.298" BaseElement.Operator="94017" BaseElement.Owner="154976" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub018" BaseElement.LongName="Sub018">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch018" rdfID="c82626d9-745e-416a-be3a-4da11f3c092d" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch018" BaseElement.TEID="278963" BaseElement.Owner="680902" BaseElement.Operator="402004" BaseElement.Substation="130350" BaseElement.SubLongName="Sub018" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub018">
+		<Descriptor DescriptorText="Switch018" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch018" rdfID="c82626d9-745e-416a-be3a-4da11f3c092d" BaseElement.TEID="278963" BaseElement.ElemType="Breaker" BaseElement.Owner="680902" BaseElement.Operator="402004" BaseElement.KVLevel="138 KV" BaseElement.Substation="130350" BaseElement.SubName="Switch018" BaseElement.SubLongName="Switch018" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch018"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line011" rdfID="403f2b9c-9564-45f4-a5dd-553d90fccc15" BaseElement.ElemType="Line" BaseElement.KVLevel="138 KV" BaseElement.Name="Line011" BaseElement.TEID="122068" BaseElement.Owner="154976" BaseElement.Operator="770538">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line011" rdfID="403f2b9c-9564-45f4-a5dd-553d90fccc15" BaseElement.TEID="122068" BaseElement.ElemType="Line" BaseElement.Owner="154976" BaseElement.Operator="770538" BaseElement.KVLevel="138 KV" BaseElement.Name="Line011" />
+	</Line>
+	<Reactor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Right" Bounds="268,50,32,25" Visible="true" Text="Reac017" rdfID="c5ebf983-7391-40fd-ae19-6cc77130b970" BaseElement.ElemType="Reactor" BaseElement.KVLevel="138 KV" BaseElement.Name="Reac017" BaseElement.TEID="822642" BaseElement.Owner="402004" BaseElement.Operator="998404" BaseElement.Substation="130350" BaseElement.SubLongName="Sub018" PUNElement="False" BaseElement.SubName="Sub018">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="298,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Reac017" rdfID="c5ebf983-7391-40fd-ae19-6cc77130b970" BaseElement.TEID="822642" BaseElement.ElemType="Reactor" BaseElement.Owner="402004" BaseElement.Operator="998404" BaseElement.KVLevel="138 KV" BaseElement.Substation="130350" BaseElement.SubName="Sub018" BaseElement.SubLongName="Sub018" BaseElement.Name="Reac017" />
+	</Reactor>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,364,8" Orientation="Vertical" Text="Bus027" rdfID="d249bf12-6803-4dc5-b9e9-02f2a02a2a8c" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus027" BaseElement.TEID="995735" BaseElement.Owner="94017" BaseElement.Operator="770538" BaseElement.Substation="130350" BaseElement.SubLongName="Sub018" PUNElement="False" BaseElement.SubName="Sub018">
+		<Switch rdfID="33145799-bf83-4188-8ce3-b5193bc409df" TEID="278963"/>
+		<Line rdfID="403f2b9c-9564-45f4-a5dd-553d90fccc15" TEID="122068"/>
+		<Reactor rdfID="c5ebf983-7391-40fd-ae19-6cc77130b970" TEID="822642"/>
+	</Node>
+</Nodes>
+</One_Line>

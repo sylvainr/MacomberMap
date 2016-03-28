@@ -1,0 +1,126 @@
+© 2009 - 2016, Michael E. Legatt, Ph.D., 
+Electric Reliability Council of Texas (ERCOT)
+
+The Macomber Map provides high to low-level 
+situation awareness, pulling data from a variety 
+of systems, integrated around a network model.
+
+The Macomber Map is named to honor the memory of 
+Gary Macomber, Ph.D., who initated the research 
+that lead to this product's development.
+
+Principal Developer and architect: 
+Michael E. Legatt, Ph.D., ERCOT
+
+Contributing Developers: 
+Murali Boddeti, ERCOT
+Paul Li, ERCOT
+Yong Ma, ERCOT
+Helen Li, ERCOT
+Cody Parker, SPP
+Jeff Parker, SPP
+Tim Van Prayoon,SPP
+
+ERCOT EMMS Development:
+Richard Howard, Manager
+Steve Daniels, Director
+Jerry Dreyer, Chief Information Officer
+
+ERCOT Grid Coordination:
+John Moseley, Ph.D., Principal, Network Modeling
+Bill Blevins, Director
+Woody Rickerson, Vice President, Grid Planning & Operations
+Cheryl Mele, Chief Operating Officer
+
+ERCOT Training:
+Stacy Wozny, Coordinator
+Kelly Blackmer, Manager
+Bill Blevins, Director
+Woody Rickerson, Vice President, Grid Planning & Operations
+Cheryl Mele, Chief Operating Officer
+
+ERCOT Grid Operations:
+Jimmy Hartmann, Manager
+Dan Woodfin, Director
+Woody Rickerson, Vice President, Grid Planning & Operations
+Cheryl Mele, Chief Operating Officer
+
+ERCOT Communications and External Relations:
+Mike Legatt, Principal Human Factors Engineer
+Shelly Botkin, Director
+Theresa Gage, Vice President
+
+ERCOT Leadership: 
+H.B. "Trip" Doggett, Past Chief Executive Officer
+Bill Magness, Chief Executive Officer
+
+Special Thanks:
+John Adams
+Vasiliy Astapov
+Manuel Atanacio
+Boza Avramovic
+Ross Baldick
+Kelly Blackmer
+Murali Boddeti
+Arthur Boecker
+Bill Blevins
+Jim Bowles
+Sam Chanoski
+Candy Clark
+Brian Cook
+Vinod Damaraju
+Steve Daniels
+Chris Davis
+H.B. "Trip" Doggett
+Estrellita Doolin
+Barak Epstein
+David Forfia
+Colleen Frosch
+Weihui Fu
+David Hackett
+Yancy Harlow
+Jimmy Hartmann
+Shari Heino
+Kate Horne
+Richard Howard
+Andrew Johnston
+Manho Joung
+Bob Kahn
+Venkata Kanduri
+Joel Koepke
+Caroline Legatt
+Shelly Levitt
+Cagle Lowe
+Gene Lowrie
+Martha Macomber
+Bill Magness
+William Malcolm
+Art Markman
+Jake Mazulewicz
+Tim Mortensen
+James Merlo
+John Moseley
+Mark Nataros
+Jerry Neef
+Sarma "NDR" Nuthalapati
+Diran Obadina
+Danya Pysh
+Dan Roehl
+Kent Saathoff
+Emek Sadot
+Gil Shavit
+Martha Siebold
+Sinoun Staples
+Chelsea Valentine
+Michael Webber
+Steve White
+
+ERCOT's control room operators
+ERCOT's operations engineers
+ERCOT's production support
+
+And most of all, Gary Macomber.
+
+This product, including all research and intellectual 
+property, is the property of the Electric Reliability 
+Council of Texas. All Rights Reserved.

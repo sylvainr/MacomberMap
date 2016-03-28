@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="231456" BaseElement.ConnectedLines="" BaseElement.County="San Augustine" BaseElement.DisplayName="Sub239" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="31.37643" BaseElement.LatLong="31.37643,-94.191385" BaseElement.Longitude="-94.191385" BaseElement.Operator="998404" BaseElement.Owner="177411" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub239" BaseElement.LongName="Sub239">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch239" rdfID="4c9d663d-0358-436e-92f2-bfafc00026e2" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch239" BaseElement.TEID="301079" BaseElement.Owner="998404" BaseElement.Operator="919908" BaseElement.Substation="231456" BaseElement.SubLongName="Sub239" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub239">
+		<Descriptor DescriptorText="Switch239" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch239" rdfID="4c9d663d-0358-436e-92f2-bfafc00026e2" BaseElement.TEID="301079" BaseElement.ElemType="Breaker" BaseElement.Owner="998404" BaseElement.Operator="919908" BaseElement.KVLevel="138 KV" BaseElement.Substation="231456" BaseElement.SubName="Switch239" BaseElement.SubLongName="Switch239" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch239"/>
+	</Switch>
+	<Reactor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Right" Bounds="172,50,32,25" Visible="true" Text="Reac234" rdfID="54386c50-f998-4c27-9b9d-c4a01ed633e8" BaseElement.ElemType="Reactor" BaseElement.KVLevel="138 KV" BaseElement.Name="Reac234" BaseElement.TEID="770215" BaseElement.Owner="680902" BaseElement.Operator="177411" BaseElement.Substation="231456" BaseElement.SubLongName="Sub239" PUNElement="False" BaseElement.SubName="Sub239">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Reac234" rdfID="54386c50-f998-4c27-9b9d-c4a01ed633e8" BaseElement.TEID="770215" BaseElement.ElemType="Reactor" BaseElement.Owner="680902" BaseElement.Operator="177411" BaseElement.KVLevel="138 KV" BaseElement.Substation="231456" BaseElement.SubName="Sub239" BaseElement.SubLongName="Sub239" BaseElement.Name="Reac234" />
+	</Reactor>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,268,8" Orientation="Vertical" Text="Bus347" rdfID="beaccfd6-27e9-4e8b-b42f-58e4ea15dd1f" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus347" BaseElement.TEID="391142" BaseElement.Owner="919908" BaseElement.Operator="998404" BaseElement.Substation="231456" BaseElement.SubLongName="Sub239" PUNElement="False" BaseElement.SubName="Sub239">
+		<Switch rdfID="e443d8ee-04e4-47e7-9adb-17c49a6743ea" TEID="301079"/>
+		<Reactor rdfID="54386c50-f998-4c27-9b9d-c4a01ed633e8" TEID="770215"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus421" rdfID="ffee4796-4c5f-4650-8d4e-94149f5d2448" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus421" BaseElement.TEID="5922" BaseElement.Owner="402004" BaseElement.Operator="260493" BaseElement.Substation="231456" BaseElement.SubLongName="Sub239" PUNElement="False" BaseElement.SubName="Sub239">
+		<Line rdfID="06bafb6d-62b3-43b7-8865-c940608576c0" TEID="240855"/>
+		<Line rdfID="64e02d41-0550-4cbc-a096-3d789764c567" TEID="489380"/>
+	</Node>
+</Nodes>
+</One_Line>

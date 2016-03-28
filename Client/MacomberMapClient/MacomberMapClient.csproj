@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\CefSharp.WinForms.47.0.3\build\CefSharp.WinForms.props" Condition="Exists('..\..\packages\CefSharp.WinForms.47.0.3\build\CefSharp.WinForms.props')" />
+  <Import Project="..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.props" Condition="Exists('..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.props')" />
+  <Import Project="..\..\packages\CefSharp.WinForms.41.0.1\build\CefSharp.WinForms.props" Condition="Exists('..\..\packages\CefSharp.WinForms.41.0.1\build\CefSharp.WinForms.props')" />
+  <Import Project="..\..\packages\CefSharp.Common.41.0.1\build\CefSharp.Common.props" Condition="Exists('..\..\packages\CefSharp.Common.41.0.1\build\CefSharp.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C34A9AF-E44A-4111-B06F-FD3DBD154B33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MacomberMapClient</RootNamespace>
+    <AssemblyName>MacomberMapClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\CompanyIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\MacomberMapClient.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\MacomberMapClient.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.0.5.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPPlus.4.0.5\lib\net20\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SharpDX, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.3.0.2\lib\net45\SharpDX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.D3DCompiler, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.D3DCompiler.3.0.2\lib\net45\SharpDX.D3DCompiler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Desktop, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.Desktop.3.0.2\lib\net45\SharpDX.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.Direct2D1.3.0.2\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.Direct3D11.3.0.2\lib\net45\SharpDX.Direct3D11.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11.Effects, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.Direct3D11.Effects.3.0.2\lib\net45\SharpDX.Direct3D11.Effects.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.DXGI.3.0.2\lib\net45\SharpDX.DXGI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.Mathematics.3.0.2\lib\net45\SharpDX.Mathematics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation, Version=3.0.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpDX.MediaFoundation.3.0.2\lib\net45\SharpDX.MediaFoundation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\Documents\SpiderOak Hive\ResilientGrid, Inc\GenCell\Macomber Map Open Source\MacomberMapClient\bin\x86\Debug\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Elements\Blackstart\MM_Blackstart_Corridor.cs" />
+    <Compile Include="Data Elements\Blackstart\MM_Blackstart_Corridor_Element.cs" />
+    <Compile Include="Data Elements\Blackstart\MM_Blackstart_Corridor_Target.cs" />
+    <Compile Include="Data Elements\Display\MM_Display.cs" />
+    <Compile Include="Data Elements\Display\MM_DisplayParameter.cs" />
+    <Compile Include="Data Elements\Display\MM_Display_View.cs" />
+    <Compile Include="Data Elements\Display\MM_MapTile.cs" />
+    <Compile Include="Data Elements\Display\MM_Permissions.cs" />
+    <Compile Include="Data Elements\Display\MM_Substation_Display.cs" />
+    <Compile Include="Data Elements\Geographic\MM_Boundary.cs" />
+    <Compile Include="Data Elements\Geographic\MM_Coordinates.cs" />
+    <Compile Include="Data Elements\Geographic\MM_Coordinate_Suggestion.cs" />
+    <Compile Include="Data Elements\Geographic\MM_Zone.cs" />
+    <Compile Include="Data Elements\Physical\MM_Contingency.cs" />
+    <Compile Include="Data Elements\Physical\MM_Flowgate.cs" />
+    <Compile Include="Data Elements\Physical\MM_Limit.cs" />
+    <Compile Include="Data Elements\Physical\MM_Pricing_Vector.cs" />
+    <Compile Include="Data Elements\Physical\MM_RemedialActionScheme.cs" />
+    <Compile Include="Data Elements\Physical\MM_Reserve.cs" />
+    <Compile Include="Data Elements\Physical\MM_Scheduled_Outage.cs" />
+    <Compile Include="Data Elements\Physical\MM_Unit_CombinedCycle.cs" />
+    <Compile Include="Data Elements\Physical\MM_Unit_Logical.cs" />
+    <Compile Include="Data Elements\SystemInformation\MM_Command.cs" />
+    <Compile Include="Data Elements\SystemInformation\MM_Data_Source.cs" />
+    <Compile Include="Data Elements\SystemInformation\MM_Pipe.cs" />
+    <Compile Include="Data Elements\SystemInformation\MM_Process.cs" />
+    <Compile Include="Framework\EmbeddedResourceReader.cs" />
+    <Compile Include="Framework\KDTree\DistanceFunction.cs" />
+    <Compile Include="Framework\KDTree\IntervalHeap.cs" />
+    <Compile Include="Framework\KDTree\KDNode.cs" />
+    <Compile Include="Framework\KDTree\KDTree.cs" />
+    <Compile Include="Framework\KDTree\MinHeap.cs" />
+    <Compile Include="Framework\KDTree\NearestNeighbor.cs" />
+    <Compile Include="Integration\Data_Integration.cs" />
+    <Compile Include="Integration\MM_Converter.cs" />
+    <Compile Include="Integration\MM_DataRetrieval_Information.cs" />
+    <Compile Include="Integration\MM_Repository.cs" />
+    <Compile Include="Integration\MM_Serializable.cs" />
+    <Compile Include="Data Elements\Physical\MM_Breaker_Switch.cs" />
+    <Compile Include="Data Elements\Physical\MM_Bus.cs" />
+    <Compile Include="Data Elements\Physical\MM_Company.cs" />
+    <Compile Include="Data Elements\Physical\MM_Electrical_Bus.cs" />
+    <Compile Include="Data Elements\Physical\MM_Element.cs" />
+    <Compile Include="Data Elements\Physical\MM_Element_Type.cs" />
+    <Compile Include="Data Elements\Physical\MM_EPSMeter.cs" />
+    <Compile Include="Data Elements\Physical\MM_Island.cs" />
+    <Compile Include="Data Elements\Physical\MM_KVLevel.cs" />
+    <Compile Include="Data Elements\Physical\MM_Line.cs" />
+    <Compile Include="Data Elements\Physical\MM_Load.cs" />
+    <Compile Include="Data Elements\Physical\MM_Node.cs" />
+    <Compile Include="Data Elements\Physical\MM_ShuntCompensator.cs" />
+    <Compile Include="Data Elements\Physical\MM_StaticVarCompensator.cs" />
+    <Compile Include="Data Elements\Physical\MM_Substation.cs" />
+    <Compile Include="Data Elements\Physical\MM_Transformer.cs" />
+    <Compile Include="Data Elements\Physical\MM_TransformerWinding.cs" />
+    <Compile Include="Data Elements\Physical\MM_Unit.cs" />
+    <Compile Include="Data Elements\Physical\MM_Tie.cs" />
+    <Compile Include="Data Elements\Physical\MM_Unit_Type.cs" />
+    <Compile Include="Data Elements\Training\MM_Training.cs" />
+    <Compile Include="Data Elements\Violations\MM_AlarmViolation.cs" />
+    <Compile Include="Data Elements\Violations\MM_AlarmViolation_Type.cs" />
+    <Compile Include="Data Elements\Weather\MM_WeatherStation.cs" />
+    <Compile Include="Data Elements\Weather\MM_WeatherStationCollection.cs" />
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\MM_Server_Callback_Handler.cs" />
+    <Compile Include="Integration\MM_Server_Information.cs" />
+    <Compile Include="Integration\MM_Server_Interface.cs" />
+    <Compile Include="Integration\MM_Type_Finder.cs" />
+    <Compile Include="Integration\MM_WCF_Interface.cs" />
+    <Compile Include="Integration\ReflectionOrm\FastProperty.cs" />
+    <Compile Include="Integration\SqlModelLoader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_EMS_Command_Display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_EMS_Command_Display.Designer.cs">
+      <DependentUpon>MM_EMS_Command_Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Generators_Display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Generators_Display.Designer.cs">
+      <DependentUpon>MM_Generators_Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_LoadGen_Tracking_Operator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_LoadGen_Tracking_Operator.Designer.cs">
+      <DependentUpon>MM_LoadGen_Tracking_Operator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Communications\MM_Process_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Communications\MM_Process_Viewer.Designer.cs">
+      <DependentUpon>MM_Process_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Configuration\MM_Display_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Configuration\MM_Display_Options.Designer.cs">
+      <DependentUpon>MM_Display_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\External\MM_Excel_Exporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\External\MM_Excel_Exporter.Designer.cs">
+      <DependentUpon>MM_Excel_Exporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Configuration\MM_Coordinate_Delta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Configuration\MM_Coordinate_Delta.Designer.cs">
+      <DependentUpon>MM_Coordinate_Delta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_Bound_Element.cs" />
+    <Compile Include="User Interfaces\Generic\MM_DataGrid_View.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_Gauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_Gauge.Designer.cs">
+      <DependentUpon>MM_Gauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_UserInterface_Helper.cs" />
+    <Compile Include="User Interfaces\Generic\MM_WindProcHelper.cs" />
+    <Compile Include="User Interfaces\Information\MM_Note_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Information\MM_Note_Viewer.Designer.cs">
+      <DependentUpon>MM_Note_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Information\MM_Note_Writer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Information\MM_Note_Writer.Designer.cs">
+      <DependentUpon>MM_Note_Writer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\MacomberMap_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\MacomberMap_Form.Designer.cs">
+      <DependentUpon>MacomberMap_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Blackstart_Display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Blackstart_Display.Designer.cs">
+      <DependentUpon>MM_Blackstart_Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\NetworkMap\Contours\ContourDataProvider.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Contours\LineLoadingPercentageContourData.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Contours\SubstationLmpContourData.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Contours\SubstationVoltageContourData.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Contours\LinearGradientPallette.cs" />
+    <Compile Include="User Interfaces\NetworkMap\DX\Direct3DSurface.cs" />
+    <Compile Include="User Interfaces\NetworkMap\DX\RenderTime.cs" />
+    <Compile Include="User Interfaces\NetworkMap\DX\SharpDxExtensions.cs" />
+    <Compile Include="User Interfaces\NetworkMap\DX\VertexPositionColorNormal.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\BaseMapLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\ContourOverlayLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\DynamicRegionsLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\LegendLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\MinimapLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\ScreenLogLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\TrainingGameLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\OldContourStuff\KDTreeContour.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\DebugLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\IRenderComponent.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\LineLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\OldContourStuff\MM_DX_Contouring.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\StateRegionsLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\SubstationLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Layers\WeatherMapLayer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\MM_Island_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\NetworkMap\MM_Island_View.Designer.cs">
+      <DependentUpon>MM_Island_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Operatorship_Display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Operatorship_Display.Designer.cs">
+      <DependentUpon>MM_Operatorship_Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Video_Recorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_Video_Recorder.Designer.cs">
+      <DependentUpon>MM_Video_Recorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\NetworkMap\Proxies\BaseMapTileProxy.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Proxies\BrushContainer.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Proxies\LineProxy.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Proxies\RegionProxy.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Proxies\SubstationProxy.cs" />
+    <Compile Include="User Interfaces\NetworkMap\Proxies\WeatherMapTileProxy.cs" />
+    <Compile Include="User Interfaces\OneLines\MM_ControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\OneLines\MM_ControlPanel.Designer.cs">
+      <DependentUpon>MM_ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\OneLines\MM_Generator_ControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\OneLines\MM_Generator_ControlPanel.designer.cs">
+      <DependentUpon>MM_Generator_ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\OneLines\MM_OneLine_Element.cs" />
+    <Compile Include="User Interfaces\OneLines\MM_OneLine_Node.cs" />
+    <Compile Include="User Interfaces\OneLines\MM_OneLine_Synchroscope.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\OneLines\MM_OneLine_Synchroscope.Designer.cs">
+      <DependentUpon>MM_OneLine_Synchroscope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\OneLines\MM_OneLine_TransformerWinding.cs" />
+    <Compile Include="User Interfaces\OneLines\MM_OneLine_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\OneLines\MM_OneLine_Viewer.Designer.cs">
+      <DependentUpon>MM_OneLine_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Overrides\MM_Data_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Overrides\MM_Data_Entry.Designer.cs">
+      <DependentUpon>MM_Data_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Overrides\MM_SearchBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_DataSet_Base.cs" />
+    <Compile Include="User Interfaces\Summary\MM_Data_Table.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Element_Summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Historic_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Historic_Viewer.Designer.cs">
+      <DependentUpon>MM_Historic_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Historic_Viewer_Date_SelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Historic_Viewer_Date_SelectionForm.Designer.cs">
+      <DependentUpon>MM_Historic_Viewer_Date_SelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Key_Indicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Key_Indicators.Designer.cs">
+      <DependentUpon>MM_Key_Indicators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Key_Indicator_Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Limit_Reserve_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Limit_Reserve_Viewer.Designer.cs">
+      <DependentUpon>MM_Limit_Reserve_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_LoadGen_Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Blackstart\MM_LoadGen_Tracking.Designer.cs">
+      <DependentUpon>MM_LoadGen_Tracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Property_Page.cs" />
+    <Compile Include="User Interfaces\Summary\MM_Search_Results.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Search_Results.Designer.cs">
+      <DependentUpon>MM_Search_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_Search_Results_Helper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_UserInteraction_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Summary\MM_UserInteraction_Viewer.Designer.cs">
+      <DependentUpon>MM_UserInteraction_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\MM_About_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\MM_About_Form.Designer.cs">
+      <DependentUpon>MM_About_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Communications\MM_Communication_Linkage.cs" />
+    <Compile Include="User Interfaces\Communications\MM_Communication_Status.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Communications\MM_Communication_Status.Designer.cs">
+      <DependentUpon>MM_Communication_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Communications\MM_Communication_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Communications\MM_Communication_Viewer.Designer.cs">
+      <DependentUpon>MM_Communication_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_Form.Designer.cs">
+      <DependentUpon>MM_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_Form_Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_Form_Builder.Designer.cs">
+      <DependentUpon>MM_Form_Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Generic\MM_System_Interfaces.cs" />
+    <Compile Include="User Interfaces\Menuing\MM_Popup_Menu_ValueItems.cs" />
+    <Compile Include="User Interfaces\NetworkMap\MM_Mini_Map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\NetworkMap\MM_Mini_Map.Designer.cs">
+      <DependentUpon>MM_Mini_Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\NetworkMap\MM_NetworkMap_FlowPath.cs" />
+    <Compile Include="User Interfaces\Menuing\MM_Popup_Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\NetworkMap\MM_Network_Map_DX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Startup\MM_Startup_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Startup\MM_Startup_Form.Designer.cs">
+      <DependentUpon>MM_Startup_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Startup\frmWindowsSecurityDialog.cs" />
+    <Compile Include="User Interfaces\Training\MM_Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Training\MM_Game.Designer.cs">
+      <DependentUpon>MM_Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Video\MM_Video_Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Video\MM_Video_Player.Designer.cs">
+      <DependentUpon>MM_Video_Player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Video\MM_Video_Player_Control.xaml.cs">
+      <DependentUpon>MM_Video_Player_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Interfaces\Violations\MM_Violation_Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Interfaces\Violations\MM_Violation_Viewer.Designer.cs">
+      <DependentUpon>MM_Violation_Viewer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Blackstart\MM_EMS_Command_Display.resx">
+      <DependentUpon>MM_EMS_Command_Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Blackstart\MM_Generators_Display.resx">
+      <DependentUpon>MM_Generators_Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Blackstart\MM_LoadGen_Tracking_Operator.resx">
+      <DependentUpon>MM_LoadGen_Tracking_Operator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Communications\MM_Communication_Viewer.resx">
+      <DependentUpon>MM_Communication_Viewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Configuration\MM_Coordinate_Delta.resx">
+      <DependentUpon>MM_Coordinate_Delta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Configuration\MM_Display_Options.resx">
+      <DependentUpon>MM_Display_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Blackstart\MM_Blackstart_Display.resx">
+      <DependentUpon>MM_Blackstart_Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Blackstart\MM_Operatorship_Display.resx">
+      <DependentUpon>MM_Operatorship_Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Blackstart\MM_Video_Recorder.resx">
+      <DependentUpon>MM_Video_Recorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\NetworkMap\MM_Island_View.resx">
+      <DependentUpon>MM_Island_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\OneLines\MM_ControlPanel.resx">
+      <DependentUpon>MM_ControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\OneLines\MM_Generator_ControlPanel.resx">
+      <DependentUpon>MM_Generator_ControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\OneLines\MM_OneLine_Synchroscope.resx">
+      <DependentUpon>MM_OneLine_Synchroscope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\OneLines\MM_OneLine_Viewer.resx">
+      <DependentUpon>MM_OneLine_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Startup\MM_Startup_Form.resx">
+      <DependentUpon>MM_Startup_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Summary\MM_Key_Indicators.resx">
+      <DependentUpon>MM_Key_Indicators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Blackstart\MM_LoadGen_Tracking.resx">
+      <DependentUpon>MM_LoadGen_Tracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Summary\MM_Search_Results.resx">
+      <DependentUpon>MM_Search_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interfaces\Video\MM_Video_Player.resx">
+      <DependentUpon>MM_Video_Player.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Analog_Measurement.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Analog_Measurement1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Analog_Measurement11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Basecase_Violation_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_BreakerSwitch_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Bus_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Bus_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Chart_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Contingency_Violation_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_DCTie_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Interface_Monitoring_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Interface_Monitoring_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Interface_Monitoring_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Island_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Island_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Island_Simulation_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Line_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Line_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Line_Outage_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Line_Outage_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Load_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Load_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Load_Forecast_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Load_Forecast_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_OneLine_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_OneLine_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_OneLine_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_OneLine_Data12.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_OneLine_Data13.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Operatorship_Update.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Line_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Line_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Line_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Transformer_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Transformer_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Transformer_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Unit_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Unit_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Outage_Unit_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Scada_Analog.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Scada_Analog1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Scada_Analog11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Scada_Status.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Scada_Status1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Scada_Status11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_ShuntCompensator_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_ShuntCompensator_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_ShuntCompensator_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Simulation_Time.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_State_Measurement.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_State_Measurement1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_State_Measurement11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_StaticVarComepensator_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_StaticVarCompensator_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_StaticVarCompensator_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_StaticVarCompensator_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_StaticVarCompensator_Data12.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Synchroscope_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_SystemWide_Generation_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Transformer_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Transformer_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Transformer_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_UnitType_Generation_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Unit_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Unit_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Unit_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Unit_Gen_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_Unit_Simulation_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_ZeroImpedanceBridge_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_ZeroImpedanceBridge_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.EMS.MM_ZeroImpedanceBridge_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Database_Model.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Database_Model1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Database_Model11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Data_Collection.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Historic_Query.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Island_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Island_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Island_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Island_Data12.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Island_Data13.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Island_Data14.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Line_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Line_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Line_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Line_Data12.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Line_Data13.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Line_Data14.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Load_Data.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Load_Data1.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Load_Data11.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Load_Data12.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Load_Data13.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Load_Data14.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Note.datasource" />
+    <None Include="Properties\DataSources\MacomberMapCommunications.Messages.MM_Training_Level.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MacomberMap.UI\MacomberMap.UI.csproj">
+      <Project>{f24a74c6-d112-48b0-910a-64595e985713}</Project>
+      <Name>MacomberMap.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MacomberMapCommunications\MacomberMapCommunications.csproj">
+      <Project>{b75c9805-1c7d-4b32-8a84-d0ac41d7d57a}</Project>
+      <Name>MacomberMapCommunications</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network_ConnectTo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Macomber Map Open Source License - MIT.txt" />
+    <None Include="Resources\SynchroscopeHiRes.png" />
+    <Content Include="sharpdx_direct3d11_1_effects_arm.dll" />
+    <Content Include="sharpdx_direct3d11_1_effects_x64.dll" />
+    <Content Include="sharpdx_direct3d11_1_effects_x86.dll" />
+    <None Include="Resources\CompanyLogo.png" />
+    <None Include="Resources\CompanyIcon.ico" />
+    <None Include="d3dcompiler_47.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="d3dcsx_47.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Effects\VertexColorShader.fx" />
+    <Content Include="Resources\world_go.png" />
+    <None Include="Resources\Expand_large.bmp" />
+    <None Include="Resources\Collapse_large.bmp" />
+    <None Include="Resources\PageWidth.bmp" />
+    <None Include="Resources\UnitFrequencyControl.png" />
+    <None Include="Resources\Synchroscope.png" />
+    <None Include="Resources\OutagedAutoTransformer.png" />
+    <None Include="Resources\btnLog.Image.png" />
+    <None Include="Resources\tsForward.Image.png" />
+    <None Include="Resources\tsBack.Image.png" />
+    <None Include="Resources\btnDisplay.Image.png" />
+    <None Include="Resources\btnDataSource.Image.png" />
+    <None Include="Resources\PauseHS.png" />
+    <None Include="Resources\FillRightHS.png" />
+    <None Include="Resources\StopHS1.png" />
+    <None Include="Resources\StopHS.png" />
+    <None Include="Resources\FindNextHS.bmp" />
+    <None Include="Resources\Excel.bmp" />
+    <None Include="Resources\RefreshDocViewHS.png" />
+    <None Include="Resources\Search.bmp" />
+    <None Include="Resources\Acknowledgements.txt" />
+    <None Include="Resources\SearchWebHS.png" />
+    <None Include="Resources\PropertiesHS.png" />
+    <None Include="Resources\OneLine.bmp" />
+    <None Include="Resources\NoteHS.png" />
+    <None Include="Resources\PublishToWebHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="User Interfaces\Video\MM_Video_Player_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)VersionIncrementer.exe" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\cef.redist.x86.3.2526.1362\build\cef.redist.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\cef.redist.x86.3.2526.1362\build\cef.redist.x86.targets'))" />
+    <Error Condition="!Exists('..\..\packages\cef.redist.x64.3.2526.1362\build\cef.redist.x64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\cef.redist.x64.3.2526.1362\build\cef.redist.x64.targets'))" />
+    <Error Condition="!Exists('..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\..\packages\CefSharp.WinForms.47.0.3\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\CefSharp.WinForms.47.0.3\build\CefSharp.WinForms.props'))" />
+  </Target>
+  <Import Project="..\..\packages\cef.redist.x86.3.2526.1362\build\cef.redist.x86.targets" Condition="Exists('..\..\packages\cef.redist.x86.3.2526.1362\build\cef.redist.x86.targets')" />
+  <Import Project="..\..\packages\cef.redist.x64.3.2526.1362\build\cef.redist.x64.targets" Condition="Exists('..\..\packages\cef.redist.x64.3.2526.1362\build\cef.redist.x64.targets')" />
+  <Import Project="..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.targets" Condition="Exists('..\..\packages\CefSharp.Common.47.0.3\build\CefSharp.Common.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

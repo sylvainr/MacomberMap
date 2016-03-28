@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="100411" BaseElement.ConnectedLines="" BaseElement.County="Orange" BaseElement.DisplayName="Sub225" BaseElement.ElemTypes="BusbarSection,Load"  BaseElement.KVLevels="230 KV" BaseElement.Latitude="30.05479" BaseElement.LatLong="30.05479,-93.903105" BaseElement.Longitude="-93.903105" BaseElement.Operator="770538" BaseElement.Owner="919908" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub225" BaseElement.LongName="Sub225">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker225" rdfID="17329a4e-37d6-4a19-ba2d-9460bbcddac2" BaseElement.ElemType="Breaker" BaseElement.KVLevel="230 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker225" BaseElement.TEID="151178" BaseElement.Owner="402004" BaseElement.Operator="402004" BaseElement.Substation="100411" BaseElement.SubLongName="Sub225" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub225">
+		<Descriptor DescriptorText="Breaker225" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker225" rdfID="17329a4e-37d6-4a19-ba2d-9460bbcddac2" BaseElement.TEID="151178" BaseElement.ElemType="Breaker" BaseElement.Owner="402004" BaseElement.Operator="402004" BaseElement.KVLevel="230 KV" BaseElement.Substation="100411" BaseElement.SubName="Breaker225" BaseElement.SubLongName="Breaker225" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker225"/>
+	</Breaker>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Up" Bounds="180,50,32,25" Visible="true" Text="Line126" rdfID="502a1bd5-fa6d-4aee-9f68-a7d6b036a178" BaseElement.ElemType="Line" BaseElement.KVLevel="230 KV" BaseElement.Name="Line126" BaseElement.TEID="223720" BaseElement.Owner="998404" BaseElement.Operator="94017">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="210,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line126" rdfID="502a1bd5-fa6d-4aee-9f68-a7d6b036a178" BaseElement.TEID="223720" BaseElement.ElemType="Line" BaseElement.Owner="998404" BaseElement.Operator="94017" BaseElement.KVLevel="230 KV" BaseElement.Name="Line126" />
+	</Line>
+	<Load BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Right" Bounds="276,50,32,25" Visible="true" Text="Load119" rdfID="f1191287-80ab-4e8c-86c1-5c225c9e3e18" BaseElement.ElemType="Load" BaseElement.KVLevel="230 KV" BaseElement.Name="Load119" BaseElement.TEID="350024" BaseElement.Owner="402004" BaseElement.Operator="154976" BaseElement.Substation="100411" BaseElement.SubLongName="Sub225" PUNElement="False" BaseElement.SubName="Sub225">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="306,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Load119" rdfID="f1191287-80ab-4e8c-86c1-5c225c9e3e18" BaseElement.TEID="350024" BaseElement.ElemType="Load" BaseElement.Owner="402004" BaseElement.Operator="154976" BaseElement.KVLevel="230 KV" BaseElement.Substation="100411" BaseElement.SubName="Sub225" BaseElement.SubLongName="Sub225" BaseElement.Name="Load119" />
+	</Load>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,372,8" Orientation="Vertical" Text="Bus326" rdfID="d8309746-ad84-4793-86d6-021088cea9f7" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus326" BaseElement.TEID="864515" BaseElement.Owner="998404" BaseElement.Operator="919908" BaseElement.Substation="100411" BaseElement.SubLongName="Sub225" PUNElement="False" BaseElement.SubName="Sub225">
+		<Breaker rdfID="7841601d-add3-421c-9bb0-b04935f0c9bd" TEID="151178"/>
+		<Line rdfID="502a1bd5-fa6d-4aee-9f68-a7d6b036a178" TEID="223720"/>
+		<Load rdfID="f1191287-80ab-4e8c-86c1-5c225c9e3e18" TEID="350024"/>
+	</Node>
+</Nodes>
+</One_Line>

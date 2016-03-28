@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="991554" BaseElement.ConnectedLines="" BaseElement.County="Medina" BaseElement.DisplayName="Sub197" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="230 KV" BaseElement.Latitude="29.390475" BaseElement.LatLong="29.390475,-99.109235" BaseElement.Longitude="-99.109235" BaseElement.Operator="680902" BaseElement.Owner="998404" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub197" BaseElement.LongName="Sub197">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch197" rdfID="aa6bd400-9308-4884-9b85-e8ba50458d26" BaseElement.ElemType="Breaker" BaseElement.KVLevel="230 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch197" BaseElement.TEID="629122" BaseElement.Owner="94017" BaseElement.Operator="998404" BaseElement.Substation="991554" BaseElement.SubLongName="Sub197" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub197">
+		<Descriptor DescriptorText="Switch197" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch197" rdfID="aa6bd400-9308-4884-9b85-e8ba50458d26" BaseElement.TEID="629122" BaseElement.ElemType="Breaker" BaseElement.Owner="94017" BaseElement.Operator="998404" BaseElement.KVLevel="230 KV" BaseElement.Substation="991554" BaseElement.SubName="Switch197" BaseElement.SubLongName="Switch197" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch197"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line109" rdfID="55c412ce-4543-4d52-a0d6-16c66b46e773" BaseElement.ElemType="Line" BaseElement.KVLevel="230 KV" BaseElement.Name="Line109" BaseElement.TEID="233355" BaseElement.Owner="998404" BaseElement.Operator="154976">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line109" rdfID="55c412ce-4543-4d52-a0d6-16c66b46e773" BaseElement.TEID="233355" BaseElement.ElemType="Line" BaseElement.Owner="998404" BaseElement.Operator="154976" BaseElement.KVLevel="230 KV" BaseElement.Name="Line109" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,268,8" Orientation="Vertical" Text="Bus287" rdfID="0362fe02-370b-477b-a9ae-8d68f5652ea4" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus287" BaseElement.TEID="621195" BaseElement.Owner="770538" BaseElement.Operator="402004" BaseElement.Substation="991554" BaseElement.SubLongName="Sub197" PUNElement="False" BaseElement.SubName="Sub197">
+		<Switch rdfID="d1eb9f13-c47a-4ef9-8cdc-6278b33c4ede" TEID="629122"/>
+		<Line rdfID="55c412ce-4543-4d52-a0d6-16c66b46e773" TEID="233355"/>
+	</Node>
+</Nodes>
+</One_Line>

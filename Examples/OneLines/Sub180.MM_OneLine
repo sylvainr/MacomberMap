@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="220424" BaseElement.ConnectedLines="" BaseElement.County="Cameron" BaseElement.DisplayName="Sub180" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="26.125245" BaseElement.LatLong="26.125245,-97.47566" BaseElement.Longitude="-97.47566" BaseElement.Operator="402004" BaseElement.Owner="21073" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub180" BaseElement.LongName="Sub180">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker180" rdfID="bb7d7a20-cfdc-4efa-847c-6751cac046b6" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker180" BaseElement.TEID="945539" BaseElement.Owner="680902" BaseElement.Operator="260493" BaseElement.Substation="220424" BaseElement.SubLongName="Sub180" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub180">
+		<Descriptor DescriptorText="Breaker180" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker180" rdfID="bb7d7a20-cfdc-4efa-847c-6751cac046b6" BaseElement.TEID="945539" BaseElement.ElemType="Breaker" BaseElement.Owner="680902" BaseElement.Operator="260493" BaseElement.KVLevel="69 KV" BaseElement.Substation="220424" BaseElement.SubName="Breaker180" BaseElement.SubLongName="Breaker180" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker180"/>
+	</Breaker>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus262" rdfID="b693b99b-3814-4fdd-9b6f-8145a32724fd" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus262" BaseElement.TEID="396236" BaseElement.Owner="919908" BaseElement.Operator="94017" BaseElement.Substation="220424" BaseElement.SubLongName="Sub180" PUNElement="False" BaseElement.SubName="Sub180">
+		<Breaker rdfID="8e65a4bd-6762-4666-9d90-24dd10021565" TEID="945539"/>
+	</Node>
+</Nodes>
+</One_Line>

@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MacomberMapClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MacomberMapServerBroadcastPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">56574</Value>
+    </Setting>
+    <Setting Name="SavecaseDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.</Value>
+    </Setting>
+    <Setting Name="MacomberMapServerQueryPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">56575</Value>
+    </Setting>
+    <Setting Name="ServersToPing" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FlowgateBaseUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HistoricServerBaseUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HistoricFrameworkPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HelpLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">M:\Examples\HelpFiles</Value>
+    </Setting>
+    <Setting Name="ModelDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(Model database information if needed)</Value>
+    </Setting>
+    <Setting Name="VideoURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

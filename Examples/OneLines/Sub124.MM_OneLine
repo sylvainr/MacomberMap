@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="905946" BaseElement.ConnectedLines="" BaseElement.County="Edwards" BaseElement.DisplayName="Sub124" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="29.95695" BaseElement.LatLong="29.95695,-100.227485" BaseElement.Longitude="-100.227485" BaseElement.Operator="402004" BaseElement.Owner="21073" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub124" BaseElement.LongName="Sub124">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker124" rdfID="f022c7d5-8f33-4a9a-a759-8082cbe8296d" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker124" BaseElement.TEID="155703" BaseElement.Owner="919908" BaseElement.Operator="680902" BaseElement.Substation="905946" BaseElement.SubLongName="Sub124" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub124">
+		<Descriptor DescriptorText="Breaker124" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker124" rdfID="f022c7d5-8f33-4a9a-a759-8082cbe8296d" BaseElement.TEID="155703" BaseElement.ElemType="Breaker" BaseElement.Owner="919908" BaseElement.Operator="680902" BaseElement.KVLevel="69 KV" BaseElement.Substation="905946" BaseElement.SubName="Breaker124" BaseElement.SubLongName="Breaker124" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker124"/>
+	</Breaker>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Up" Bounds="50,100,32,25" Visible="true" Text="Line069" rdfID="ed6619f7-774f-4094-ad40-d20fb03165fa" BaseElement.ElemType="Line" BaseElement.KVLevel="69 KV" BaseElement.Name="Line069" BaseElement.TEID="167619" BaseElement.Owner="260493" BaseElement.Operator="154976">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="80,100,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line069" rdfID="ed6619f7-774f-4094-ad40-d20fb03165fa" BaseElement.TEID="167619" BaseElement.ElemType="Line" BaseElement.Owner="260493" BaseElement.Operator="154976" BaseElement.KVLevel="69 KV" BaseElement.Name="Line069" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus181" rdfID="a526efef-6b42-4716-a640-a6479aff6113" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus181" BaseElement.TEID="720477" BaseElement.Owner="177411" BaseElement.Operator="402004" BaseElement.Substation="905946" BaseElement.SubLongName="Sub124" PUNElement="False" BaseElement.SubName="Sub124">
+		<Breaker rdfID="534ff952-78d4-4eb8-ad30-49cceb9d0c33" TEID="155703"/>
+		<Line rdfID="e062f6b8-15a2-46c2-acfb-f7a964a70a8e" TEID="417026"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,146,8" Orientation="Vertical" Text="Bus416" rdfID="7817495b-4e7e-4a04-82c9-7cea6e969065" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus416" BaseElement.TEID="123298" BaseElement.Owner="260493" BaseElement.Operator="260493" BaseElement.Substation="905946" BaseElement.SubLongName="Sub124" PUNElement="False" BaseElement.SubName="Sub124">
+		<Line rdfID="01d3c6dc-f385-4827-977e-904d28e1f8ff" TEID="244209"/>
+		<Line rdfID="ed6619f7-774f-4094-ad40-d20fb03165fa" TEID="167619"/>
+	</Node>
+</Nodes>
+</One_Line>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="668400" BaseElement.ConnectedLines="" BaseElement.County="Comanche" BaseElement.DisplayName="Sub072" BaseElement.ElemTypes="BusbarSection,Load"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="31.972715" BaseElement.LatLong="31.972715,-98.540485" BaseElement.Longitude="-98.540485" BaseElement.Operator="402004" BaseElement.Owner="154976" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub072" BaseElement.LongName="Sub072">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker072" rdfID="240c15bb-a86b-491b-994c-74ad45fc06bd" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker072" BaseElement.TEID="843021" BaseElement.Owner="21073" BaseElement.Operator="680902" BaseElement.Substation="668400" BaseElement.SubLongName="Sub072" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub072">
+		<Descriptor DescriptorText="Breaker072" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker072" rdfID="240c15bb-a86b-491b-994c-74ad45fc06bd" BaseElement.TEID="843021" BaseElement.ElemType="Breaker" BaseElement.Owner="21073" BaseElement.Operator="680902" BaseElement.KVLevel="69 KV" BaseElement.Substation="668400" BaseElement.SubName="Breaker072" BaseElement.SubLongName="Breaker072" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker072"/>
+	</Breaker>
+	<Load BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Right" Bounds="180,50,32,25" Visible="true" Text="Load026" rdfID="8e74ddae-625c-413a-a85e-7da95e95b0b3" BaseElement.ElemType="Load" BaseElement.KVLevel="69 KV" BaseElement.Name="Load026" BaseElement.TEID="401929" BaseElement.Owner="770538" BaseElement.Operator="680902" BaseElement.Substation="668400" BaseElement.SubLongName="Sub072" PUNElement="False" BaseElement.SubName="Sub072">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="210,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Load026" rdfID="8e74ddae-625c-413a-a85e-7da95e95b0b3" BaseElement.TEID="401929" BaseElement.ElemType="Load" BaseElement.Owner="770538" BaseElement.Operator="680902" BaseElement.KVLevel="69 KV" BaseElement.Substation="668400" BaseElement.SubName="Sub072" BaseElement.SubLongName="Sub072" BaseElement.Name="Load026" />
+	</Load>
+	<Load BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Right" Bounds="276,50,32,25" Visible="true" Text="Load027" rdfID="15a49285-a2d1-4404-9075-86e22a11911a" BaseElement.ElemType="Load" BaseElement.KVLevel="69 KV" BaseElement.Name="Load027" BaseElement.TEID="887801" BaseElement.Owner="680902" BaseElement.Operator="21073" BaseElement.Substation="668400" BaseElement.SubLongName="Sub072" PUNElement="False" BaseElement.SubName="Sub072">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="306,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Load027" rdfID="15a49285-a2d1-4404-9075-86e22a11911a" BaseElement.TEID="887801" BaseElement.ElemType="Load" BaseElement.Owner="680902" BaseElement.Operator="21073" BaseElement.KVLevel="69 KV" BaseElement.Substation="668400" BaseElement.SubName="Sub072" BaseElement.SubLongName="Sub072" BaseElement.Name="Load027" />
+	</Load>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,372,8" Orientation="Vertical" Text="Bus103" rdfID="b9c6d176-eb52-4566-af32-3b7850d9ed9c" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus103" BaseElement.TEID="104191" BaseElement.Owner="21073" BaseElement.Operator="21073" BaseElement.Substation="668400" BaseElement.SubLongName="Sub072" PUNElement="False" BaseElement.SubName="Sub072">
+		<Breaker rdfID="54bbbd54-1a6d-4548-b931-b829a37c0eec" TEID="843021"/>
+		<Line rdfID="271f4e81-ada6-4e0e-aa73-24b42824fc26" TEID="530463"/>
+		<Load rdfID="8e74ddae-625c-413a-a85e-7da95e95b0b3" TEID="401929"/>
+		<Load rdfID="15a49285-a2d1-4404-9075-86e22a11911a" TEID="887801"/>
+	</Node>
+</Nodes>
+</One_Line>

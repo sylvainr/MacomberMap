@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="502149" BaseElement.ConnectedLines="" BaseElement.County="Red River" BaseElement.DisplayName="Sub082" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="33.63968" BaseElement.LatLong="33.63968,-95.021685" BaseElement.Longitude="-95.021685" BaseElement.Operator="21073" BaseElement.Owner="94017" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub082" BaseElement.LongName="Sub082">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch082" rdfID="fa513d00-df91-4770-9356-2948493b07af" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch082" BaseElement.TEID="950366" BaseElement.Owner="919908" BaseElement.Operator="770538" BaseElement.Substation="502149" BaseElement.SubLongName="Sub082" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub082">
+		<Descriptor DescriptorText="Switch082" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch082" rdfID="fa513d00-df91-4770-9356-2948493b07af" BaseElement.TEID="950366" BaseElement.ElemType="Breaker" BaseElement.Owner="919908" BaseElement.Operator="770538" BaseElement.KVLevel="69 KV" BaseElement.Substation="502149" BaseElement.SubName="Switch082" BaseElement.SubLongName="Switch082" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch082"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line050" rdfID="1d232473-6a45-4033-a4c9-c2748886f6fe" BaseElement.ElemType="Line" BaseElement.KVLevel="69 KV" BaseElement.Name="Line050" BaseElement.TEID="521969" BaseElement.Owner="21073" BaseElement.Operator="260493">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line050" rdfID="1d232473-6a45-4033-a4c9-c2748886f6fe" BaseElement.TEID="521969" BaseElement.ElemType="Line" BaseElement.Owner="21073" BaseElement.Operator="260493" BaseElement.KVLevel="69 KV" BaseElement.Name="Line050" />
+	</Line>
+	<Capacitor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Right" Bounds="268,50,32,25" Visible="true" Text="Cap081" rdfID="b0f59b08-069c-42cf-92b8-209999261d1f" BaseElement.ElemType="Capacitor" BaseElement.KVLevel="69 KV" BaseElement.Name="Cap081" BaseElement.TEID="753673" BaseElement.Owner="402004" BaseElement.Operator="260493" BaseElement.Substation="502149" BaseElement.SubLongName="Sub082" PUNElement="False" BaseElement.SubName="Sub082">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="298,50,48,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Cap081" rdfID="b0f59b08-069c-42cf-92b8-209999261d1f" BaseElement.TEID="753673" BaseElement.ElemType="Capacitor" BaseElement.Owner="402004" BaseElement.Operator="260493" BaseElement.KVLevel="69 KV" BaseElement.Substation="502149" BaseElement.SubName="Sub082" BaseElement.SubLongName="Sub082" BaseElement.Name="Cap081" />
+	</Capacitor>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,356,8" Orientation="Vertical" Text="Bus117" rdfID="c17222bc-4b85-4fbf-b9ca-584a022259ed" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus117" BaseElement.TEID="560850" BaseElement.Owner="260493" BaseElement.Operator="154976" BaseElement.Substation="502149" BaseElement.SubLongName="Sub082" PUNElement="False" BaseElement.SubName="Sub082">
+		<Switch rdfID="8a26f4ac-6bf5-4c82-9250-090c7dcf9c64" TEID="950366"/>
+		<Line rdfID="1d232473-6a45-4033-a4c9-c2748886f6fe" TEID="521969"/>
+		<Capacitor rdfID="b0f59b08-069c-42cf-92b8-209999261d1f" TEID="753673"/>
+	</Node>
+</Nodes>
+</One_Line>

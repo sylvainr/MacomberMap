@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="653538" BaseElement.ConnectedLines="" BaseElement.County="Bosque" BaseElement.DisplayName="Sub144" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="345 KV" BaseElement.Latitude="31.89738" BaseElement.LatLong="31.89738,-97.64097" BaseElement.Longitude="-97.64097" BaseElement.Operator="94017" BaseElement.Owner="177411" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub144" BaseElement.LongName="Sub144">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker144" rdfID="117422f3-9979-4b1b-abac-757f1fc13532" BaseElement.ElemType="Breaker" BaseElement.KVLevel="345 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker144" BaseElement.TEID="466830" BaseElement.Owner="919908" BaseElement.Operator="177411" BaseElement.Substation="653538" BaseElement.SubLongName="Sub144" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub144">
+		<Descriptor DescriptorText="Breaker144" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker144" rdfID="117422f3-9979-4b1b-abac-757f1fc13532" BaseElement.TEID="466830" BaseElement.ElemType="Breaker" BaseElement.Owner="919908" BaseElement.Operator="177411" BaseElement.KVLevel="345 KV" BaseElement.Substation="653538" BaseElement.SubName="Breaker144" BaseElement.SubLongName="Breaker144" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker144"/>
+	</Breaker>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="345 KV" DescriptorArrow="false" Orientation="Up" Bounds="180,50,32,25" Visible="true" Text="Line080" rdfID="ba9a88ea-c2dd-4f67-ab8a-87174de8e36f" BaseElement.ElemType="Line" BaseElement.KVLevel="345 KV" BaseElement.Name="Line080" BaseElement.TEID="479285" BaseElement.Owner="998404" BaseElement.Operator="94017">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="210,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line080" rdfID="ba9a88ea-c2dd-4f67-ab8a-87174de8e36f" BaseElement.TEID="479285" BaseElement.ElemType="Line" BaseElement.Owner="998404" BaseElement.Operator="94017" BaseElement.KVLevel="345 KV" BaseElement.Name="Line080" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,276,8" Orientation="Vertical" Text="Bus210" rdfID="3385769b-acb2-4e9e-bc89-f4145343667f" BaseElement.ElemType="Node" BaseElement.KVLevel="345 KV" BaseElement.Name="Bus210" BaseElement.TEID="471843" BaseElement.Owner="680902" BaseElement.Operator="177411" BaseElement.Substation="653538" BaseElement.SubLongName="Sub144" PUNElement="False" BaseElement.SubName="Sub144">
+		<Breaker rdfID="23bdabeb-4fdc-456f-906e-de910e4d5c35" TEID="466830"/>
+		<Line rdfID="ba9a88ea-c2dd-4f67-ab8a-87174de8e36f" TEID="479285"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus211" rdfID="9953d55c-0778-4f45-8543-7d1325c09775" BaseElement.ElemType="Node" BaseElement.KVLevel="345 KV" BaseElement.Name="Bus211" BaseElement.TEID="599995" BaseElement.Owner="680902" BaseElement.Operator="154976" BaseElement.Substation="653538" BaseElement.SubLongName="Sub144" PUNElement="False" BaseElement.SubName="Sub144">
+		<Breaker rdfID="23bdabeb-4fdc-456f-906e-de910e4d5c35" TEID="466830"/>
+	</Node>
+</Nodes>
+</One_Line>

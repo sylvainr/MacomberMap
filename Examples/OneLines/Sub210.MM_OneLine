@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="844397" BaseElement.ConnectedLines="" BaseElement.County="Uvalde" BaseElement.DisplayName="Sub210" BaseElement.ElemTypes="BusbarSection,Unit"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="29.357005" BaseElement.LatLong="29.357005,-99.762065" BaseElement.Longitude="-99.762065" BaseElement.Operator="402004" BaseElement.Owner="402004" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub210" BaseElement.LongName="Sub210">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker210" rdfID="6d8571a7-2780-48b8-bea7-c6242b549d67" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker210" BaseElement.TEID="82368" BaseElement.Owner="260493" BaseElement.Operator="21073" BaseElement.Substation="844397" BaseElement.SubLongName="Sub210" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub210">
+		<Descriptor DescriptorText="Breaker210" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker210" rdfID="6d8571a7-2780-48b8-bea7-c6242b549d67" BaseElement.TEID="82368" BaseElement.ElemType="Breaker" BaseElement.Owner="260493" BaseElement.Operator="21073" BaseElement.KVLevel="138 KV" BaseElement.Substation="844397" BaseElement.SubName="Breaker210" BaseElement.SubLongName="Breaker210" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker210"/>
+	</Breaker>
+	<Unit BaseElement.Permitted="true" GenerationLevel="0" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Up" Bounds="180,50,26,26," Visible="true" Text="Unit018" rdfID="6d3bf94e-8ea1-4d1a-935a-49c9c70abd64" BaseElement.ElemType="Unit" BaseElement.KVLevel="138 KV" BaseElement.IsRC="false" BaseElement.UnitType="ThermalGeneratingUnit" BaseElement.Name="Unit018" BaseElement.TEID="172892" BaseElement.Owner="919908" BaseElement.Operator="260493" BaseElement.Substation="844397" BaseElement.SubLongName="Sub210" PUNElement="False" BaseElement.SubName="Sub210">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="210,50,56,15," Font="Arial, 9pt" ForeColor="Gray" LabelBounds="-22,-1,90,46," Collision="false" Visible="true" Text="Unit018" rdfID = "6d3bf94e-8ea1-4d1a-935a-49c9c70abd64" BaseElement.TEID="172892" BaseElement.ElemType="Unit" BaseElement.Owner="919908" BaseElement.Operator="260493" BaseElement.KVLevel="138 KV" BaseElement.Substation="844397" BaseElement.SubName="Unit018" BaseElement.SubLongName="Unit018" BaseElement.IsRC="false" BaseElement.UnitType="ThermalGeneratingUnit" BaseElement.Name="Unit018" />
+	</Unit>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,286,8" Orientation="Vertical" Text="Bus305" rdfID="8213469d-3ca2-4e62-9d16-6219ffe3fc91" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus305" BaseElement.TEID="646924" BaseElement.Owner="260493" BaseElement.Operator="94017" BaseElement.Substation="844397" BaseElement.SubLongName="Sub210" PUNElement="False" BaseElement.SubName="Sub210">
+		<Breaker rdfID="fd4eed60-15d0-4512-9e56-1309749ddb04" TEID="82368"/>
+		<Line rdfID="6c08999d-8096-41e2-bf9a-56644a9d9ca3" TEID="501516"/>
+		<Unit rdfID="4d6323ef-0be2-4d16-96ba-0aae6e8641dc" TEID="172892"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus306" rdfID="e908b063-c658-40df-97f2-a339b3cd89b1" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus306" BaseElement.TEID="494785" BaseElement.Owner="998404" BaseElement.Operator="770538" BaseElement.Substation="844397" BaseElement.SubLongName="Sub210" PUNElement="False" BaseElement.SubName="Sub210">
+		<Breaker rdfID="fd4eed60-15d0-4512-9e56-1309749ddb04" TEID="82368"/>
+	</Node>
+</Nodes>
+</One_Line>

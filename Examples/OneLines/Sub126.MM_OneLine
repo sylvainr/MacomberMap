@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="844555" BaseElement.ConnectedLines="" BaseElement.County="El Paso" BaseElement.DisplayName="Sub126" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="31.69484" BaseElement.LatLong="31.69484,-106.29995" BaseElement.Longitude="-106.29995" BaseElement.Operator="998404" BaseElement.Owner="177411" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub126" BaseElement.LongName="Sub126">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker126" rdfID="d9171710-c196-46f1-bb71-e2958aad4815" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker126" BaseElement.TEID="713087" BaseElement.Owner="177411" BaseElement.Operator="998404" BaseElement.Substation="844555" BaseElement.SubLongName="Sub126" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub126">
+		<Descriptor DescriptorText="Breaker126" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker126" rdfID="d9171710-c196-46f1-bb71-e2958aad4815" BaseElement.TEID="713087" BaseElement.ElemType="Breaker" BaseElement.Owner="177411" BaseElement.Operator="998404" BaseElement.KVLevel="69 KV" BaseElement.Substation="844555" BaseElement.SubName="Breaker126" BaseElement.SubLongName="Breaker126" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker126"/>
+	</Breaker>
+	<Reactor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Right" Bounds="180,50,32,25" Visible="true" Text="Reac126" rdfID="84d99784-7a77-4959-9a0b-9399dbd93d08" BaseElement.ElemType="Reactor" BaseElement.KVLevel="69 KV" BaseElement.Name="Reac126" BaseElement.TEID="926882" BaseElement.Owner="260493" BaseElement.Operator="998404" BaseElement.Substation="844555" BaseElement.SubLongName="Sub126" PUNElement="False" BaseElement.SubName="Sub126">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="210,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Reac126" rdfID="84d99784-7a77-4959-9a0b-9399dbd93d08" BaseElement.TEID="926882" BaseElement.ElemType="Reactor" BaseElement.Owner="260493" BaseElement.Operator="998404" BaseElement.KVLevel="69 KV" BaseElement.Substation="844555" BaseElement.SubName="Sub126" BaseElement.SubLongName="Sub126" BaseElement.Name="Reac126" />
+	</Reactor>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,276,8" Orientation="Vertical" Text="Bus184" rdfID="e7ec4001-1077-4c2d-85ba-5270c2bd3e25" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus184" BaseElement.TEID="577959" BaseElement.Owner="919908" BaseElement.Operator="919908" BaseElement.Substation="844555" BaseElement.SubLongName="Sub126" PUNElement="False" BaseElement.SubName="Sub126">
+		<Breaker rdfID="be9cee51-406c-4cc0-b8fe-a30fc01843ca" TEID="713087"/>
+		<Reactor rdfID="84d99784-7a77-4959-9a0b-9399dbd93d08" TEID="926882"/>
+	</Node>
+</Nodes>
+</One_Line>

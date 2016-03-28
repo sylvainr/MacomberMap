@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="184348" BaseElement.ConnectedLines="" BaseElement.County="Sterling" BaseElement.DisplayName="Sub253" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="31.82189" BaseElement.LatLong="31.82189,-101.0446" BaseElement.Longitude="-101.0446" BaseElement.Operator="402004" BaseElement.Owner="21073" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub253" BaseElement.LongName="Sub253">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker253" rdfID="6bb77ae9-d043-455d-a4f2-516aea502486" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker253" BaseElement.TEID="528665" BaseElement.Owner="680902" BaseElement.Operator="998404" BaseElement.Substation="184348" BaseElement.SubLongName="Sub253" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub253">
+		<Descriptor DescriptorText="Breaker253" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker253" rdfID="6bb77ae9-d043-455d-a4f2-516aea502486" BaseElement.TEID="528665" BaseElement.ElemType="Breaker" BaseElement.Owner="680902" BaseElement.Operator="998404" BaseElement.KVLevel="138 KV" BaseElement.Substation="184348" BaseElement.SubName="Breaker253" BaseElement.SubLongName="Breaker253" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker253"/>
+	</Breaker>
+	<Capacitor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Right" Bounds="50,100,32,25" Visible="true" Text="Cap245" rdfID="828f6389-d5bc-47d7-bb37-8d14cccb91b4" BaseElement.ElemType="Capacitor" BaseElement.KVLevel="138 KV" BaseElement.Name="Cap245" BaseElement.TEID="813193" BaseElement.Owner="919908" BaseElement.Operator="94017" BaseElement.Substation="184348" BaseElement.SubLongName="Sub253" PUNElement="False" BaseElement.SubName="Sub253">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="80,100,48,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Cap245" rdfID="828f6389-d5bc-47d7-bb37-8d14cccb91b4" BaseElement.TEID="813193" BaseElement.ElemType="Capacitor" BaseElement.Owner="919908" BaseElement.Operator="94017" BaseElement.KVLevel="138 KV" BaseElement.Substation="184348" BaseElement.SubName="Sub253" BaseElement.SubLongName="Sub253" BaseElement.Name="Cap245" />
+	</Capacitor>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus371" rdfID="d13687ba-dc59-430e-adef-3679c4c380dd" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus371" BaseElement.TEID="726445" BaseElement.Owner="154976" BaseElement.Operator="680902" BaseElement.Substation="184348" BaseElement.SubLongName="Sub253" PUNElement="False" BaseElement.SubName="Sub253">
+		<Breaker rdfID="48e9e64e-8a5c-4dda-9819-a2e088f1c08f" TEID="528665"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,138,8" Orientation="Vertical" Text="Bus372" rdfID="40925e2d-4820-43c9-baaf-ed208ee2a787" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus372" BaseElement.TEID="674780" BaseElement.Owner="680902" BaseElement.Operator="177411" BaseElement.Substation="184348" BaseElement.SubLongName="Sub253" PUNElement="False" BaseElement.SubName="Sub253">
+		<Breaker rdfID="48e9e64e-8a5c-4dda-9819-a2e088f1c08f" TEID="528665"/>
+		<Capacitor rdfID="828f6389-d5bc-47d7-bb37-8d14cccb91b4" TEID="813193"/>
+	</Node>
+</Nodes>
+</One_Line>

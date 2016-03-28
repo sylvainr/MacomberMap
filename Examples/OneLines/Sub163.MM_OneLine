@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="462949" BaseElement.ConnectedLines="" BaseElement.County="Dallam" BaseElement.DisplayName="Sub163" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="230 KV" BaseElement.Latitude="36.27784" BaseElement.LatLong="36.27784,-102.60215" BaseElement.Longitude="-102.60215" BaseElement.Operator="177411" BaseElement.Owner="21073" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub163" BaseElement.LongName="Sub163">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch163" rdfID="8cd1b12d-e47e-42a4-9180-115182b2585f" BaseElement.ElemType="Breaker" BaseElement.KVLevel="230 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch163" BaseElement.TEID="300748" BaseElement.Owner="154976" BaseElement.Operator="998404" BaseElement.Substation="462949" BaseElement.SubLongName="Sub163" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub163">
+		<Descriptor DescriptorText="Switch163" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch163" rdfID="8cd1b12d-e47e-42a4-9180-115182b2585f" BaseElement.TEID="300748" BaseElement.ElemType="Breaker" BaseElement.Owner="154976" BaseElement.Operator="998404" BaseElement.KVLevel="230 KV" BaseElement.Substation="462949" BaseElement.SubName="Switch163" BaseElement.SubLongName="Switch163" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch163"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line087" rdfID="e8af61a6-019f-4379-8300-3dbc970bd41b" BaseElement.ElemType="Line" BaseElement.KVLevel="230 KV" BaseElement.Name="Line087" BaseElement.TEID="252711" BaseElement.Owner="21073" BaseElement.Operator="21073">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line087" rdfID="e8af61a6-019f-4379-8300-3dbc970bd41b" BaseElement.TEID="252711" BaseElement.ElemType="Line" BaseElement.Owner="21073" BaseElement.Operator="21073" BaseElement.KVLevel="230 KV" BaseElement.Name="Line087" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,268,8" Orientation="Vertical" Text="Bus237" rdfID="9cfd6ce5-976b-40e5-baf9-03b2294d866f" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus237" BaseElement.TEID="420842" BaseElement.Owner="680902" BaseElement.Operator="260493" BaseElement.Substation="462949" BaseElement.SubLongName="Sub163" PUNElement="False" BaseElement.SubName="Sub163">
+		<Switch rdfID="ee47f495-33e4-4898-85a9-d097ef71dc34" TEID="300748"/>
+		<Line rdfID="e8af61a6-019f-4379-8300-3dbc970bd41b" TEID="252711"/>
+	</Node>
+</Nodes>
+</One_Line>

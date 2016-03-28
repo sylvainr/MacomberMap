@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="581076" BaseElement.ConnectedLines="" BaseElement.County="Potter" BaseElement.DisplayName="Sub214" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="230 KV" BaseElement.Latitude="35.401475" BaseElement.LatLong="35.401475,-101.8951" BaseElement.Longitude="-101.8951" BaseElement.Operator="260493" BaseElement.Owner="680902" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub214" BaseElement.LongName="Sub214">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker214" rdfID="f2a6e664-4298-4238-b3b4-d824cfceb098" BaseElement.ElemType="Breaker" BaseElement.KVLevel="230 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker214" BaseElement.TEID="747113" BaseElement.Owner="919908" BaseElement.Operator="21073" BaseElement.Substation="581076" BaseElement.SubLongName="Sub214" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub214">
+		<Descriptor DescriptorText="Breaker214" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker214" rdfID="f2a6e664-4298-4238-b3b4-d824cfceb098" BaseElement.TEID="747113" BaseElement.ElemType="Breaker" BaseElement.Owner="919908" BaseElement.Operator="21073" BaseElement.KVLevel="230 KV" BaseElement.Substation="581076" BaseElement.SubName="Breaker214" BaseElement.SubLongName="Breaker214" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker214"/>
+	</Breaker>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus311" rdfID="55057117-7c2a-4648-8e0a-5291aaa33a88" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus311" BaseElement.TEID="838106" BaseElement.Owner="21073" BaseElement.Operator="154976" BaseElement.Substation="581076" BaseElement.SubLongName="Sub214" PUNElement="False" BaseElement.SubName="Sub214">
+		<Breaker rdfID="235aba01-f0f3-44b5-86b8-ce5a37f5050b" TEID="747113"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus312" rdfID="3b6407bf-ee2c-4f0d-9d29-1b28c09a6656" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus312" BaseElement.TEID="720159" BaseElement.Owner="21073" BaseElement.Operator="402004" BaseElement.Substation="581076" BaseElement.SubLongName="Sub214" PUNElement="False" BaseElement.SubName="Sub214">
+		<Breaker rdfID="235aba01-f0f3-44b5-86b8-ce5a37f5050b" TEID="747113"/>
+	</Node>
+</Nodes>
+</One_Line>

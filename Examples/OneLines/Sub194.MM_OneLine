@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="628481" BaseElement.ConnectedLines="" BaseElement.County="Trinity" BaseElement.DisplayName="Sub194" BaseElement.ElemTypes="BusbarSection,Load"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="31.10579" BaseElement.LatLong="31.10579,-95.138795" BaseElement.Longitude="-95.138795" BaseElement.Operator="680902" BaseElement.Owner="919908" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub194" BaseElement.LongName="Sub194">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch194" rdfID="876fbac2-d0ee-448c-9882-b6f3f1fb3af2" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch194" BaseElement.TEID="345652" BaseElement.Owner="21073" BaseElement.Operator="260493" BaseElement.Substation="628481" BaseElement.SubLongName="Sub194" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub194">
+		<Descriptor DescriptorText="Switch194" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch194" rdfID="876fbac2-d0ee-448c-9882-b6f3f1fb3af2" BaseElement.TEID="345652" BaseElement.ElemType="Breaker" BaseElement.Owner="21073" BaseElement.Operator="260493" BaseElement.KVLevel="138 KV" BaseElement.Substation="628481" BaseElement.SubName="Switch194" BaseElement.SubLongName="Switch194" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch194"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Up" Bounds="172,50,32,25" Visible="true" Text="Line106" rdfID="470f269e-4bae-4a6c-80f6-f95c6c344b14" BaseElement.ElemType="Line" BaseElement.KVLevel="138 KV" BaseElement.Name="Line106" BaseElement.TEID="191964" BaseElement.Owner="919908" BaseElement.Operator="177411">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line106" rdfID="470f269e-4bae-4a6c-80f6-f95c6c344b14" BaseElement.TEID="191964" BaseElement.ElemType="Line" BaseElement.Owner="919908" BaseElement.Operator="177411" BaseElement.KVLevel="138 KV" BaseElement.Name="Line106" />
+	</Line>
+	<Load BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Right" Bounds="268,50,32,25" Visible="true" Text="Load099" rdfID="d6cbcf84-a043-4def-ba01-8332113902e7" BaseElement.ElemType="Load" BaseElement.KVLevel="138 KV" BaseElement.Name="Load099" BaseElement.TEID="493949" BaseElement.Owner="94017" BaseElement.Operator="94017" BaseElement.Substation="628481" BaseElement.SubLongName="Sub194" PUNElement="False" BaseElement.SubName="Sub194">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="298,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Load099" rdfID="d6cbcf84-a043-4def-ba01-8332113902e7" BaseElement.TEID="493949" BaseElement.ElemType="Load" BaseElement.Owner="94017" BaseElement.Operator="94017" BaseElement.KVLevel="138 KV" BaseElement.Substation="628481" BaseElement.SubName="Sub194" BaseElement.SubLongName="Sub194" BaseElement.Name="Load099" />
+	</Load>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,364,8" Orientation="Vertical" Text="Bus282" rdfID="86c7d97f-3bfe-4a8c-a4dd-7e0c49403db3" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus282" BaseElement.TEID="372646" BaseElement.Owner="21073" BaseElement.Operator="998404" BaseElement.Substation="628481" BaseElement.SubLongName="Sub194" PUNElement="False" BaseElement.SubName="Sub194">
+		<Switch rdfID="d05219cc-b83c-4e6c-baea-30ee73ab8fde" TEID="345652"/>
+		<Line rdfID="470f269e-4bae-4a6c-80f6-f95c6c344b14" TEID="191964"/>
+		<Load rdfID="d6cbcf84-a043-4def-ba01-8332113902e7" TEID="493949"/>
+	</Node>
+</Nodes>
+</One_Line>

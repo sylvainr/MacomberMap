@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="269493" BaseElement.ConnectedLines="" BaseElement.County="Refugio" BaseElement.DisplayName="Sub085" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="230 KV" BaseElement.Latitude="28.308115" BaseElement.LatLong="28.308115,-97.152095" BaseElement.Longitude="-97.152095" BaseElement.Operator="260493" BaseElement.Owner="770538" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub085" BaseElement.LongName="Sub085">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch085" rdfID="8482172d-7974-4719-b97d-e060c1e1cb75" BaseElement.ElemType="Breaker" BaseElement.KVLevel="230 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch085" BaseElement.TEID="920661" BaseElement.Owner="402004" BaseElement.Operator="770538" BaseElement.Substation="269493" BaseElement.SubLongName="Sub085" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub085">
+		<Descriptor DescriptorText="Switch085" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch085" rdfID="8482172d-7974-4719-b97d-e060c1e1cb75" BaseElement.TEID="920661" BaseElement.ElemType="Breaker" BaseElement.Owner="402004" BaseElement.Operator="770538" BaseElement.KVLevel="230 KV" BaseElement.Substation="269493" BaseElement.SubName="Switch085" BaseElement.SubLongName="Switch085" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch085"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Up" Bounds="50,100,32,25" Visible="true" Text="Line051" rdfID="06912ddf-b02d-4134-b241-85a04a06820f" BaseElement.ElemType="Line" BaseElement.KVLevel="230 KV" BaseElement.Name="Line051" BaseElement.TEID="992666" BaseElement.Owner="919908" BaseElement.Operator="770538">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="80,100,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line051" rdfID="06912ddf-b02d-4134-b241-85a04a06820f" BaseElement.TEID="992666" BaseElement.ElemType="Line" BaseElement.Owner="919908" BaseElement.Operator="770538" BaseElement.KVLevel="230 KV" BaseElement.Name="Line051" />
+	</Line>
+	<Reactor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Right" Bounds="146,100,32,25" Visible="true" Text="Reac085" rdfID="a4ad7ae3-67e8-40e1-94b3-9a0549dc0501" BaseElement.ElemType="Reactor" BaseElement.KVLevel="230 KV" BaseElement.Name="Reac085" BaseElement.TEID="115766" BaseElement.Owner="154976" BaseElement.Operator="177411" BaseElement.Substation="269493" BaseElement.SubLongName="Sub085" PUNElement="False" BaseElement.SubName="Sub085">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="176,100,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Reac085" rdfID="a4ad7ae3-67e8-40e1-94b3-9a0549dc0501" BaseElement.TEID="115766" BaseElement.ElemType="Reactor" BaseElement.Owner="154976" BaseElement.Operator="177411" BaseElement.KVLevel="230 KV" BaseElement.Substation="269493" BaseElement.SubName="Sub085" BaseElement.SubLongName="Sub085" BaseElement.Name="Reac085" />
+	</Reactor>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,172,8" Orientation="Vertical" Text="Bus122" rdfID="e6e77f81-7d12-4528-82ba-6fad9edd84ae" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus122" BaseElement.TEID="78709" BaseElement.Owner="770538" BaseElement.Operator="94017" BaseElement.Substation="269493" BaseElement.SubLongName="Sub085" PUNElement="False" BaseElement.SubName="Sub085">
+		<Switch rdfID="c27a5c7b-9b11-40fe-8a16-a7c7bd8e46ab" TEID="920661"/>
+		<Line rdfID="c1dfe1f7-b143-41b2-a7fb-85c3b27a1def" TEID="846747"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,242,8" Orientation="Vertical" Text="Bus123" rdfID="6e115f41-ccab-48f2-b898-a972e9bad868" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus123" BaseElement.TEID="458583" BaseElement.Owner="177411" BaseElement.Operator="154976" BaseElement.Substation="269493" BaseElement.SubLongName="Sub085" PUNElement="False" BaseElement.SubName="Sub085">
+		<Switch rdfID="c27a5c7b-9b11-40fe-8a16-a7c7bd8e46ab" TEID="920661"/>
+		<Line rdfID="06912ddf-b02d-4134-b241-85a04a06820f" TEID="992666"/>
+		<Reactor rdfID="a4ad7ae3-67e8-40e1-94b3-9a0549dc0501" TEID="115766"/>
+	</Node>
+</Nodes>
+</One_Line>

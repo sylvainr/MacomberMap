@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="827300" BaseElement.ConnectedLines="" BaseElement.County="Presidio" BaseElement.DisplayName="Sub230" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="29.94372" BaseElement.LatLong="29.94372,-104.3867" BaseElement.Longitude="-104.3867" BaseElement.Operator="680902" BaseElement.Owner="770538" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub230" BaseElement.LongName="Sub230">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch230" rdfID="2587ce2d-53df-4b30-8ea8-ebe08d01050d" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch230" BaseElement.TEID="913797" BaseElement.Owner="680902" BaseElement.Operator="770538" BaseElement.Substation="827300" BaseElement.SubLongName="Sub230" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub230">
+		<Descriptor DescriptorText="Switch230" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch230" rdfID="2587ce2d-53df-4b30-8ea8-ebe08d01050d" BaseElement.TEID="913797" BaseElement.ElemType="Breaker" BaseElement.Owner="680902" BaseElement.Operator="770538" BaseElement.KVLevel="138 KV" BaseElement.Substation="827300" BaseElement.SubName="Switch230" BaseElement.SubLongName="Switch230" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch230"/>
+	</Switch>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,172,8" Orientation="Vertical" Text="Bus333" rdfID="5001ea1d-3e19-4a8f-b489-40ff9a775098" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus333" BaseElement.TEID="408093" BaseElement.Owner="154976" BaseElement.Operator="680902" BaseElement.Substation="827300" BaseElement.SubLongName="Sub230" PUNElement="False" BaseElement.SubName="Sub230">
+		<Switch rdfID="0eee7685-4640-4aa9-ac76-e44fbb852808" TEID="913797"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus334" rdfID="716a20ea-f977-488f-bd7d-b9f528f2405d" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus334" BaseElement.TEID="921664" BaseElement.Owner="770538" BaseElement.Operator="154976" BaseElement.Substation="827300" BaseElement.SubLongName="Sub230" PUNElement="False" BaseElement.SubName="Sub230">
+		<Switch rdfID="0eee7685-4640-4aa9-ac76-e44fbb852808" TEID="913797"/>
+	</Node>
+</Nodes>
+</One_Line>

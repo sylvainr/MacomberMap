@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="419825" BaseElement.ConnectedLines="" BaseElement.County="Real" BaseElement.DisplayName="Sub100" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="29.85293" BaseElement.LatLong="29.85293,-99.83337" BaseElement.Longitude="-99.83337" BaseElement.Operator="154976" BaseElement.Owner="177411" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub100" BaseElement.LongName="Sub100">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker100" rdfID="7533dd01-573a-47a0-b9a6-710b5f25b1d0" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker100" BaseElement.TEID="41921" BaseElement.Owner="21073" BaseElement.Operator="680902" BaseElement.Substation="419825" BaseElement.SubLongName="Sub100" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub100">
+		<Descriptor DescriptorText="Breaker100" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker100" rdfID="7533dd01-573a-47a0-b9a6-710b5f25b1d0" BaseElement.TEID="41921" BaseElement.ElemType="Breaker" BaseElement.Owner="21073" BaseElement.Operator="680902" BaseElement.KVLevel="69 KV" BaseElement.Substation="419825" BaseElement.SubName="Breaker100" BaseElement.SubLongName="Breaker100" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Breaker100"/>
+	</Breaker>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus147" rdfID="4bc36d79-7058-4ca4-a453-2748021e88ae" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus147" BaseElement.TEID="471747" BaseElement.Owner="998404" BaseElement.Operator="680902" BaseElement.Substation="419825" BaseElement.SubLongName="Sub100" PUNElement="False" BaseElement.SubName="Sub100">
+		<Breaker rdfID="1032881b-9239-4561-90fc-2d4ea7f950ec" TEID="41921"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus148" rdfID="0eba03b9-bb8f-4d55-bfe3-0eb057d884c2" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus148" BaseElement.TEID="846302" BaseElement.Owner="998404" BaseElement.Operator="94017" BaseElement.Substation="419825" BaseElement.SubLongName="Sub100" PUNElement="False" BaseElement.SubName="Sub100">
+		<Breaker rdfID="1032881b-9239-4561-90fc-2d4ea7f950ec" TEID="41921"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,150,50,8" Orientation="Vertical" Text="Bus434" rdfID="03bb2ce4-199c-48f7-83c7-06cbef7bc990" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus434" BaseElement.TEID="763108" BaseElement.Owner="154976" BaseElement.Operator="402004" BaseElement.Substation="419825" BaseElement.SubLongName="Sub100" PUNElement="False" BaseElement.SubName="Sub100">
+		<Line rdfID="20be3e75-2172-4875-8387-584e4310b913" TEID="217618"/>
+	</Node>
+</Nodes>
+</One_Line>

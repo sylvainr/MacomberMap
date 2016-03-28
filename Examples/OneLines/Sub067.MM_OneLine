@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="170745" BaseElement.ConnectedLines="" BaseElement.County="Rockwall" BaseElement.DisplayName="Sub067" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="230 KV" BaseElement.Latitude="32.897775" BaseElement.LatLong="32.897775,-96.408045" BaseElement.Longitude="-96.408045" BaseElement.Operator="21073" BaseElement.Owner="919908" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub067" BaseElement.LongName="Sub067">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch067" rdfID="f58fdf0d-c00c-4341-93c5-44256158fba8" BaseElement.ElemType="Breaker" BaseElement.KVLevel="230 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch067" BaseElement.TEID="172843" BaseElement.Owner="177411" BaseElement.Operator="177411" BaseElement.Substation="170745" BaseElement.SubLongName="Sub067" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub067">
+		<Descriptor DescriptorText="Switch067" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch067" rdfID="f58fdf0d-c00c-4341-93c5-44256158fba8" BaseElement.TEID="172843" BaseElement.ElemType="Breaker" BaseElement.Owner="177411" BaseElement.Operator="177411" BaseElement.KVLevel="230 KV" BaseElement.Substation="170745" BaseElement.SubName="Switch067" BaseElement.SubLongName="Switch067" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch067"/>
+	</Switch>
+	<Capacitor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Right" Bounds="172,50,32,25" Visible="true" Text="Cap075" rdfID="13b18901-daef-42ca-9f54-e5505cfe53c1" BaseElement.ElemType="Capacitor" BaseElement.KVLevel="230 KV" BaseElement.Name="Cap075" BaseElement.TEID="895205" BaseElement.Owner="402004" BaseElement.Operator="154976" BaseElement.Substation="170745" BaseElement.SubLongName="Sub067" PUNElement="False" BaseElement.SubName="Sub067">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,48,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Cap075" rdfID="13b18901-daef-42ca-9f54-e5505cfe53c1" BaseElement.TEID="895205" BaseElement.ElemType="Capacitor" BaseElement.Owner="402004" BaseElement.Operator="154976" BaseElement.KVLevel="230 KV" BaseElement.Substation="170745" BaseElement.SubName="Sub067" BaseElement.SubLongName="Sub067" BaseElement.Name="Cap075" />
+	</Capacitor>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="230 KV" DescriptorArrow="false" Orientation="Up" Bounds="50,100,32,25" Visible="true" Text="Line041" rdfID="a0a773a6-f1c5-4dc1-8ec0-10be4bba184d" BaseElement.ElemType="Line" BaseElement.KVLevel="230 KV" BaseElement.Name="Line041" BaseElement.TEID="71428" BaseElement.Owner="919908" BaseElement.Operator="770538">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="80,100,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line041" rdfID="a0a773a6-f1c5-4dc1-8ec0-10be4bba184d" BaseElement.TEID="71428" BaseElement.ElemType="Line" BaseElement.Owner="919908" BaseElement.Operator="770538" BaseElement.KVLevel="230 KV" BaseElement.Name="Line041" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,260,8" Orientation="Vertical" Text="Bus095" rdfID="b8dd2cd0-48f5-48e7-be6a-474d0f988b25" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus095" BaseElement.TEID="819970" BaseElement.Owner="21073" BaseElement.Operator="177411" BaseElement.Substation="170745" BaseElement.SubLongName="Sub067" PUNElement="False" BaseElement.SubName="Sub067">
+		<Switch rdfID="4f31251d-a879-4e02-b632-150e2ff7a3d4" TEID="172843"/>
+		<Capacitor rdfID="13b18901-daef-42ca-9f54-e5505cfe53c1" TEID="895205"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,146,8" Orientation="Vertical" Text="Bus096" rdfID="72e81967-6efc-4477-af8e-744f77e5a4ba" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus096" BaseElement.TEID="473040" BaseElement.Owner="177411" BaseElement.Operator="177411" BaseElement.Substation="170745" BaseElement.SubLongName="Sub067" PUNElement="False" BaseElement.SubName="Sub067">
+		<Switch rdfID="4f31251d-a879-4e02-b632-150e2ff7a3d4" TEID="172843"/>
+		<Line rdfID="a0a773a6-f1c5-4dc1-8ec0-10be4bba184d" TEID="71428"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,150,50,8" Orientation="Vertical" Text="Bus453" rdfID="05d196e9-b8d1-4354-a5a9-2973fa8f46ff" BaseElement.ElemType="Node" BaseElement.KVLevel="230 KV" BaseElement.Name="Bus453" BaseElement.TEID="203870" BaseElement.Owner="680902" BaseElement.Operator="919908" BaseElement.Substation="170745" BaseElement.SubLongName="Sub067" PUNElement="False" BaseElement.SubName="Sub067">
+		<Line rdfID="e758d5a2-d06a-4cc6-8ad3-29361a0cfaf1" TEID="716854"/>
+	</Node>
+</Nodes>
+</One_Line>

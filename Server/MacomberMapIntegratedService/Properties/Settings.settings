@@ -1,0 +1,99 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MacomberMapIntegratedService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TCPListener" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8889</Value>
+    </Setting>
+    <Setting Name="OneLineDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\OneLines</Value>
+    </Setting>
+    <Setting Name="SystemFileDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\SystemFiles</Value>
+    </Setting>
+    <Setting Name="DatabaseEncryptedPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DatabaseConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DataSource=..\..\..\..\..\Examples\SystemFiles\MacomberMapDatabase.sqlite</Value>
+    </Setting>
+    <Setting Name="HistoryServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OperatorCommandPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\OperatorCommandsToCoreSystem</Value>
+    </Setting>
+    <Setting Name="LoginFileLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\LoginOperatorships.csv</Value>
+    </Setting>
+    <Setting Name="MacomberMapAdministratorAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">net.tcp://localhost:8774/MacomberMapAdministratorInterface.svc,http://localhost:8733/Design_Time_Addresses/MacomberMapServer/MacomberMapAdministratorInterface</Value>
+    </Setting>
+    <Setting Name="MacomberMapServerAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">net.tcp://localhost:8774/MacomberMapWCFService.svc,http://localhost:8733/Design_Time_Addresses/MacomberMapServer/MacomberMapWCFService/</Value>
+    </Setting>
+    <Setting Name="MacomberMapServerQueryPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">56575</Value>
+    </Setting>
+    <Setting Name="MacomberMapServerBroadcastPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">56574</Value>
+    </Setting>
+    <Setting Name="OperatorCommandTCPAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="OperatorCommandTCPPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9000</Value>
+    </Setting>
+    <Setting Name="TEDESourceFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\RealTime Data</Value>
+    </Setting>
+    <Setting Name="AllowTestCredentials" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MacomberMapServerDescription" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Development system</Value>
+    </Setting>
+    <Setting Name="ForwardCommandsToERCOTClients" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ForwardCommandsToAdminClients" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CommandFileLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\OperatorCommandLog</Value>
+    </Setting>
+    <Setting Name="LogFileLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\MacomberMapServerLog.html</Value>
+    </Setting>
+    <Setting Name="AcceptAllDomainUsers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DatabaseConnectionType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">System.Data.SQLite.SQLiteConnection</Value>
+    </Setting>
+    <Setting Name="DatabaseNoteInsertCommand" Type="System.String" Scope="User">
+      <Value Profile="(Default)">INSERT INTO MM_NOTE (ID, CreatedOn, Author, Note, AssociatedElement, Acknowledged) VALUES (SEQ_MM_NOTE.NEXTVAL, :CreatedOn, :Author, :Note, :AssociatedElement, :Acknowledged) RETURNING ID into :ID</Value>
+    </Setting>
+    <Setting Name="DatabaseTrainingUpdateCommand" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UPDATE MM_Training_Session SET {Title}=:Title, LastUpdate=:LastUpdate WHERE Id=:Id</Value>
+    </Setting>
+    <Setting Name="DatabaseAssembly" Type="System.String" Scope="User">
+      <Value Profile="(Default)">System.Data.SQLite</Value>
+    </Setting>
+    <Setting Name="DatabaseTrainingStartCommand" Type="System.String" Scope="User">
+      <Value Profile="(Default)">INSERT INTO MM_Training_Session (UserName, StartTime, PriorLevel,Score,SystemName) VALUES (:UserName,:CurrentDate, 0, 0,:MachineName); SELECT last_insert_rowid();</Value>
+    </Setting>
+    <Setting Name="TrainingGameHtmlFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\TrainingLeaderboard.html</Value>
+    </Setting>
+    <Setting Name="TrainingGameQuery" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT * FROM MM_Training_Session;</Value>
+    </Setting>
+    <Setting Name="TrainingGameOutputLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;tr&gt;&lt;td&gt;{UserName}&lt;/td&gt;&lt;td&gt;{Score:#,##0}&lt;/td&gt;&lt;td&gt;{CurrentLevel}&lt;/td&gt;&lt;/tr&gt;</Value>
+    </Setting>
+    <Setting Name="ModelFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\..\Examples\SystemFiles\MacomberMap-Combined.MM_Model</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

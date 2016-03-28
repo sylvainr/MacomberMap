@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="166820" BaseElement.ConnectedLines="" BaseElement.County="Somervell" BaseElement.DisplayName="Sub209" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="32.20298" BaseElement.LatLong="32.20298,-97.77996" BaseElement.Longitude="-97.77996" BaseElement.Operator="94017" BaseElement.Owner="919908" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub209" BaseElement.LongName="Sub209">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker209" rdfID="4a668c56-c0d7-46b1-a8c7-8ad3a59e4de6" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker209" BaseElement.TEID="103802" BaseElement.Owner="21073" BaseElement.Operator="770538" BaseElement.Substation="166820" BaseElement.SubLongName="Sub209" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub209">
+		<Descriptor DescriptorText="Breaker209" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker209" rdfID="4a668c56-c0d7-46b1-a8c7-8ad3a59e4de6" BaseElement.TEID="103802" BaseElement.ElemType="Breaker" BaseElement.Owner="21073" BaseElement.Operator="770538" BaseElement.KVLevel="69 KV" BaseElement.Substation="166820" BaseElement.SubName="Breaker209" BaseElement.SubLongName="Breaker209" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker209"/>
+	</Breaker>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus304" rdfID="72fbec3c-2fb2-45cb-8fce-665ffca21f68" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus304" BaseElement.TEID="83058" BaseElement.Owner="177411" BaseElement.Operator="94017" BaseElement.Substation="166820" BaseElement.SubLongName="Sub209" PUNElement="False" BaseElement.SubName="Sub209">
+		<Breaker rdfID="df9e6436-66fc-467e-80f7-131b776afcee" TEID="103802"/>
+		<Line rdfID="8da41aca-81eb-4ecc-88df-10592ee152d5" TEID="596436"/>
+		<Line rdfID="47ea846a-6369-435c-a335-50731baf7b0b" TEID="881879"/>
+	</Node>
+</Nodes>
+</One_Line>

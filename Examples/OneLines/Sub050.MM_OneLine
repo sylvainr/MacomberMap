@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="543309" BaseElement.ConnectedLines="" BaseElement.County="Jasper" BaseElement.DisplayName="Sub050" BaseElement.ElemTypes="BusbarSection,Load"  BaseElement.KVLevels="345 KV" BaseElement.Latitude="30.69986" BaseElement.LatLong="30.69986,-94.163" BaseElement.Longitude="-94.163" BaseElement.Operator="21073" BaseElement.Owner="680902" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub050" BaseElement.LongName="Sub050">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch050" rdfID="25f255ef-07c2-468b-b5d3-77cf022b56eb" BaseElement.ElemType="Breaker" BaseElement.KVLevel="345 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch050" BaseElement.TEID="738128" BaseElement.Owner="154976" BaseElement.Operator="21073" BaseElement.Substation="543309" BaseElement.SubLongName="Sub050" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub050">
+		<Descriptor DescriptorText="Switch050" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch050" rdfID="25f255ef-07c2-468b-b5d3-77cf022b56eb" BaseElement.TEID="738128" BaseElement.ElemType="Breaker" BaseElement.Owner="154976" BaseElement.Operator="21073" BaseElement.KVLevel="345 KV" BaseElement.Substation="543309" BaseElement.SubName="Switch050" BaseElement.SubLongName="Switch050" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Switch050"/>
+	</Switch>
+	<Reactor BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="345 KV" DescriptorArrow="false" Orientation="Right" Bounds="172,50,32,25" Visible="true" Text="Reac059" rdfID="ee252e8c-e47f-46f6-ad50-6779aee7a2c0" BaseElement.ElemType="Reactor" BaseElement.KVLevel="345 KV" BaseElement.Name="Reac059" BaseElement.TEID="950392" BaseElement.Owner="21073" BaseElement.Operator="919908" BaseElement.Substation="543309" BaseElement.SubLongName="Sub050" PUNElement="False" BaseElement.SubName="Sub050">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="202,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Reac059" rdfID="ee252e8c-e47f-46f6-ad50-6779aee7a2c0" BaseElement.TEID="950392" BaseElement.ElemType="Reactor" BaseElement.Owner="21073" BaseElement.Operator="919908" BaseElement.KVLevel="345 KV" BaseElement.Substation="543309" BaseElement.SubName="Sub050" BaseElement.SubLongName="Sub050" BaseElement.Name="Reac059" />
+	</Reactor>
+	<Load BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="345 KV" DescriptorArrow="false" Orientation="Right" Bounds="268,50,32,25" Visible="true" Text="Load018" rdfID="f04aa765-491a-451c-9c2d-dae8d990f553" BaseElement.ElemType="Load" BaseElement.KVLevel="345 KV" BaseElement.Name="Load018" BaseElement.TEID="757698" BaseElement.Owner="154976" BaseElement.Operator="998404" BaseElement.Substation="543309" BaseElement.SubLongName="Sub050" PUNElement="False" BaseElement.SubName="Sub050">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="298,50,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Load018" rdfID="f04aa765-491a-451c-9c2d-dae8d990f553" BaseElement.TEID="757698" BaseElement.ElemType="Load" BaseElement.Owner="154976" BaseElement.Operator="998404" BaseElement.KVLevel="345 KV" BaseElement.Substation="543309" BaseElement.SubName="Sub050" BaseElement.SubLongName="Sub050" BaseElement.Name="Load018" />
+	</Load>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,364,8" Orientation="Vertical" Text="Bus073" rdfID="5d4dfd8e-f8e2-441f-bf3d-57b44288d5cd" BaseElement.ElemType="Node" BaseElement.KVLevel="345 KV" BaseElement.Name="Bus073" BaseElement.TEID="477952" BaseElement.Owner="402004" BaseElement.Operator="260493" BaseElement.Substation="543309" BaseElement.SubLongName="Sub050" PUNElement="False" BaseElement.SubName="Sub050">
+		<Switch rdfID="46033077-022f-43ef-bad0-2d476eb7aecb" TEID="738128"/>
+		<Reactor rdfID="ee252e8c-e47f-46f6-ad50-6779aee7a2c0" TEID="950392"/>
+		<Load rdfID="f04aa765-491a-451c-9c2d-dae8d990f553" TEID="757698"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus468" rdfID="360c0b39-53fa-4fa3-9e63-982f491a97cc" BaseElement.ElemType="Node" BaseElement.KVLevel="345 KV" BaseElement.Name="Bus468" BaseElement.TEID="931382" BaseElement.Owner="919908" BaseElement.Operator="260493" BaseElement.Substation="543309" BaseElement.SubLongName="Sub050" PUNElement="False" BaseElement.SubName="Sub050">
+		<Line rdfID="6a831298-f362-459b-a0f8-d08c40a4f1ea" TEID="395809"/>
+	</Node>
+</Nodes>
+</One_Line>

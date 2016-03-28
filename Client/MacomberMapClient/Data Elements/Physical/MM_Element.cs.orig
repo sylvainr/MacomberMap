@@ -1,0 +1,766 @@
+﻿using MacomberMapClient.Data_Elements.Geographic;
+using MacomberMapClient.Data_Elements.Violations;
+using MacomberMapClient.Integration;
+using MacomberMapClient.User_Interfaces.Generic;
+using MacomberMapClient.User_Interfaces.NetworkMap;
+using MacomberMapCommunications;
+using MacomberMapCommunications.Messages;
+using System;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml;
+
+namespace MacomberMapClient.Data_Elements.Physical
+{
+    /// <summary>
+    /// © 2014, Michael E. Legatt, Ph.D., Electric Reliability Council of Texas, Inc. All Rights Reserved.
+    /// This is the generic class for all CIM elements, which can be referenced by TEID. Every element can have violations.
+    /// </summary>
+    public class MM_Element : MM_Serializable, IComparable
+    {
+        #region Variable Declaration
+        /// <summary>
+        /// The TEID of the element
+        /// </summary>
+        public Int32 TEID;
+
+        /// <summary>
+        /// Our collection of mismatches, so we don't keep on flagging the user
+        /// </summary>
+        private static Dictionary<String, int> Mismatches = new Dictionary<string, int>(2);
+
+
+        /// <summary>The name of the element</summary>
+        public String Name = null;
+
+        /// <summary>The owner of the company</summary>
+        public MM_Company Owner = null;
+
+        /// <summary>The operator of the company</summary>
+        public MM_Company Operator = null;
+
+        /// <summary>The name of the contingencies/breaker-to-breakers associated with the element</summary>
+        public List<MM_Contingency> Contingencies = new List<MM_Contingency>(5);
+
+        /// <summary>The type of element this is</summary>
+        public MM_Element_Type ElemType;
+
+        /// <summary>Our collection of unknown elements that need to be adjusted</summary>
+        public static Dictionary<Int32, Dictionary<MM_Element, MemberInfo>> UnknownElements = new Dictionary<int, Dictionary<MM_Element, MemberInfo>>(2);
+
+        /// <summary>The near bus number associated with the element</summary>
+        public int NearBusNumber = -1;
+
+        /// <summary>The near bus number associated with the element</summary>
+        public int FarBusNumber = -1;
+        
+        /// <summary>The island associated with the near bus</summary>
+        public MM_Island NearIsland
+        {
+            get
+            {
+                MM_Bus Bus = this.NearBus;
+                if (Bus == null)
+                    return null;
+                else
+                    return Bus.Island;
+            }
+        }
+
+        /// <summary>The island associated with the far bus</summary>
+        public MM_Island FarIsland
+        {
+            get
+            {
+                MM_Bus Bus = this.FarBus;
+                if (Bus == null)
+                    return null;
+                else
+                    return Bus.Island;
+            }
+        }
+
+
+        /// <summary>
+        /// Report the bus associated with our element, if we can
+        /// </summary>
+        public MM_Bus NearBus
+        {
+            get
+            {
+                if (NearBusNumber == -1)
+                    return null;
+
+                //If we're flagged as open, don't provide a bus
+
+                MM_Bus Bus = null;
+                MM_Repository.BusNumbers.TryGetValue(NearBusNumber, out Bus);
+                return Bus;
+            }
+        }
+
+        /// <summary>
+        /// Report the bus associated with our element, if we can
+        /// </summary>
+        public MM_Bus FarBus
+        {
+            get
+            {
+                if (FarBusNumber == -1)
+                    return null;
+                MM_Bus Bus = null;
+                MM_Repository.BusNumbers.TryGetValue(FarBusNumber, out Bus);
+                return Bus;
+            }
+        }
+
+
+        /// <summary>
+        /// The collection of violations occuring within the element
+        /// </summary>
+        public Dictionary<MM_AlarmViolation, MM_AlarmViolation> Violations
+        {
+            get
+            {
+                if (_Violations == null)
+                    return _Violations = new Dictionary<MM_AlarmViolation, MM_AlarmViolation>(10);
+                else
+                    return _Violations;
+            }
+        }
+
+        private Dictionary<MM_AlarmViolation, MM_AlarmViolation> _Violations = null;
+        /// <summary>
+        /// The collection of notes occuring within the element
+        /// </summary>
+        public Dictionary<Int32, MM_Note> Notes
+        {
+            get
+            {
+                if (_Notes == null)
+                    return _Notes = new Dictionary<Int32, MM_Note>(10);
+                else
+                    return _Notes;
+            }
+        }
+        private Dictionary<Int32, MM_Note> _Notes = null;
+
+        /// <summary>The KV level of the element</summary>
+        public MM_KVLevel KVLevel;
+
+        /// <summary>The substation in which the element resides (null for lines and substations)</summary>
+        public MM_Substation Substation;
+
+        /// <summary>
+        /// This routine is for legacy compatability - substation name
+        /// </summary>
+        public String SubName
+        {
+            get { return Substation == null ? "" : Substation.Name; }
+            set { }
+        }
+
+        /// <summary>
+        /// This routine is for legacy compatability - substation name
+        /// </summary>
+        public String SubLongName
+        {
+            get { return Substation == null ? "" : Substation.LongName; }
+            set { }
+        }
+
+        /// <summary>The color for a non-active menu item</summary>
+        public static Color MenuDeactivatedColor = Color.FromArgb(64, 64, 64);
+
+        /// <summary>
+        /// Report a value change in the element, leading to its being recomputed
+        /// </summary>
+        /// <param name="Element">The changed element</param>
+        /// <param name="Property"></param>
+        public delegate void ValuesChangedDelegate(MM_Element Element, String Property);
+
+        /// <summary>Report a line's measurement change </summary>
+        public event ValuesChangedDelegate ValuesChanged;
+
+        /// <summary>The remedial action schemes associated with the element</summary>
+        public MM_RemedialActionScheme[] RASs = null;
+
+        /// <summary>Whether the element is inside a PUN</summary>
+        public bool PUNElement = false;
+       
+        /// <summary>The near angle</summary>
+        public float NearAngle { get { return NearBus != null ? NearBus.Estimated_Angle : float.NaN; } }
+
+        /// <summary>The far angle</summary>
+        public float FarAngle { get { return FarBus != null ? FarBus.Estimated_Angle : float.NaN; } }
+        
+        /// <summary>The near voltage level</summary>
+        public float NearVoltage { get { return NearBus != null ? NearBus.Estimated_kV : float.NaN; } }
+        
+        /// <summary>The far voltage level</summary>
+        public float FarVoltage { get { return FarBus != null ? FarBus.Estimated_kV : float.NaN; } }
+
+        /// <summary>The near frequency </summary>
+        public float NearFrequency { get { return NearIsland != null ? NearIsland.Frequency : float.NaN; } }
+
+        /// <summary>The far frequency </summary>        
+        public float FarFrequency { get { return FarIsland != null ? FarIsland.Frequency : float.NaN; } }
+        #endregion
+
+        #region Initialization
+        /// <summary>
+        /// Parameter-free constructor
+        /// </summary>
+        public MM_Element()
+        {
+        }
+
+        /// <summary>
+        /// Initialize a new CIM element based on an XML element
+        /// </summary>
+        /// <param name="AddIfNew">Whether to add any new elements that may be created</param>
+        /// <param name="ElementSource">The XML element containing the TEID, name, owner and operator for the element in question</param>
+        public MM_Element(XmlElement ElementSource, bool AddIfNew)
+            : base(ElementSource, AddIfNew)
+        {
+            if (this.ElemType == null)
+                MM_Repository.ElemTypes.TryGetValue(ElementSource.Name, out this.ElemType);
+        }
+
+        /// <summary>
+        /// Initialize a new CIM element based on a data reader element
+        /// </summary>
+        /// <param name="ElementSource">The data reader containing the TEID, name, owner and operator for the element in question</param>
+        /// <param name="AddIfNew">Whether to add any new elements that may be created</param>
+        public MM_Element(DbDataReader ElementSource, bool AddIfNew)
+            : base(ElementSource, AddIfNew)
+        {
+        }
+        #endregion
+
+        #region Menu enhancing
+        /// <summary>
+        /// Return a menu one-line description for this element
+        /// </summary>
+        /// <returns></returns>
+        public String MenuDescription()
+        {
+            try
+            {
+                if (this is MM_Bus)
+                    return String.Format("Bus {0} ({1:0.0} kV, {2:0.0%} pU, {3:0.0}°)", "Bus " + (this as MM_Bus).BusNumber.ToString(), (this as MM_Bus).Estimated_kV, (this as MM_Bus).PerUnitVoltage, (this as MM_Bus).Estimated_Angle);
+                else if (this is MM_Transformer)
+                    return "Transformer " + this.Name + " (" + (this as MM_Transformer).FlowPercentageText + " / " + (this as MM_Transformer).MVAFlow.ToString("0.0") + " mva to " + (this as MM_Transformer).MVAFlowDirection.Name + ")";
+                else if (this is MM_Line)
+                    return ((this as MM_Line).IsSeriesCompensator ? "SeriesCompensator" : this.ElemType.Name) + " " + this.Name + " (" + (this as MM_Line).LinePercentageText + ")";
+                else if (this is MM_Load)
+                    return this.ElemType.Name + " " + this.Name + " (" + (this as MM_Load).Estimated_MW.ToString("#,##0.0") + " MW)";
+                else if (this is MM_Unit)
+                    return (this as MM_Unit).UnitType.Name + " " + this.Name + " (" + (this as MM_Unit).UnitPercentageText + " / " + (this as MM_Unit).Estimated_MW.ToString("#,##0.0") + " MW) / (" + (this as MM_Unit).UnitReactivePercentage.ToString("0%") + " / " + (this as MM_Unit).UnitMVARCapacity.ToString("#,##0.0")  + " MVAR)";
+                else if (this is MM_ShuntCompensator)
+                    return this.ElemType.Name + " " + this.Name + " (" + (this as MM_ShuntCompensator).Estimated_MVAR.ToString("#,##0.0") + "/" + (this as MM_ShuntCompensator).Nominal_MVAR.ToString("#,##0.0") + ")";               
+                else if (this is MM_Substation)
+                    return "Substation " + (this as MM_Substation).LongName + " (" + this.Name + ")";
+                else if (this is MM_Contingency)
+                    return this.Name + " / " + (this as MM_Contingency).Description;
+                else
+                    return this.ElemType.Name + " " + this.Name;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+        }
+
+        /// <summary>
+        /// The full path to the AF Element.
+        /// </summary>
+        public string AFPath;
+
+        /// <summary>
+        /// Link to the AFElement.
+        /// </summary>
+        public string Link;
+
+
+        /// <summary>
+        /// Return a  description for this element
+        /// </summary>
+        /// <returns></returns>
+        public String ElementDescription()
+        {
+            if (this is MM_Line)
+                if ((this as MM_Line).IsSeriesCompensator)
+                    return "SeriesCompensator " + this.Name + " (" + (this as MM_Line).Substation1.DisplayName() + ")";
+                else
+                    return this.Name + " (" + (this as MM_Line).Substation1.DisplayName() + " / " + (this as MM_Line).Substation2.DisplayName() + ")";
+            else if (this is MM_AlarmViolation)
+            {
+                MM_AlarmViolation Viol = this as MM_AlarmViolation;
+                return Viol.Type.Name + " " + Viol.ViolatedElement.ToString() + " " + Viol.Text + (Viol.Contingency != null ? " " + Viol.Contingency.Name : "") + " (" + Viol.Recency + ")";
+            }
+            else if (this is MM_Company)
+                return (this as MM_Company).Alias + " " + this.Name;
+            else if (this.ElemType != null && this.ElemType.Name == "User")
+                return this.Name;
+            else if (this is MM_Substation)
+                return this.ElemType.Acronym + " " + this.Name;
+            else if (this.Substation != null)
+                return this.Substation.DisplayName() + " " + this.ElemType.Acronym + " " + this.Name;
+            else if (this is MM_Bus)
+                return "Bus " + ((MM_Bus)this).BusNumber.ToString();
+            else if (this.ElemType == null)
+                return this.GetType().Name + " " + this.Name;
+            else
+                return this.ElemType.Acronym + " " + this.Name;
+        }
+
+        /// <summary>
+        /// Determine the worst violation for an element, against the tally of the worst and the current
+        /// </summary>
+        /// <param name="CurrentViolation"></param>
+        /// <returns></returns>
+        public MM_AlarmViolation_Type WorstViolation(MM_AlarmViolation_Type CurrentViolation)
+        {
+            MM_AlarmViolation_Type CurWorst = WorstViolationOverall;
+            if (Data_Integration.Permissions.OTS == true && this is MM_Bus && this.Substation != null)//r-rtst
+                return this.Substation.WorstViolation(CurrentViolation);//r-rtst
+
+            if (CurrentViolation == null)
+                return WorstViolationOverall;
+            else if (CurWorst == null)
+                return CurrentViolation;
+            else if (CurWorst.Priority < CurrentViolation.Priority)
+                return CurWorst;
+            else
+                return CurrentViolation;
+        }
+
+
+        /// <summary>
+        /// Return the worst violation overall, regardless of its visibility
+        /// </summary>
+        public MM_AlarmViolation_Type WorstViolationOverall
+        {
+            get
+            {
+                MM_AlarmViolation_Type WorstViol = null;
+                foreach (MM_AlarmViolation Viol in this.Violations.Values)
+                    if (WorstViol == null || Viol.Type.Priority < WorstViol.Priority)
+                        WorstViol = Viol.Type;
+                if (this is MM_Transformer)
+                    foreach (MM_TransformerWinding Winding in (this as MM_Transformer).Windings)
+                        foreach (MM_AlarmViolation Viol in Winding.Violations.Values)
+                            if (WorstViol == null || Viol.Type.Priority < WorstViol.Priority)
+                                WorstViol = Viol.Type;
+                if (this is MM_Boundary)
+                    foreach (MM_Substation Sub in (this as MM_Boundary).Substations)
+                        WorstViol = Sub.WorstViolation(WorstViol);
+                /*/if (this is MM_Substation)
+                {
+                    MM_Substation Sub = this as MM_Substation;
+                    foreach (MM_Element[] Elem in new MM_Element[][] { Sub.ElectricalBuses, Sub.Loads, Sub.ShuntCompensators, Sub.Transformers, Sub.Units })
+                        if (Elem != null)
+                            WorstViol = WorstViolation(WorstViol);
+                }*/
+
+<<<<<<< .merge_file_a09080
+=======
+                if (this is MM_Node)
+                {
+                    MM_Node ThisNode = (MM_Node)this;
+                    if (ThisNode.AssociatedBus != null)
+                        foreach (MM_AlarmViolation Viol in ThisNode.AssociatedBus.Violations.Values)
+                            if (WorstViol == null || Viol.Type.Priority < WorstViol.Priority)
+                                WorstViol = Viol.Type;
+
+                }
+                else if (MM_Repository.OverallDisplay.ShowNodeViolationsOnEquipment)
+                {
+                    MM_Bus NearBus = this.NearBus;
+                    MM_Bus FarBus = this.FarBus;
+                    if (NearBus != null)
+                        foreach (MM_AlarmViolation Viol in NearBus.Violations.Values)
+                            if (WorstViol == null || Viol.Type.Priority < WorstViol.Priority)
+                                WorstViol = Viol.Type;
+                    if (FarBus != null)
+                        foreach (MM_AlarmViolation Viol in FarBus.Violations.Values)
+                            if (WorstViol == null || Viol.Type.Priority < WorstViol.Priority)
+                                WorstViol = Viol.Type;
+                }
+>>>>>>> .merge_file_a11560
+                return WorstViol;
+            }
+        }
+
+        /// <summary>
+        /// Retrieve the image corresponding to the worst violation type
+        /// </summary>
+        public Image WorstViolationImage
+        {
+            get
+            {
+                if (Data_Integration.Permissions.OTS == true && this is MM_Bus && ((MM_Bus)this).Node != null) //r-rtst
+                    return ((MM_Bus)this).Node.WorstViolationImage; //r-rtst
+                MM_AlarmViolation_Type WorstViol = this.WorstViolationOverall;
+                if (WorstViol != null)
+                    return MM_Repository.ViolationImages.Images[WorstViol.Name];
+                else if (FindNotes().Length > 0)
+                    return MM_Repository.ViolationImages.Images["Note"];
+                else
+                    return null;
+            }
+        }
+
+
+        #endregion
+
+        #region String - represent as TEID
+        /// <summary>
+        /// Override the ToString function, so that the data tables are sorting by TEID
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return ElementDescription();
+        }
+        #endregion
+
+        #region Violation handling
+        /// <summary>
+        /// Determine the worst violation type within the substation
+        /// </summary>
+        public MM_AlarmViolation_Type WorstVisibleViolation(Dictionary<MM_AlarmViolation, ListViewItem> ShownViolations, Object CallingForm)
+        {
+            MM_AlarmViolation_Type WorstViolation = null;
+
+            if (CallingForm is MM_Mini_Map)
+            {
+                foreach (MM_AlarmViolation Viol in Violations.Values)
+                    if ((Viol.Type.MiniMap == MM_AlarmViolation_Type.DisplayModeEnum.Always) || ((Viol.Type.MiniMap == MM_AlarmViolation_Type.DisplayModeEnum.WhenSelected) && (ShownViolations.ContainsKey(Viol))))
+                        if ((WorstViolation == null) || (Viol.Type.ViolationIndex < WorstViolation.ViolationIndex))
+                            WorstViolation = Viol.Type;
+            }
+            else if (this is MM_Line)
+            {
+                foreach (MM_AlarmViolation Viol in Violations.Values)
+                    if ((Viol.Type.NetworkMap_Line == MM_AlarmViolation_Type.DisplayModeEnum.Always) || ((Viol.Type.NetworkMap_Line == MM_AlarmViolation_Type.DisplayModeEnum.WhenSelected) && (ShownViolations.ContainsKey(Viol))))
+                        if ((WorstViolation == null) || (Viol.Type.ViolationIndex < WorstViolation.ViolationIndex))
+                            WorstViolation = Viol.Type;
+            }
+            else if (this is MM_Substation)
+            {
+                foreach (MM_AlarmViolation Viol in Violations.Values)
+                    if ((Viol.Type.NetworkMap_Substation == MM_AlarmViolation_Type.DisplayModeEnum.Always) || ((Viol.Type.NetworkMap_Substation == MM_AlarmViolation_Type.DisplayModeEnum.WhenSelected) && (ShownViolations.ContainsKey(Viol))))
+                        if ((WorstViolation == null) || (Viol.Type.ViolationIndex < WorstViolation.ViolationIndex))
+                            WorstViolation = Viol.Type;
+            }
+            else if (this is MM_Node && Violations.Count == 0 && ShownViolations.Count > 0)
+            {
+                foreach (MM_AlarmViolation Viol in ShownViolations.Keys)
+                    if (Viol.ViolatedElement.ElemType.Name == "BusbarSection" && Viol.ViolatedElement.Substation.Equals(this.Substation) && Viol.ViolatedElement.Name.Equals(this.Name))
+                        if ((Viol.Type.OneLineElement == MM_AlarmViolation_Type.DisplayModeEnum.Always) || ((Viol.Type.OneLineElement == MM_AlarmViolation_Type.DisplayModeEnum.WhenSelected)))
+                            if ((WorstViolation == null) || (Viol.Type.ViolationIndex < WorstViolation.ViolationIndex))
+                                WorstViolation = Viol.Type;
+            }
+            else
+            {
+                foreach (MM_AlarmViolation Viol in Violations.Values)
+                    if ((Viol.Type.OneLineElement == MM_AlarmViolation_Type.DisplayModeEnum.Always) || ((Viol.Type.OneLineElement == MM_AlarmViolation_Type.DisplayModeEnum.WhenSelected) && (ShownViolations.ContainsKey(Viol))))
+                        if ((WorstViolation == null) || (Viol.Type.ViolationIndex < WorstViolation.ViolationIndex))
+                            WorstViolation = Viol.Type;
+            }
+            return WorstViolation;
+        }
+        #endregion
+
+        /// <summary>
+        /// Determine the available notes for our element
+        /// </summary>
+        /// <returns></returns>
+        public MM_Note[] FindNotes()
+        {
+            List<MM_Note> OutNotes = new List<MM_Note>();
+
+            //First, look at notes for this item;
+            OutNotes.AddRange(Notes.Values);
+            //Now, if a substation, pull in notes on all elements within
+            if (this is MM_Substation)
+                foreach (MM_Element Elem in MM_Repository.TEIDs.Values)
+                    if (Elem.Substation != null && Elem.Substation == this)
+                        OutNotes.AddRange(Elem.Notes.Values);
+
+            if (this is MM_Boundary)
+                foreach (MM_Element Elem in MM_Repository.TEIDs.Values)
+                    try
+                    {
+                        if (Elem is MM_Substation && (Elem as MM_Substation).County.Equals(this))
+                            OutNotes.AddRange(Elem.Notes.Values);
+                        else if (Elem is MM_Line && ((Elem as MM_Line).Substation1.County.Equals(this) || (Elem as MM_Line).Substation2.County.Equals(this)))
+                            OutNotes.AddRange(Elem.Notes.Values);
+                        else if (Elem.Substation != null && Elem.Substation.County.Equals(this))
+                            OutNotes.AddRange(Elem.Notes.Values);
+                    }
+                    catch (Exception)
+                    {
+                    }
+            if (this is MM_AlarmViolation)
+                OutNotes.AddRange((this as MM_AlarmViolation).ViolatedElement.Notes.Values);
+            return OutNotes.ToArray();
+        }
+
+        private CheckState _Permitted = CheckState.Indeterminate;
+
+        /// <summary>
+        /// Whether this substation can be displayed, given its permission levels
+        /// </summary>
+        public bool Permitted
+        {
+            set
+            {
+                this._Permitted = value ? CheckState.Checked : CheckState.Unchecked;
+            }
+            get
+            {
+                if (_Permitted == CheckState.Checked)
+                    return true;
+                else if (_Permitted == CheckState.Unchecked)
+                    return false;
+                else if (this is MM_Substation)
+                {
+                    foreach (MM_KVLevel KVLevel in (this as MM_Substation).KVLevels)
+                        if (KVLevel.Permitted && KVLevel.Name != "Other KV")
+                            return true;
+                    if ((this as MM_Substation).KVLevels.Count == 1)
+                        return (this as MM_Substation).KVLevels[0].Permitted;
+                    return false;
+                }
+                else if (this is MM_Transformer)
+                {
+                    foreach (MM_TransformerWinding Winding in (this as MM_Transformer).Windings)
+                        if (Winding.Permitted)
+                            return true;
+                    return false;
+                }
+                else if (this.KVLevel == null)
+                    return true;
+                else
+                    return this.KVLevel.Permitted;
+            }
+        }
+
+        #region IComparable Members
+        /// <summary>
+        /// Handle comparing the two elements
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public int CompareTo(object obj)
+        {
+            if (obj is MM_Element == false)
+                return 1;
+            else if (obj is MM_KVLevel)
+                return ((MM_KVLevel)this).Nominal.CompareTo(((MM_KVLevel)obj).Nominal);
+            else if (obj is MM_Island && this is MM_Island)
+                return ((MM_Island)this).ID.CompareTo(((MM_Island)obj).ID);
+            else
+                return TEID.CompareTo(((MM_Element)obj).TEID);
+            /*
+            MM_Element OtherElem = obj as MM_Element;
+            int FirstLevel = 0;
+            if (this.ElemType != OtherElem.ElemType)
+                FirstLevel = this.ElemType.Index.CompareTo(OtherElem.ElemType.Index);
+            else if (this is MM_ShuntCompensator)
+                FirstLevel = (this as MM_ShuntCompensator).CompareShuntCompensators(obj as MM_ShuntCompensator);
+            else if (this is MM_BusbarSection)
+                FirstLevel = (this as MM_BusbarSection).CompareBusbarSections(obj as MM_BusbarSection);
+            else if (this is MM_Unit)
+                FirstLevel = (this as MM_Unit).CompareUnits(obj as MM_Unit);
+            else if (this is MM_Load)
+                FirstLevel = (this as MM_Load).CompareLoads(obj as MM_Load);
+
+            if (FirstLevel != 0)
+                return FirstLevel;
+            else if (OtherElem.TEID == TEID)
+                return 0;
+            else
+            {
+
+                MM_Substation Sub = (this is MM_Substation ? this as MM_Substation : this.Substation);
+                MM_Substation OtherSub = (obj is MM_Substation ? ((MM_Substation)obj) : OtherElem.Substation);
+                if (Sub == null || OtherSub == null)
+                {
+                    if (OtherElem.Name != null&& this.Name != null)
+                        return this.Name.CompareTo(OtherElem.Name);
+                    else
+                        return 0;
+                }
+                String ThisName = Sub.DisplayName();
+                String OtherName = OtherSub.DisplayName();
+
+                if (String.IsNullOrEmpty(ThisName) || String.IsNullOrEmpty(OtherName))
+                    return this.Name.CompareTo(OtherElem.Name);
+                else
+                {
+                    int SubComp = ThisName.CompareTo(OtherName);
+                    if (SubComp != 0)
+                        return SubComp;
+                    else if (this is MM_TransformerWinding && OtherElem is MM_TransformerWinding)
+                        return this.TEID.CompareTo(OtherElem.TEID);
+                    else
+                        return this.Name.CompareTo(OtherElem.Name);
+                }
+            }*/
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Trigger the value change event
+        /// </summary>
+        public void TriggerValueChange(String Property)
+        {
+            if (ValuesChanged != null)
+                ValuesChanged(this,Property);
+        }
+
+        /// <summary>
+        /// Create a new element
+        /// </summary>
+        /// <param name="TEID"></param>
+        /// <param name="ElemType"></param>
+        /// <param name="AddIfNew"></param>
+        ///  <param name="BaseElement"></param>
+        ///  <param name="mI"></param>
+        /// <returns></returns>
+        public static MM_Element CreateElement(Int32 TEID, Type ElemType, bool AddIfNew, MM_Element BaseElement, MemberInfo mI)
+        {
+
+            MM_Element OutElement;
+            if (MM_Repository.TEIDs.TryGetValue(TEID, out OutElement))
+                return OutElement;
+
+            OutElement = Activator.CreateInstance(ElemType) as MM_Element;
+            OutElement.TEID = TEID;
+
+            if (AddIfNew)
+            {
+
+                MM_Repository.TEIDs.Add(TEID, OutElement);
+                if (ElemType == typeof(MM_Element) || OutElement.ElemType == null)
+                {
+                    Dictionary<MM_Element, MemberInfo> Mapping;
+                    if (!UnknownElements.TryGetValue(TEID, out Mapping))
+                        UnknownElements.Add(TEID, Mapping = new Dictionary<MM_Element, MemberInfo>(5));
+                    Mapping.Add(BaseElement, mI);
+                }
+            }
+            return OutElement;
+
+        }
+
+        /// <summary>
+        /// Create a new element based on its definition
+        /// </summary>
+        /// <param name="xElem">The definition for the element</param>
+        /// <param name="Prefix">The prefix for the element, if any</param>
+        /// <param name="AddIfNew">Whether to add a new element to our master repository</param>        
+        /// <returns></returns>
+        public static MM_Element CreateElement(XmlElement xElem, string Prefix, bool AddIfNew)
+        {
+            MM_Element OutElement;
+             String ElemType;
+            if (xElem.HasAttribute("ElemType"))
+                ElemType = String.IsNullOrEmpty(Prefix) ? xElem.Attributes["ElemType"].Value : xElem.HasAttribute(Prefix + ".ElemType") ? xElem.Attributes[Prefix + ".ElemType"].Value : Prefix;
+                else
+                ElemType = xElem.Name;
+            if (Prefix == "EPSMeter")
+            {
+                OutElement = new MM_EPSMeter();
+                OutElement.ElemType = MM_Repository.FindElementType(Prefix);
+            }
+            else if (xElem.HasAttribute("BaseElement.IsSeriesCompensator") && XmlConvert.ToBoolean(xElem.Attributes["BaseElement.IsSeriesCompensator"].Value))
+                OutElement = new MM_Line();
+            else if (ElemType == "Breaker" || ElemType == "Switch")
+                OutElement = new MM_Breaker_Switch();
+            else if (ElemType == "DCTie")
+                OutElement = new MM_DCTie();
+            else if (ElemType == "ElectricalBus")
+                OutElement = new MM_Electrical_Bus();
+            else if (ElemType == "Line")
+                OutElement = new MM_Line();
+            else if (ElemType == "Load" || ElemType.Equals("LaaR", StringComparison.CurrentCultureIgnoreCase))
+                OutElement = new MM_Load();
+            else if (ElemType == "Unit")
+                OutElement = new MM_Unit();
+            else if (ElemType == "Capacitor" || ElemType == "Reactor")
+                OutElement = new MM_ShuntCompensator();
+            else if (ElemType == "Transformer")
+                OutElement = new MM_Transformer();
+            else if (ElemType == "TransformerWinding")
+                OutElement = new MM_TransformerWinding();
+            else if (ElemType == "StaticVarCompensator")
+                OutElement = new MM_StaticVarCompensator();
+            else if (ElemType == "Node")
+                OutElement = new MM_Node();
+            else if (ElemType == "BusbarSection")
+                OutElement = new MM_Bus();
+            else if (ElemType == "PricingVector")
+            {
+                OutElement = new MM_PricingVector();
+                ((MM_PricingVector)OutElement).EPSMeter = (MM_EPSMeter)CreateElement(xElem, "EPSMeter", false);
+            }
+            else if (ElemType == "EPSMeter")
+                OutElement = new MM_EPSMeter();
+            else if (ElemType == "County" || ElemType == "State")
+                OutElement = new MM_Boundary();
+            else if (ElemType == "Company")
+                OutElement = new MM_Company();
+            else if (ElemType == "Contingency")
+                OutElement = new MM_Contingency();
+            else if (ElemType == "Substation")
+                OutElement = new MM_Substation();
+            else if (ElemType == "VoltageLevel")
+                OutElement = new MM_KVLevel();
+            else
+                OutElement = new MM_Element();
+            OutElement.ElemType = MM_Repository.FindElementType(ElemType);
+
+
+
+            //Now, pull in our attributes
+            foreach (XmlAttribute xAttr in xElem.Attributes)
+                if ((String.IsNullOrEmpty(Prefix) && xAttr.Name.IndexOf('.') == -1))
+                    MM_Serializable.AssignValue(xAttr.Name, xAttr.Value, OutElement, AddIfNew);
+                else if (!String.IsNullOrEmpty(Prefix) && xAttr.Name.StartsWith(Prefix + "."))
+                    MM_Serializable.AssignValue(xAttr.Name.Substring(xAttr.Name.IndexOf('.') + 1), xAttr.Value, OutElement, AddIfNew);
+
+            //If we're a transformer, pull in our windings
+            if (ElemType == "Transformer")
+            {
+                List<MM_TransformerWinding> Windings = new List<MM_TransformerWinding>();
+                foreach (XmlElement xWind in xElem.SelectNodes("Winding"))
+                    Windings.Add(MM_Element.CreateElement(xWind, "BaseElement", AddIfNew) as MM_TransformerWinding);
+                if (xElem.HasAttribute("BaseElement.KVLevel1"))
+                    Windings[0].Voltage = XmlConvert.ToSingle(xElem.Attributes["BaseElement.KVLevel1"].Value.Split(' ')[0]);
+                if (xElem.HasAttribute("BaseElement.KVLevel2"))
+                    Windings[1].Voltage = XmlConvert.ToSingle(xElem.Attributes["BaseElement.KVLevel2"].Value.Split(' ')[0]);
+                (OutElement as MM_Transformer).Windings = Windings.ToArray();
+            }
+
+            //If we're a line, check for series compensator status to upgrade our type
+            if (OutElement is MM_Line && xElem.HasAttribute("BaseElement.IsSeriesCompensator") && XmlConvert.ToBoolean(xElem.Attributes["BaseElement.IsSeriesCompensator"].Value))
+                OutElement.ElemType = MM_Repository.FindElementType("SeriesCompensator");
+            //Return our new element
+            return OutElement;
+        }
+    }
+
+}

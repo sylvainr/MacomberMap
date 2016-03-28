@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="168322" BaseElement.ConnectedLines="" BaseElement.County="Irion" BaseElement.DisplayName="Sub039" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="345 KV" BaseElement.Latitude="31.304065" BaseElement.LatLong="31.304065,-100.9818" BaseElement.Longitude="-100.9818" BaseElement.Operator="402004" BaseElement.Owner="94017" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub039" BaseElement.LongName="Sub039">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch039" rdfID="34f634a7-6322-486d-b578-83bda3c5b3be" BaseElement.ElemType="Breaker" BaseElement.KVLevel="345 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch039" BaseElement.TEID="613205" BaseElement.Owner="94017" BaseElement.Operator="770538" BaseElement.Substation="168322" BaseElement.SubLongName="Sub039" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub039">
+		<Descriptor DescriptorText="Switch039" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch039" rdfID="34f634a7-6322-486d-b578-83bda3c5b3be" BaseElement.TEID="613205" BaseElement.ElemType="Breaker" BaseElement.Owner="94017" BaseElement.Operator="770538" BaseElement.KVLevel="345 KV" BaseElement.Substation="168322" BaseElement.SubName="Switch039" BaseElement.SubLongName="Switch039" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch039"/>
+	</Switch>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,172,8" Orientation="Vertical" Text="Bus056" rdfID="1a720d79-b5a7-4909-a410-4c11a161189f" BaseElement.ElemType="Node" BaseElement.KVLevel="345 KV" BaseElement.Name="Bus056" BaseElement.TEID="73869" BaseElement.Owner="770538" BaseElement.Operator="402004" BaseElement.Substation="168322" BaseElement.SubLongName="Sub039" PUNElement="False" BaseElement.SubName="Sub039">
+		<Switch rdfID="d62d94b8-d0a1-4a3a-a6e1-c16f0dcb91ff" TEID="613205"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,50,8" Orientation="Vertical" Text="Bus057" rdfID="ea50ec5e-3516-4efa-97e6-f4c93bbfea23" BaseElement.ElemType="Node" BaseElement.KVLevel="345 KV" BaseElement.Name="Bus057" BaseElement.TEID="434379" BaseElement.Owner="998404" BaseElement.Operator="94017" BaseElement.Substation="168322" BaseElement.SubLongName="Sub039" PUNElement="False" BaseElement.SubName="Sub039">
+		<Switch rdfID="d62d94b8-d0a1-4a3a-a6e1-c16f0dcb91ff" TEID="613205"/>
+	</Node>
+</Nodes>
+</One_Line>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="711416" BaseElement.ConnectedLines="" BaseElement.County="Mitchell" BaseElement.DisplayName="Sub222" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="32.306755" BaseElement.LatLong="32.306755,-100.9223" BaseElement.Longitude="-100.9223" BaseElement.Operator="680902" BaseElement.Owner="94017" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub222" BaseElement.LongName="Sub222">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker222" rdfID="31b5f685-327c-4753-899a-b293e4c3a863" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker222" BaseElement.TEID="344445" BaseElement.Owner="770538" BaseElement.Operator="770538" BaseElement.Substation="711416" BaseElement.SubLongName="Sub222" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub222">
+		<Descriptor DescriptorText="Breaker222" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker222" rdfID="31b5f685-327c-4753-899a-b293e4c3a863" BaseElement.TEID="344445" BaseElement.ElemType="Breaker" BaseElement.Owner="770538" BaseElement.Operator="770538" BaseElement.KVLevel="138 KV" BaseElement.Substation="711416" BaseElement.SubName="Breaker222" BaseElement.SubLongName="Breaker222" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker222"/>
+	</Breaker>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus322" rdfID="f16d4a4f-ab73-4a64-b5a3-5c6bedc77d8d" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus322" BaseElement.TEID="53802" BaseElement.Owner="680902" BaseElement.Operator="680902" BaseElement.Substation="711416" BaseElement.SubLongName="Sub222" PUNElement="False" BaseElement.SubName="Sub222">
+		<Breaker rdfID="1ce75de9-36e6-47bc-9c48-26a4251317e9" TEID="344445"/>
+	</Node>
+</Nodes>
+</One_Line>

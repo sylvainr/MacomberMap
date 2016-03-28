@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="389098" BaseElement.ConnectedLines="" BaseElement.County="Upton" BaseElement.DisplayName="Sub090" BaseElement.ElemTypes="BusbarSection,Load"  BaseElement.KVLevels="69 KV" BaseElement.Latitude="31.365815" BaseElement.LatLong="31.365815,-102.0465" BaseElement.Longitude="-102.0465" BaseElement.Operator="998404" BaseElement.Owner="402004" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub090" BaseElement.LongName="Sub090">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch090" rdfID="fff81afc-47a5-4037-b6ae-6371d8bafa44" BaseElement.ElemType="Breaker" BaseElement.KVLevel="69 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch090" BaseElement.TEID="671783" BaseElement.Owner="402004" BaseElement.Operator="21073" BaseElement.Substation="389098" BaseElement.SubLongName="Sub090" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub090">
+		<Descriptor DescriptorText="Switch090" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch090" rdfID="fff81afc-47a5-4037-b6ae-6371d8bafa44" BaseElement.TEID="671783" BaseElement.ElemType="Breaker" BaseElement.Owner="402004" BaseElement.Operator="21073" BaseElement.KVLevel="69 KV" BaseElement.Substation="389098" BaseElement.SubName="Switch090" BaseElement.SubLongName="Switch090" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch090"/>
+	</Switch>
+	<Load BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="69 KV" DescriptorArrow="false" Orientation="Right" Bounds="50,100,32,25" Visible="true" Text="Load035" rdfID="b7f12ae3-b8ca-470a-b923-3c26a96e48b5" BaseElement.ElemType="Load" BaseElement.KVLevel="69 KV" BaseElement.Name="Load035" BaseElement.TEID="893270" BaseElement.Owner="402004" BaseElement.Operator="94017" BaseElement.Substation="389098" BaseElement.SubLongName="Sub090" PUNElement="False" BaseElement.SubName="Sub090">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="80,100,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Load035" rdfID="b7f12ae3-b8ca-470a-b923-3c26a96e48b5" BaseElement.TEID="893270" BaseElement.ElemType="Load" BaseElement.Owner="402004" BaseElement.Operator="94017" BaseElement.KVLevel="69 KV" BaseElement.Substation="389098" BaseElement.SubName="Sub090" BaseElement.SubLongName="Sub090" BaseElement.Name="Load035" />
+	</Load>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,172,8" Orientation="Vertical" Text="Bus129" rdfID="b4351105-1b1a-4936-be53-f465e0d2994f" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus129" BaseElement.TEID="667990" BaseElement.Owner="680902" BaseElement.Operator="998404" BaseElement.Substation="389098" BaseElement.SubLongName="Sub090" PUNElement="False" BaseElement.SubName="Sub090">
+		<Switch rdfID="6a8b9d32-d62b-46d1-a84a-71c51f44a849" TEID="671783"/>
+		<Line rdfID="579ad379-340c-44c7-b906-22fdd6629cb7" TEID="639628"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,146,8" Orientation="Vertical" Text="Bus130" rdfID="7bc10833-a8be-42a4-8674-7f6c6d2dd151" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus130" BaseElement.TEID="159749" BaseElement.Owner="94017" BaseElement.Operator="94017" BaseElement.Substation="389098" BaseElement.SubLongName="Sub090" PUNElement="False" BaseElement.SubName="Sub090">
+		<Switch rdfID="6a8b9d32-d62b-46d1-a84a-71c51f44a849" TEID="671783"/>
+		<Load rdfID="b7f12ae3-b8ca-470a-b923-3c26a96e48b5" TEID="893270"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,150,50,8" Orientation="Vertical" Text="Bus450" rdfID="888b4472-5c97-4ee3-9477-24369582cc93" BaseElement.ElemType="Node" BaseElement.KVLevel="69 KV" BaseElement.Name="Bus450" BaseElement.TEID="223057" BaseElement.Owner="94017" BaseElement.Operator="177411" BaseElement.Substation="389098" BaseElement.SubLongName="Sub090" PUNElement="False" BaseElement.SubName="Sub090">
+		<Line rdfID="92a8eeda-7c69-4328-9a9a-00da0507a468" TEID="640368"/>
+	</Node>
+</Nodes>
+</One_Line>

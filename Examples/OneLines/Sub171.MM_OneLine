@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="367571" BaseElement.ConnectedLines="" BaseElement.County="Throckmorton" BaseElement.DisplayName="Sub171" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="33.177715" BaseElement.LatLong="33.177715,-99.211655" BaseElement.Longitude="-99.211655" BaseElement.Operator="154976" BaseElement.Owner="21073" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub171" BaseElement.LongName="Sub171">
+<Elements>
+	<Switch IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Switch171" rdfID="db34b10c-0ab3-4bd9-ba86-8829743aa495" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch171" BaseElement.TEID="297111" BaseElement.Owner="998404" BaseElement.Operator="680902" BaseElement.Substation="367571" BaseElement.SubLongName="Sub171" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub171">
+		<Descriptor DescriptorText="Switch171" Bounds="80,50,72,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Switch171" rdfID="db34b10c-0ab3-4bd9-ba86-8829743aa495" BaseElement.TEID="297111" BaseElement.ElemType="Breaker" BaseElement.Owner="998404" BaseElement.Operator="680902" BaseElement.KVLevel="138 KV" BaseElement.Substation="367571" BaseElement.SubName="Switch171" BaseElement.SubLongName="Switch171" Opened="Checked" ScadaOpened="Checked" BaseElement.Name="Switch171"/>
+	</Switch>
+	<Line BaseElement.Permitted="true" ToplogyValidated="true" Collision="false" KVLevel="138 KV" DescriptorArrow="false" Orientation="Up" Bounds="50,100,32,25" Visible="true" Text="Line090" rdfID="f7c1931d-30a2-4024-87d2-cac7ff8d0d28" BaseElement.ElemType="Line" BaseElement.KVLevel="138 KV" BaseElement.Name="Line090" BaseElement.TEID="148073" BaseElement.Owner="998404" BaseElement.Operator="998404">
+		<Descriptor ToplogyValidated="false" DescriptorArrow="false" Orientation="Unknown" Bounds="80,100,56,14" Font="Microsoft Sans Serif, 8.25pt" ForeColor="Gray" LabelBounds="-9,0,46,20," Collision="false" Visible="true" Text="Line090" rdfID="f7c1931d-30a2-4024-87d2-cac7ff8d0d28" BaseElement.TEID="148073" BaseElement.ElemType="Line" BaseElement.Owner="998404" BaseElement.Operator="998404" BaseElement.KVLevel="138 KV" BaseElement.Name="Line090" />
+	</Line>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,172,8" Orientation="Vertical" Text="Bus247" rdfID="0c84d523-cffc-4a43-85dd-0729c7e89c32" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus247" BaseElement.TEID="554552" BaseElement.Owner="402004" BaseElement.Operator="680902" BaseElement.Substation="367571" BaseElement.SubLongName="Sub171" PUNElement="False" BaseElement.SubName="Sub171">
+		<Switch rdfID="1cc86ee6-3226-42d4-b590-263c2765e681" TEID="297111"/>
+	</Node>
+	<Node IsVisible ="true" Bounds="25,100,146,8" Orientation="Vertical" Text="Bus248" rdfID="d2b52c8d-3a3a-4658-9fb5-064e59808218" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus248" BaseElement.TEID="240659" BaseElement.Owner="770538" BaseElement.Operator="260493" BaseElement.Substation="367571" BaseElement.SubLongName="Sub171" PUNElement="False" BaseElement.SubName="Sub171">
+		<Switch rdfID="1cc86ee6-3226-42d4-b590-263c2765e681" TEID="297111"/>
+		<Line rdfID="6f9efe84-97ab-44ea-bf72-e4d8bd67b130" TEID="387752"/>
+		<Line rdfID="f7c1931d-30a2-4024-87d2-cac7ff8d0d28" TEID="148073"/>
+	</Node>
+</Nodes>
+</One_Line>

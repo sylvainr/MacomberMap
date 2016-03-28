@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<One_Line BaseElement.ElemType="Substation" BaseElement.TEID="782792" BaseElement.ConnectedLines="" BaseElement.County="Coke" BaseElement.DisplayName="Sub078" BaseElement.ElemTypes="BusbarSection"  BaseElement.KVLevels="138 KV" BaseElement.Latitude="31.8896" BaseElement.LatLong="31.8896,-100.53025" BaseElement.Longitude="-100.53025" BaseElement.Operator="21073" BaseElement.Owner="177411" BaseElement.Permitted="true" Font="Microsoft Sans Serif, 8.25pt" BaseElement.Name="Sub078" BaseElement.LongName="Sub078">
+<Elements>
+	<Breaker IsVisible="true" Bounds="50,50,26,26" Orientation="Vertical" Text="Breaker078" rdfID="bd5b78ca-8ace-487a-9fe2-da71166756ee" BaseElement.ElemType="Breaker" BaseElement.KVLevel="138 KV" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker078" BaseElement.TEID="349813" BaseElement.Owner="94017" BaseElement.Operator="177411" BaseElement.Substation="782792" BaseElement.SubLongName="Sub078" BaseElement.HasSynchroscope="False" BaseElement.HasSynchrocheckRelay="False" PUNElement="False" BaseElement.SubName="Sub078">
+		<Descriptor DescriptorText="Breaker078" Bounds="80,50,80,14" LabelBounds="50,0,50,17" Font="Arial, 8pt" Text="Breaker078" rdfID="bd5b78ca-8ace-487a-9fe2-da71166756ee" BaseElement.TEID="349813" BaseElement.ElemType="Breaker" BaseElement.Owner="94017" BaseElement.Operator="177411" BaseElement.KVLevel="138 KV" BaseElement.Substation="782792" BaseElement.SubName="Breaker078" BaseElement.SubLongName="Breaker078" Opened="Unchecked" ScadaOpened="Unchecked" BaseElement.Name="Breaker078"/>
+	</Breaker>
+</Elements>
+<Nodes>
+	<Node IsVisible ="true" Bounds="25,50,180,8" Orientation="Vertical" Text="Bus112" rdfID="fd32e5f4-8ce8-410e-b6ce-3af283850e06" BaseElement.ElemType="Node" BaseElement.KVLevel="138 KV" BaseElement.Name="Bus112" BaseElement.TEID="549312" BaseElement.Owner="770538" BaseElement.Operator="770538" BaseElement.Substation="782792" BaseElement.SubLongName="Sub078" PUNElement="False" BaseElement.SubName="Sub078">
+		<Breaker rdfID="618a3e34-094b-46be-8b9a-25396decc72b" TEID="349813"/>
+	</Node>
+</Nodes>
+</One_Line>
